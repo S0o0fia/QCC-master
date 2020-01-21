@@ -1,0 +1,218 @@
+﻿@model IEnumerable<AspnetMvcDemo.Models.Factory11>
+    @using Resources
+@{
+    ViewBag.Title = "FactoriesList";
+
+}
+
+@section Scripts {
+    <!-- Dependencies -->
+    @Scripts.Render("~/bundle/vendor/js/bootbox/bootbox")
+    @Scripts.Render("~/bundle/vendor/js/sweetalert2/sweetalert2")
+
+    @Scripts.Render("~/bundle/js/ui_modals")
+}
+
+<style type="text/css">
+    .nav-tabs-top {
+        
+    }
+
+    .table {
+        border-bottom: solid 2px #eeeeee;
+    }
+</style>
+
+<body style="background-color :#ECECF1; background-size: cover;" dir="rtl">
+    <div class="page-header  align-items-center">
+        <h1 style="text-align : center">@Resources.Factories_List</h1>
+    </div>
+    <div class="nav-tabs-top nav-responsive-xl" style="-ms-flex-direction: column; flex-direction: column; margin-top: 10%; padding-left: 100px; padding-right: 100px;">
+           <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#navs-top-responsive-link-1">@Resources.Pending_Factories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#navs-top-responsive-link-2">@Resources.Approved_Factories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#navs-top-responsive-link-3">@Resources.Declined_Factories</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="navs-top-responsive-link-1">
+                <div class="card-body">
+                    <table class="table table-reponsive">
+                        <thead style="text-align:center">
+                            <tr>
+                                <th>
+                                   @Resources.Factory_Name
+                                </th>
+                                <th>
+                                  @Resources.Factroy_Type
+                                </th>
+                                <th>
+                                   @Resources.Owner_Name
+                                </th>
+                                <th>@Resources.Details</th>
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in Model)
+                        {
+                            if (item.Status == "Pending")
+                            {
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Type)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.OwnerName)
+                                        </td>
+                                        <td>
+                                            <i class="ion ion-ios-arrow-dropleft-circle d-block" data-toggle="modal" data-target="#factory-details" onclick="Modalpop(@item.Id);" data-url="@Url.Action("Details", "Factory", new { id = item.Id })" style="cursor:pointer"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            }
+                        }
+
+                    </table>
+
+                    <div class="modal fade" id="Modal_sucess" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h3 class="modal-title text-primary text-center" id="myModalLabel">@Resources.Factory_Details</h3>
+                                </div>
+                                <div id="ModalBody" class="modal-body">
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-success " data-dismiss="modal">@Resources.Approve</button>
+                                    <button type="button" class="btn btn-success " data-dismiss="modal">@Resources.Decline</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="navs-top-responsive-link-2">
+                <div class="card-body">
+                    <table class="table table-reponsive">
+                        <thead style="text-align:center">
+                            <tr>
+                                <th>
+                                    @Resources.Factory_Name
+                                </th>
+                                <th>
+                                    @Resources.Factroy_Type
+                                </th>
+                                <th>
+                                    @Resources.Owner_Name
+                                </th>
+                                <th>@Resources.Details</th>
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in Model)
+                        {
+                            if (item.Status == "Approved")
+                            {
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Type)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.OwnerName)
+                                        </td>
+                                        <td>
+                                            <i class="ion ion-ios-arrow-dropleft-circle d-block" data-toggle="modal" data-target="#factory-details" onclick="Modalpop(@item.Id);" data-url="@Url.Action("Details", "Factory", new { id = item.Id })" style="cursor:pointer"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            }
+                        }
+
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="navs-top-responsive-link-3">
+                <div class="card-body">
+                    <table class="table table-reponsive">
+                        <thead style="text-align:center">
+                            <tr>
+                                <th>
+                                    @Resources.Factory_Name
+                                </th>
+                                <th>
+                                    @Resources.Factroy_Type
+                                </th>
+                                <th>
+                                    @Resources.Owner_Name
+                                </th>
+                                <th>@Resources.Details</th>
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in Model)
+                        {
+                            if (item.Status == "Declined")
+                            {
+                                <tbody style="text-align:center">
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Type)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.OwnerName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Comments)
+                                        </td>
+                                        <td>
+                                            <i class="ion ion-ios-arrow-dropleft-circle d-block" data-toggle="modal" data-target="#factory-details" onclick="Modalpop(@item.Id);" data-url="@Url.Action("Details", "Factory", new { id = item.Id })" style="cursor:pointer"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            }
+                        }
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+
+    function Modalpop(Id) {
+        var urlPost = '@Url.Action("FactoryDetails", "Factory")' + "/" + Id;
+        $.get(urlPost, function (data) {
+            debugger;
+
+            $('#ModalBody').html(data.toString());
+
+            $('#Modal_sucess').modal('show');
+
+        });
+   }
+
+</script>

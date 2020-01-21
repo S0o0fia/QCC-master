@@ -1,0 +1,103 @@
+﻿@model AspnetMvcDemo.Models.ApproveMixingDesign
+@using Resources
+<div class="tab-pane fade active show">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">
+                <label class="form-label">@Resources.Factory_Name</label>
+            </div>
+            <div class="col-md-4 form-group">
+                @Html.TextBoxFor(M => M.FactoryName, new { @class = "form-control" })
+            </div>
+            <div class="col-md-2">
+                <label class="form-label">@Resources.Concrete_Rank </label>
+            </div>
+            <div class="col-md-4 form-group">
+                @Html.TextBoxFor(M => M.ConcreteRank, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="form-label">@Resources.Cement_Weight</label>
+            </div>
+            <div class="col-md-4 form-group">
+                @*<input type="email" class="form-control">*@
+                @Html.TextBoxFor(m => m.CementWeight, new { type = "number", min = "0", step = "1", @class = "form-control" })
+            </div>
+            <div class="col-md-2 form-group">
+                <label class="form-label">@Resources.Water_Weight</label>
+            </div>
+            <div class="col-md-4 form-group">
+                @*<input type="text" class="form-control">*@
+                @Html.TextBoxFor(m => m.WaterWeight, new { type = "number", min = "0", step = "1", @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label class="form-label">@Resources.Washed_Sand</label>
+            </div>
+            <div class="col-md-4 form-group">
+                @*<input class="form-control" type="text" />*@
+                @Html.TextBoxFor(m => m.WashedSand, new { type = "number", min = "0", step = "1", @class = "form-control" })
+            </div>
+            <div class="col-md-2 form-group">
+                <label class="form-label">@Resources.White_Sand</label>
+            </div>
+            <div class="col-md-4 form-group">
+                @*<input class="form-control" type="email" />*@
+                @Html.TextBoxFor(m => m.WhiteSand, new { type = "number", min = "0", step = "1", @class = "form-control" })
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-group">
+                <label class="form-label">@Resources.Rubble_3_4</label>
+            </div>
+            <div class="col-md-4 form-group">
+                @*<input class="form-control" type="text" />*@
+                @Html.TextBoxFor(m => m.Rubble3by4, new { type = "number", min = "0", step = "1", @class = "form-control" })
+            </div>
+            <div class="col-md-2 form-group">
+                <label class="form-label">@Resources.Rubble_3_8</label>
+            </div>
+            <div class="col-md-4 form-group">
+                @*<input class="form-control" type="number" />*@
+                @Html.TextBoxFor(m => m.Rubble3by8, new { type = "number", min = "0", step = "1", @class = "form-control" })
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="tab-pane fade show active">
+    <div class="card-body">
+        <table class="table table-reponsive">
+            <thead style="text-align:center">
+                <tr>
+                    <th>Factory Name</th>
+                    <th>Area</th>
+                    <th>Owner</th>
+                    <th>Concrete Rank</th>
+                    <th>Cement Weight</th>
+                    <th>Water Weight</th>
+                    <th>Washed Sand</th>
+                    <th>White Sand</th>
+                    <th>Rubble (3/4)</th>
+                    <th>Rubble (3/8)</th>
+                </tr>
+            </thead>
+            <tbody style="text-align:center">
+                <tr>
+                    <td>@Html.DisplayFor(m => m.FactoryName)</td>
+                    <td>@Html.DisplayFor(m => m.Latitude)</td>
+                    <td>@Html.DisplayFor(m => m.OwnerName)</td>
+                    <td>@Html.DisplayFor(m => m.ConcreteRank)</td>
+                    <td>@Html.DisplayFor(m => m.CementWeight)</td>
+                    <td>@Html.DisplayFor(m => m.WaterWeight)</td>
+                    <td>@Html.DisplayFor(m => m.WashedSand)</td>
+                    <td>@Html.DisplayFor(m => m.WhiteSand)</td>
+                    <td>@Html.DisplayFor(m => m.Rubble3by4)</td>
+                    <td>@Html.DisplayFor(m => m.Rubble3by8)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>*@

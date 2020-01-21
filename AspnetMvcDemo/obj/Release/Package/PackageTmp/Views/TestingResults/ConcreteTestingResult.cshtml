@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "ConcreteTestingResult";
+}
+@using Resources
+<style type="text/css">
+    .nav-tabs-top {
+    }
+
+    .table {
+        border-bottom: solid 2px #eeeeee;
+    }
+    .page-header
+    {
+        padding-top:2%;
+        padding-bottom : 3%;
+    }
+    .form-control-plaintext
+    {
+        padding-left : 3%;
+        outline-color : limegreen ;
+        outline-style : solid;
+        outline-width : thin;
+        
+    }
+</style>
+
+<body style="background-color :#ECECF1; background-size: cover;" dir="rtl">
+    <div class="page-header  align-items-center">
+        <h1 style="text-align : center">@Resources.Concrete_Testing_Result</h1>
+    </div>
+    <div class="nav-tabs-top nav-responsive-xl" style="-ms-flex-direction: column; flex-direction: column; margin-top: 4%; padding-left: 100px; padding-right: 100px;">
+        <div class="tab-content">
+            <div class="tab-pane fade show active">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h4>@Resources.Compressive_Strength_of_Concrete_Cube</h4>
+                        </div>
+                        <div class="col-md-5">
+                            @Resources.Sample_Number  98657426
+                        </div>
+                    </div>
+                    <table class="table table-reponsive" dir="ltr">
+                        <thead style="text-align:center ; font-weight:bold">
+                            <tr>
+                                <th> No</th>
+                                <th>Weight</th>
+                                <th>Volume</th>
+                                <th>Area Loaded</th>
+                                <th>Unit Weight</th>
+                                <th>Test Date</th>
+                                <th>Age</th>
+                                <th>Crushing Load</th>
+                                <th>Compressive Strength</th>
+                                <th>Average Compressive Strength</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody style="text-align:center">
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+                                </td>
+                                <td>3375</td>
+                                <td>22500</td>
+                                <td></td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+                                </td>
+                                <td>7</td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+                                </td>
+                                <td>3375</td>
+                                <td>22500</td>
+                                <td></td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+                                </td>
+                                <td>7</td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+                                </td>
+                                <td>3375</td>
+                                <td>22500</td>
+                                <td></td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+                                </td>
+                                <td>7</td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <button type="submit" class="btn btn-success">@Resources.Save</button>
+                </div>
+               
+            </div>
+          
+        </div>
+
+    </div>
+</body>
+

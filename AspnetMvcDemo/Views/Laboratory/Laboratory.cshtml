@@ -1,0 +1,382 @@
+﻿@using Resources
+@{
+    ViewBag.Title = "Laboratory";
+}
+
+<style type="text/css">
+    .nav-tabs-top {
+    }
+
+    .table {
+        border-bottom: solid 2px #eeeeee;
+    }
+</style>
+
+<body style="background-color :#ECECF1; background-size: cover;" dir="rtl">
+    <div class="page-header  align-items-center">
+        <h1 style="text-align : center">@Resources.Laboratory</h1>
+    </div>
+    <div class="nav-tabs-top nav-responsive-xl" style="-ms-flex-direction: column; flex-direction: column; margin-top: 4%; padding-left: 100px; padding-right: 100px;">
+        @*@Html.ActionLink("Create New", "AddMixingDesign")*@
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#navs-top-responsive-link-1">@Resources.Deliver_Concrete_Samples</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#navs-top-responsive-link-2">@Resources.Break_Concrete_7_days</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#navs-top-responsive-link-3">@Resources.Break_Concrete_28_days</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#navs-top-responsive-link-4">@Resources.Break_Block_Sample</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="navs-top-responsive-link-1">
+                <div class="card-body">
+                    <table class="table table-reponsive">
+                        <thead style="text-align:center">
+                            <tr>
+                                <th>
+                                   @Resources.Sample_Number
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody style="text-align:center">
+                            <tr>
+                                <td>
+                                    65874526
+                                </td>
+                                <td>
+                                    <button type="submit"  class="btn btn-success">@Resources.Deliver_Done</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    96578456
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-success">@Resources.Deliver_Done</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    86547892
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-success">@Resources.Deliver_Done</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    78956324
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-success">@Resources.Deliver_Done</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    34568795
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-success">@Resources.Deliver_Done</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    23564857
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-success">@Resources.Deliver_Done</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    96573456
+                                </td>
+                                <td>
+                                    <button type="submit" class="btn btn-success">@Resources.Deliver_Done</button>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="navs-top-responsive-link-2">
+                <div class="card-body">
+                    <table class="table table-reponsive">
+                        <thead style="text-align:center">
+                            <tr>
+                                <th>
+                                   @Resources.Sample_Number
+                                </th>
+                                <th>
+                                   @Resources.Move
+                                </th>
+                            </tr>
+
+                        </thead>
+                        <tbody style="text-align:center">
+                            <tr>
+                                <td>
+                                    65874526
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                       onclick="location.href = '@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "65874526", duration = "7" })';">
+                                    </i> 
+       
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    96578456
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                      onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "96578456", duration = "7" })'">
+                                    </i> 
+       
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    86547892
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                        onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "86547892", duration = "7" })'">
+                                    </i> 
+       
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    78956324
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                     onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "34568795", duration = "7" })'">
+                                    </i> 
+       
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    34568795
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer" 
+                                    onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "34568795", duration = "7" })'">
+                                    </i> 
+     
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    23564857
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                    onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "23564857", duration = "7" })'">
+                                    </i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    96573456
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                        onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "96573456", duration = "7" })'">
+                                    </i> 
+
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="navs-top-responsive-link-3">
+                <div class="card-body">
+                    <table class="table table-reponsive">
+                        <thead style="text-align:center">
+                            <tr>
+                                <th>
+                                   @Resources.Sample_Number
+                                </th>
+                                <th>
+                                   @Resources.Move
+                                </th>
+                            </tr>
+
+                        </thead>
+                        <tbody style="text-align:center">
+                            <tr>
+                                <td>
+                                    65874526
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                        onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "65874526", duration = "28" })'">
+                                    </i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    96578456
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                        onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults"  , new { id = "96578456", duration = "28" })'">
+                                    </i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    86547892
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                        onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults"  , new { id = "86547892", duration = "28" })'">
+                                    </i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    78956324
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                       onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults"  , new { id = "78956324", duration = "28" })'"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    34568795
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                        onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "34568795", duration = "28" })'"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    23564857
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                        onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "23564857", duration = "28" })'"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    96573456
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                        onclick="location.href='@Url.Action("ConcreteTestingResult", "TestingResults" , new { id = "96573456", duration = "28" })'"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="navs-top-responsive-link-4">
+                <div class="card-body">
+                    <table class="table table-reponsive">
+                        <thead style="text-align:center">
+                            <tr>
+                                <th>
+                                    @Resources.Sample_Number
+                                </th>
+                                <th>
+                                    @Resources.Move
+                                </th>
+                            </tr>
+
+                        </thead>
+                        <tbody style="text-align:center">
+                            <tr>
+                                <td>
+                                    65874526
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                        onclick="location.href='@Url.Action("BlockTestingResult", "TestingResults")'"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    96578456
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                           onclick="location.href='@Url.Action("BlockTestingResult", "TestingResults")'"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    86547892
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                           onclick="location.href='@Url.Action("BlockTestingResult", "TestingResults")'"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    78956324
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                           onclick="location.href='@Url.Action("BlockTestingResult", "TestingResults")'"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    34568795
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                           onclick="location.href='@Url.Action("BlockTestingResult", "TestingResults")'"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    23564857
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                           onclick="location.href='@Url.Action("BlockTestingResult", "TestingResults")'"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    96573456
+                                </td>
+                                <td>
+                                    <i class="ion ion-ios-arrow-dropleft-circle d-block" style="cursor:pointer"
+                                           onclick="location.href='@Url.Action("BlockTestingResult", "TestingResults")'"></i>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+

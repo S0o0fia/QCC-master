@@ -1,0 +1,2389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QCModelStoreContainer" CdmEntityContainer="QCEntities">
+    <EntitySetMapping Name="C_ConClsCustomProperties">
+      <EntityTypeMapping TypeName="QCModel.C_ConClsCustomProperties">
+        <MappingFragment StoreEntitySet="_ConClsCustomProperties">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ConClsCategoryId" ColumnName="ConClsCategoryId" />
+          <ScalarProperty Name="PropertyText" ColumnName="PropertyText" />
+          <ScalarProperty Name="PropertyWeight" ColumnName="PropertyWeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_ConClsPropertyMulti">
+      <EntityTypeMapping TypeName="QCModel.C_ConClsPropertyMulti">
+        <MappingFragment StoreEntitySet="_ConClsPropertyMulti">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ConClsCategoryId" ColumnName="ConClsCategoryId" />
+          <ScalarProperty Name="PropertyText" ColumnName="PropertyText" />
+          <ScalarProperty Name="PropertyWeight" ColumnName="PropertyWeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_ConClsPropertyThirtyValues">
+      <EntityTypeMapping TypeName="QCModel.C_ConClsPropertyThirtyValues">
+        <MappingFragment StoreEntitySet="_ConClsPropertyThirtyValues">
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="ConClsPropertyIdMulti" ColumnName="ConClsPropertyIdMulti" />
+          <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsphaltTypes">
+      <EntityTypeMapping TypeName="QCModel.AsphaltType">
+        <MappingFragment StoreEntitySet="AsphaltTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Applications">
+      <EntityTypeMapping TypeName="QCModel.aspnet_Applications">
+        <MappingFragment StoreEntitySet="aspnet_Applications">
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="QCModel.aspnet_Membership">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Paths">
+      <EntityTypeMapping TypeName="QCModel.aspnet_Paths">
+        <MappingFragment StoreEntitySet="aspnet_Paths">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+      <EntityTypeMapping TypeName="QCModel.aspnet_PersonalizationAllUsers">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+      <EntityTypeMapping TypeName="QCModel.aspnet_PersonalizationPerUser">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Profile">
+      <EntityTypeMapping TypeName="QCModel.aspnet_Profile">
+        <MappingFragment StoreEntitySet="aspnet_Profile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles">
+      <EntityTypeMapping TypeName="QCModel.aspnet_Roles">
+        <MappingFragment StoreEntitySet="aspnet_Roles">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_SchemaVersions">
+      <EntityTypeMapping TypeName="QCModel.aspnet_SchemaVersions">
+        <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+          <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+          <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="QCModel.aspnet_Users">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_WebEvent_Events">
+      <EntityTypeMapping TypeName="QCModel.aspnet_WebEvent_Events">
+        <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+          <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+          <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="QCModel.Branch">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="QCModel.Client">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compactions">
+      <EntityTypeMapping TypeName="QCModel.Compaction">
+        <MappingFragment StoreEntitySet="Compaction">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="GeneralSamleTypeId" ColumnName="GeneralSamleTypeId" />
+          <ScalarProperty Name="Comp1" ColumnName="Comp1" />
+          <ScalarProperty Name="Comp2" ColumnName="Comp2" />
+          <ScalarProperty Name="Comp3" ColumnName="Comp3" />
+          <ScalarProperty Name="CRatio" ColumnName="CRatio" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="AsphaltTypeId" ColumnName="AsphaltTypeId" />
+          <ScalarProperty Name="SoilTypeId" ColumnName="SoilTypeId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="GehaID" ColumnName="GehaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsCategories">
+      <EntityTypeMapping TypeName="QCModel.ConClsCategory">
+        <MappingFragment StoreEntitySet="ConClsCategories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SuperCategory" ColumnName="SuperCategory" />
+          <ScalarProperty Name="SuperCategoryName" ColumnName="SuperCategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsClassificationTexts">
+      <EntityTypeMapping TypeName="QCModel.ConClsClassificationText">
+        <MappingFragment StoreEntitySet="ConClsClassificationTexts">
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="ClassificationDegree" ColumnName="ClassificationDegree" />
+          <ScalarProperty Name="ClassificationText" ColumnName="ClassificationText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsEvalPerformControls">
+      <EntityTypeMapping TypeName="QCModel.ConClsEvalPerformControl">
+        <MappingFragment StoreEntitySet="ConClsEvalPerformControls">
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ConClsYear" ColumnName="ConClsYear" />
+          <ScalarProperty Name="TempGeneralComment" ColumnName="TempGeneralComment" />
+          <ScalarProperty Name="TempQualtyMaxComment" ColumnName="TempQualtyMaxComment" />
+          <ScalarProperty Name="TempQualtyMinComment1" ColumnName="TempQualtyMinComment1" />
+          <ScalarProperty Name="Slump" ColumnName="Slump" />
+          <ScalarProperty Name="CompressiveStrength" ColumnName="CompressiveStrength" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsLabAdditionalTools">
+      <EntityTypeMapping TypeName="QCModel.ConClsLabAdditionalTool">
+        <MappingFragment StoreEntitySet="ConClsLabAdditionalTools">
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="Cylinder" ColumnName="Cylinder" />
+          <ScalarProperty Name="Cubles" ColumnName="Cubles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsLabAdmixtures">
+      <EntityTypeMapping TypeName="QCModel.ConClsLabAdmixture">
+        <MappingFragment StoreEntitySet="ConClsLabAdmixtures">
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="IsTechniqcalSheet" ColumnName="IsTechniqcalSheet" />
+          <ScalarProperty Name="TrialMixesEvalutePeriodicId" ColumnName="TrialMixesEvalutePeriodicId" />
+          <ScalarProperty Name="TrialMixesEvalutePeriodicWeight" ColumnName="TrialMixesEvalutePeriodicWeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsLabEquipments">
+      <EntityTypeMapping TypeName="QCModel.ConClsLabEquipment">
+        <MappingFragment StoreEntitySet="ConClsLabEquipments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="MadeYear" ColumnName="MadeYear" />
+          <ScalarProperty Name="MadeFactoryCompany" ColumnName="MadeFactoryCompany" />
+          <ScalarProperty Name="MachineType" ColumnName="MachineType" />
+          <ScalarProperty Name="SpeedControl" ColumnName="SpeedControl" />
+          <ScalarProperty Name="TempControl1" ColumnName="TempControl1" />
+          <ScalarProperty Name="TempControl2" ColumnName="TempControl2" />
+          <ScalarProperty Name="TempControl3" ColumnName="TempControl3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsLabProperties">
+      <EntityTypeMapping TypeName="QCModel.ConClsLabProperty">
+        <MappingFragment StoreEntitySet="ConClsLabProperties">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ConClsCategoryId" ColumnName="ConClsCategoryId" />
+          <ScalarProperty Name="PropertyText" ColumnName="PropertyText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsLabPropertyValues">
+      <EntityTypeMapping TypeName="QCModel.ConClsLabPropertyValue">
+        <MappingFragment StoreEntitySet="ConClsLabPropertyValues">
+          <ScalarProperty Name="ConClsPeriodicLabPropertId" ColumnName="ConClsPeriodicLabPropertId" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsLabStuffs">
+      <EntityTypeMapping TypeName="QCModel.ConClsLabStuff">
+        <MappingFragment StoreEntitySet="ConClsLabStuff">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TechnicalCertified" ColumnName="TechnicalCertified" />
+          <ScalarProperty Name="JobPosition" ColumnName="JobPosition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsLabTestPractices">
+      <EntityTypeMapping TypeName="QCModel.ConClsLabTestPractice">
+        <MappingFragment StoreEntitySet="ConClsLabTestPractices">
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="MethodCuringWater" ColumnName="MethodCuringWater" />
+          <ScalarProperty Name="MethodCuringTempl" ColumnName="MethodCuringTempl" />
+          <ScalarProperty Name="MehodTestingSurface" ColumnName="MehodTestingSurface" />
+          <ScalarProperty Name="MethodRatLoading" ColumnName="MethodRatLoading" />
+          <ScalarProperty Name="ProperProtection" ColumnName="ProperProtection" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsMaterialSupCategories">
+      <EntityTypeMapping TypeName="QCModel.ConClsMaterialSupCategory">
+        <MappingFragment StoreEntitySet="ConClsMaterialSupCategories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsMaterialSups">
+      <EntityTypeMapping TypeName="QCModel.ConClsMaterialSup">
+        <MappingFragment StoreEntitySet="ConClsMaterialSups">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ConClsMaterialSupCategoryIdq" ColumnName="ConClsMaterialSupCategoryIdq" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="TypeofMaterial" ColumnName="TypeofMaterial" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsMixDesigns">
+      <EntityTypeMapping TypeName="QCModel.ConClsMixDesign">
+        <MappingFragment StoreEntitySet="ConClsMixDesigns">
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="MixResult40" ColumnName="MixResult40" />
+          <ScalarProperty Name="MixResult35" ColumnName="MixResult35" />
+          <ScalarProperty Name="MixResult30" ColumnName="MixResult30" />
+          <ScalarProperty Name="MixResult20" ColumnName="MixResult20" />
+          <ScalarProperty Name="CementKg40" ColumnName="CementKg40" />
+          <ScalarProperty Name="CementKg35" ColumnName="CementKg35" />
+          <ScalarProperty Name="CementKg30" ColumnName="CementKg30" />
+          <ScalarProperty Name="CementKg20" ColumnName="CementKg20" />
+          <ScalarProperty Name="HotWater40" ColumnName="HotWater40" />
+          <ScalarProperty Name="HotWater35" ColumnName="HotWater35" />
+          <ScalarProperty Name="HotWater30" ColumnName="HotWater30" />
+          <ScalarProperty Name="HotWater20" ColumnName="HotWater20" />
+          <ScalarProperty Name="Rookam3by4Kg40" ColumnName="Rookam3by4Kg40" />
+          <ScalarProperty Name="Rookam3by4Kg35" ColumnName="Rookam3by4Kg35" />
+          <ScalarProperty Name="Rookam3by4Kg30" ColumnName="Rookam3by4Kg30" />
+          <ScalarProperty Name="Rookam3by4Kg20" ColumnName="Rookam3by4Kg20" />
+          <ScalarProperty Name="Rookam3by8Kg40" ColumnName="Rookam3by8Kg40" />
+          <ScalarProperty Name="Rookam3by8Kg35" ColumnName="Rookam3by8Kg35" />
+          <ScalarProperty Name="Rookam3by8Kg30" ColumnName="Rookam3by8Kg30" />
+          <ScalarProperty Name="Rookam3by8Kg20" ColumnName="Rookam3by8Kg20" />
+          <ScalarProperty Name="SelicaSandKg40" ColumnName="SelicaSandKg40" />
+          <ScalarProperty Name="SelicaSandKg35" ColumnName="SelicaSandKg35" />
+          <ScalarProperty Name="SelicaSandKg30" ColumnName="SelicaSandKg30" />
+          <ScalarProperty Name="SelicaSandKg20" ColumnName="SelicaSandKg20" />
+          <ScalarProperty Name="WachingSandKg40" ColumnName="WachingSandKg40" />
+          <ScalarProperty Name="WachingSandKg35" ColumnName="WachingSandKg35" />
+          <ScalarProperty Name="WachingSandKg30" ColumnName="WachingSandKg30" />
+          <ScalarProperty Name="WachingSandKg20" ColumnName="WachingSandKg20" />
+          <ScalarProperty Name="RP264Litter40" ColumnName="RP264Litter40" />
+          <ScalarProperty Name="RP264Litter35" ColumnName="RP264Litter35" />
+          <ScalarProperty Name="RP264Litter30" ColumnName="RP264Litter30" />
+          <ScalarProperty Name="RP264Litter20" ColumnName="RP264Litter20" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsMixers">
+      <EntityTypeMapping TypeName="QCModel.ConClsMixer">
+        <MappingFragment StoreEntitySet="ConClsMixers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FactId" ColumnName="FactId" />
+          <ScalarProperty Name="YearCls" ColumnName="YearCls" />
+          <ScalarProperty Name="TotalMixers" ColumnName="TotalMixers" />
+          <ScalarProperty Name="WaysOfMixer" ColumnName="WaysOfMixer" />
+          <ScalarProperty Name="MixerSize" ColumnName="MixerSize" />
+          <ScalarProperty Name="MixerPeriod" ColumnName="MixerPeriod" />
+          <ScalarProperty Name="WeightControl" ColumnName="WeightControl" />
+          <ScalarProperty Name="SizeControl" ColumnName="SizeControl" />
+          <ScalarProperty Name="IsAmountRegisterUsing" ColumnName="IsAmountRegisterUsing" />
+          <ScalarProperty Name="IsRegisterExistAnyTime" ColumnName="IsRegisterExistAnyTime" />
+          <ScalarProperty Name="StationNo" ColumnName="StationNo" />
+          <ScalarProperty Name="IsMzReadDevice" ColumnName="IsMzReadDevice" />
+          <ScalarProperty Name="IsMzGoodSize" ColumnName="IsMzGoodSize" />
+          <ScalarProperty Name="IsMzAccurate" ColumnName="IsMzAccurate" />
+          <ScalarProperty Name="IsAllArrowGoodProtected" ColumnName="IsAllArrowGoodProtected" />
+          <ScalarProperty Name="IsLargeNoEasyRead" ColumnName="IsLargeNoEasyRead" />
+          <ScalarProperty Name="IsMixerManul" ColumnName="IsMixerManul" />
+          <ScalarProperty Name="IsMixerDigital" ColumnName="IsMixerDigital" />
+          <ScalarProperty Name="IsMixerMix" ColumnName="IsMixerMix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsPeriodicLabProperties">
+      <EntityTypeMapping TypeName="QCModel.ConClsPeriodicLabProperty">
+        <MappingFragment StoreEntitySet="ConClsPeriodicLabProperties">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ConClsPropPeriodicId" ColumnName="ConClsPropPeriodicId" />
+          <ScalarProperty Name="PropertyWeight" ColumnName="PropertyWeight" />
+          <ScalarProperty Name="ConClsLabPropertyId" ColumnName="ConClsLabPropertyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsProperties">
+      <EntityTypeMapping TypeName="QCModel.ConClsProperty">
+        <MappingFragment StoreEntitySet="ConClsProperties">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ConClsCategoryId" ColumnName="ConClsCategoryId" />
+          <ScalarProperty Name="PropertyText" ColumnName="PropertyText" />
+          <ScalarProperty Name="PropertyWeight" ColumnName="PropertyWeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsPropertiesReasons">
+      <EntityTypeMapping TypeName="QCModel.ConClsPropertiesReason">
+        <MappingFragment StoreEntitySet="ConClsPropertiesReasons">
+          <ScalarProperty Name="ConClsPropertyId" ColumnName="ConClsPropertyId" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsPropertyValues">
+      <EntityTypeMapping TypeName="QCModel.ConClsPropertyValue">
+        <MappingFragment StoreEntitySet="ConClsPropertyValues">
+          <ScalarProperty Name="ConClsPropertyId" ColumnName="ConClsPropertyId" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="PropertyValue" ColumnName="PropertyValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConClsPropPeriodics">
+      <EntityTypeMapping TypeName="QCModel.ConClsPropPeriodic">
+        <MappingFragment StoreEntitySet="ConClsPropPeriodics">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Peroidic" ColumnName="Peroidic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConcreteSamples">
+      <EntityTypeMapping TypeName="QCModel.ConcreteSample">
+        <MappingFragment StoreEntitySet="ConcreteSamples">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+          <ScalarProperty Name="PlantNumber" ColumnName="PlantNumber" />
+          <ScalarProperty Name="SampleDate" ColumnName="SampleDate" />
+          <ScalarProperty Name="SampleTime" ColumnName="SampleTime" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="TrucksNumber" ColumnName="TrucksNumber" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ConcreteRank" ColumnName="ConcreteRank" />
+          <ScalarProperty Name="ConcreteTemperture" ColumnName="ConcreteTemperture" />
+          <ScalarProperty Name="WeatherTemperture" ColumnName="WeatherTemperture" />
+          <ScalarProperty Name="AmountofLand" ColumnName="AmountofLand" />
+          <ScalarProperty Name="AcementType" ColumnName="AcementType" />
+          <ScalarProperty Name="AcementSource" ColumnName="AcementSource" />
+          <ScalarProperty Name="AdditionTypes" ColumnName="AdditionTypes" />
+          <ScalarProperty Name="AdditionAmount" ColumnName="AdditionAmount" />
+          <ScalarProperty Name="IsCleanUsage" ColumnName="IsCleanUsage" />
+          <ScalarProperty Name="IsBasicUsage" ColumnName="IsBasicUsage" />
+          <ScalarProperty Name="IsColumnUsage" ColumnName="IsColumnUsage" />
+          <ScalarProperty Name="IsRoofUsage" ColumnName="IsRoofUsage" />
+          <ScalarProperty Name="IsOtherUsage" ColumnName="IsOtherUsage" />
+          <ScalarProperty Name="AcementWeight" ColumnName="AcementWeight" />
+          <ScalarProperty Name="WaterWieght" ColumnName="WaterWieght" />
+          <ScalarProperty Name="WashedSandWeight" ColumnName="WashedSandWeight" />
+          <ScalarProperty Name="SizeFourbyThree" ColumnName="SizeFourbyThree" />
+          <ScalarProperty Name="SizeEightByThree" ColumnName="SizeEightByThree" />
+          <ScalarProperty Name="IsCleanLocation" ColumnName="IsCleanLocation" />
+          <ScalarProperty Name="IsDustControlInStation" ColumnName="IsDustControlInStation" />
+          <ScalarProperty Name="IsRokamSummar" ColumnName="IsRokamSummar" />
+          <ScalarProperty Name="IsLabEngineer" ColumnName="IsLabEngineer" />
+          <ScalarProperty Name="IsMoldanatInTrunks" ColumnName="IsMoldanatInTrunks" />
+          <ScalarProperty Name="IsPeopeSafty" ColumnName="IsPeopeSafty" />
+          <ScalarProperty Name="SampledBy" ColumnName="SampledBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="WhiteSandWeight" ColumnName="WhiteSandWeight" />
+          <ScalarProperty Name="WaterTemperature" ColumnName="WaterTemperature" />
+          <ScalarProperty Name="Resist7days" ColumnName="Resist7days" />
+          <ScalarProperty Name="Resist28days" ColumnName="Resist28days" />
+          <ScalarProperty Name="AmanaSampleNo" ColumnName="AmanaSampleNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContAsphaltSamples">
+      <EntityTypeMapping TypeName="QCModel.ContAsphaltSample">
+        <MappingFragment StoreEntitySet="ContAsphaltSamples">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AsphaltTypeId" ColumnName="AsphaltTypeId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="StartHour" ColumnName="StartHour" />
+          <ScalarProperty Name="EndHour" ColumnName="EndHour" />
+          <ScalarProperty Name="NoJobs" ColumnName="NoJobs" />
+          <ScalarProperty Name="PermitNumber" ColumnName="PermitNumber" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="LayerWidth" ColumnName="LayerWidth" />
+          <ScalarProperty Name="EvelCm" ColumnName="EvelCm" />
+          <ScalarProperty Name="LocationStartN" ColumnName="LocationStartN" />
+          <ScalarProperty Name="LocationStartE" ColumnName="LocationStartE" />
+          <ScalarProperty Name="LocationEN" ColumnName="LocationEN" />
+          <ScalarProperty Name="LocationEE" ColumnName="LocationEE" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="MoreStreet2" ColumnName="MoreStreet2" />
+          <ScalarProperty Name="LocationStartNStreet2" ColumnName="LocationStartNStreet2" />
+          <ScalarProperty Name="LocationStartEStreet2" ColumnName="LocationStartEStreet2" />
+          <ScalarProperty Name="LocationENStreet2" ColumnName="LocationENStreet2" />
+          <ScalarProperty Name="LocationEEStreet2" ColumnName="LocationEEStreet2" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="IsSampled" ColumnName="IsSampled" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="InspectorReturned" ColumnName="InspectorReturned" />
+          <ScalarProperty Name="InspectorNotes" ColumnName="InspectorNotes" />
+          <ScalarProperty Name="InspectorLongitude" ColumnName="InspectorLongitude" />
+          <ScalarProperty Name="InspectorMagnitude" ColumnName="InspectorMagnitude" />
+          <ScalarProperty Name="PlantLocationId" ColumnName="PlantLocationId" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="IsEmergency" ColumnName="IsEmergency" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="InspectorBy" ColumnName="InspectorBy" />
+          <ScalarProperty Name="MixDesignId" ColumnName="MixDesignId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContractorRetFlows">
+      <EntityTypeMapping TypeName="QCModel.ContractorRetFlow">
+        <MappingFragment StoreEntitySet="ContractorRetFlow">
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="IsContractorSubmit" ColumnName="IsContractorSubmit" />
+          <ScalarProperty Name="ContractorSubmit" ColumnName="ContractorSubmit" />
+          <ScalarProperty Name="IsGMAccept" ColumnName="IsGMAccept" />
+          <ScalarProperty Name="GMAccept" ColumnName="GMAccept" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="TestsTypes" ColumnName="TestsTypes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContSoilSamples">
+      <EntityTypeMapping TypeName="QCModel.ContSoilSample">
+        <MappingFragment StoreEntitySet="ContSoilSamples">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SoilTypeId" ColumnName="SoilTypeId" />
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="StartHour" ColumnName="StartHour" />
+          <ScalarProperty Name="EndHour" ColumnName="EndHour" />
+          <ScalarProperty Name="NoJobs" ColumnName="NoJobs" />
+          <ScalarProperty Name="PermitNumber" ColumnName="PermitNumber" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="LayerWidth" ColumnName="LayerWidth" />
+          <ScalarProperty Name="EvelCm" ColumnName="EvelCm" />
+          <ScalarProperty Name="LocationStartN" ColumnName="LocationStartN" />
+          <ScalarProperty Name="LocationStartE" ColumnName="LocationStartE" />
+          <ScalarProperty Name="LocationEN" ColumnName="LocationEN" />
+          <ScalarProperty Name="LocationEE" ColumnName="LocationEE" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="MoreStreet2" ColumnName="MoreStreet2" />
+          <ScalarProperty Name="LocationStartNStreet2" ColumnName="LocationStartNStreet2" />
+          <ScalarProperty Name="LocationStartEStreet2" ColumnName="LocationStartEStreet2" />
+          <ScalarProperty Name="LocationENStreet2" ColumnName="LocationENStreet2" />
+          <ScalarProperty Name="LocationEEStreet2" ColumnName="LocationEEStreet2" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="IsSampled" ColumnName="IsSampled" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="InspectorBy" ColumnName="InspectorBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factories">
+      <EntityTypeMapping TypeName="QCModel.Factory">
+        <MappingFragment StoreEntitySet="Factories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Lang" ColumnName="Lang" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="ResponsibleManager" ColumnName="ResponsibleManager" />
+          <ScalarProperty Name="ResponsibleManagerCertified" ColumnName="ResponsibleManagerCertified" />
+          <ScalarProperty Name="TechManager" ColumnName="TechManager" />
+          <ScalarProperty Name="TechManagerCertified" ColumnName="TechManagerCertified" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="ProductEnergy" ColumnName="ProductEnergy" />
+          <ScalarProperty Name="DailyProductRating" ColumnName="DailyProductRating" />
+          <ScalarProperty Name="CodeNo" ColumnName="CodeNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FactoryEquipments">
+      <EntityTypeMapping TypeName="QCModel.FactoryEquipment">
+        <MappingFragment StoreEntitySet="FactoryEquipments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="EquipWorking" ColumnName="EquipWorking" />
+          <ScalarProperty Name="EquipNoWorking" ColumnName="EquipNoWorking" />
+          <ScalarProperty Name="EquipSpare" ColumnName="EquipSpare" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factorys">
+      <EntityTypeMapping TypeName="QCModel.Factory1">
+        <MappingFragment StoreEntitySet="Factorys">
+          <ScalarProperty Name="FactoryID" ColumnName="FactoryID" />
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+          <ScalarProperty Name="FactoryEngName" ColumnName="FactoryEngName" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="AddressDetail" ColumnName="AddressDetail" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ManagerRespons" ColumnName="ManagerRespons" />
+          <ScalarProperty Name="ManagerCert" ColumnName="ManagerCert" />
+          <ScalarProperty Name="ManagerTech" ColumnName="ManagerTech" />
+          <ScalarProperty Name="ManagerTechCert" ColumnName="ManagerTechCert" />
+          <ScalarProperty Name="ProductivityPower" ColumnName="ProductivityPower" />
+          <ScalarProperty Name="AvgDailyProd" ColumnName="AvgDailyProd" />
+          <ScalarProperty Name="StandardDiviation" ColumnName="StandardDiviation" />
+          <ScalarProperty Name="StandardDiv30" ColumnName="StandardDiv30" />
+          <ScalarProperty Name="StandardDiv35" ColumnName="StandardDiv35" />
+          <ScalarProperty Name="StandardDiv40" ColumnName="StandardDiv40" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralSampleTypes">
+      <EntityTypeMapping TypeName="QCModel.GeneralSampleType">
+        <MappingFragment StoreEntitySet="GeneralSampleTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapRoles">
+      <EntityTypeMapping TypeName="QCModel.MapRole">
+        <MappingFragment StoreEntitySet="MapRoles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapUserProjects">
+      <EntityTypeMapping TypeName="QCModel.MapUserProject">
+        <MappingFragment StoreEntitySet="MapUserProjects">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="ProjectUserId" ColumnName="ProjectUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapUserRoles">
+      <EntityTypeMapping TypeName="QCModel.MapUserRole">
+        <MappingFragment StoreEntitySet="MapUserRoles">
+          <ScalarProperty Name="MapUserId" ColumnName="MapUserId" />
+          <ScalarProperty Name="MapRoleId" ColumnName="MapRoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MapUsers">
+      <EntityTypeMapping TypeName="QCModel.MapUser">
+        <MappingFragment StoreEntitySet="MapUsers">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Mob" ColumnName="Mob" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarshalAsphaltSpecs">
+      <EntityTypeMapping TypeName="QCModel.MarshalAsphaltSpec">
+        <MappingFragment StoreEntitySet="MarshalAsphaltSpec">
+          <ScalarProperty Name="TypeNum" ColumnName="TypeNum" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="tasphalt" ColumnName="tasphalt" />
+          <ScalarProperty Name="basphalt" ColumnName="basphalt" />
+          <ScalarProperty Name="stability" ColumnName="stability" />
+          <ScalarProperty Name="lostability" ColumnName="lostability" />
+          <ScalarProperty Name="tflow" ColumnName="tflow" />
+          <ScalarProperty Name="bflow" ColumnName="bflow" />
+          <ScalarProperty Name="tairvoid" ColumnName="tairvoid" />
+          <ScalarProperty Name="bairvoid" ColumnName="bairvoid" />
+          <ScalarProperty Name="tfilvoid" ColumnName="tfilvoid" />
+          <ScalarProperty Name="bfilvoid" ColumnName="bfilvoid" />
+          <ScalarProperty Name="ts15" ColumnName="ts15" />
+          <ScalarProperty Name="bs15" ColumnName="bs15" />
+          <ScalarProperty Name="ts1" ColumnName="ts1" />
+          <ScalarProperty Name="bs1" ColumnName="bs1" />
+          <ScalarProperty Name="ts34" ColumnName="ts34" />
+          <ScalarProperty Name="bs34" ColumnName="bs34" />
+          <ScalarProperty Name="ts12" ColumnName="ts12" />
+          <ScalarProperty Name="bs12" ColumnName="bs12" />
+          <ScalarProperty Name="ts38" ColumnName="ts38" />
+          <ScalarProperty Name="bs38" ColumnName="bs38" />
+          <ScalarProperty Name="ts4" ColumnName="ts4" />
+          <ScalarProperty Name="bs4" ColumnName="bs4" />
+          <ScalarProperty Name="ts10" ColumnName="ts10" />
+          <ScalarProperty Name="bs10" ColumnName="bs10" />
+          <ScalarProperty Name="ts40" ColumnName="ts40" />
+          <ScalarProperty Name="bs40" ColumnName="bs40" />
+          <ScalarProperty Name="ts80" ColumnName="ts80" />
+          <ScalarProperty Name="bs80" ColumnName="bs80" />
+          <ScalarProperty Name="ts200" ColumnName="ts200" />
+          <ScalarProperty Name="bs200" ColumnName="bs200" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarshalAspMixDesApps">
+      <EntityTypeMapping TypeName="QCModel.MarshalAspMixDesApp">
+        <MappingFragment StoreEntitySet="MarshalAspMixDesApp">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="IsLabEngineer" ColumnName="IsLabEngineer" />
+          <ScalarProperty Name="Pin1" ColumnName="Pin1" />
+          <ScalarProperty Name="Pin2" ColumnName="Pin2" />
+          <ScalarProperty Name="Pin3" ColumnName="Pin3" />
+          <ScalarProperty Name="Pin4" ColumnName="Pin4" />
+          <ScalarProperty Name="Pin5" ColumnName="Pin5" />
+          <ScalarProperty Name="Filler" ColumnName="Filler" />
+          <ScalarProperty Name="PinTot" ColumnName="PinTot" />
+          <ScalarProperty Name="S11B2P1" ColumnName="S11B2P1" />
+          <ScalarProperty Name="S11B2P2" ColumnName="S11B2P2" />
+          <ScalarProperty Name="S11B2P3" ColumnName="S11B2P3" />
+          <ScalarProperty Name="S11B2P4" ColumnName="S11B2P4" />
+          <ScalarProperty Name="S11B2P5" ColumnName="S11B2P5" />
+          <ScalarProperty Name="S11B2F" ColumnName="S11B2F" />
+          <ScalarProperty Name="S11B2Tot" ColumnName="S11B2Tot" />
+          <ScalarProperty Name="S1P1" ColumnName="S1P1" />
+          <ScalarProperty Name="S1P2" ColumnName="S1P2" />
+          <ScalarProperty Name="S1P3" ColumnName="S1P3" />
+          <ScalarProperty Name="S1P4" ColumnName="S1P4" />
+          <ScalarProperty Name="S1P5" ColumnName="S1P5" />
+          <ScalarProperty Name="S1F" ColumnName="S1F" />
+          <ScalarProperty Name="TotS1" ColumnName="TotS1" />
+          <ScalarProperty Name="S3B4P1" ColumnName="S3B4P1" />
+          <ScalarProperty Name="S3B4P2" ColumnName="S3B4P2" />
+          <ScalarProperty Name="S3B4P3" ColumnName="S3B4P3" />
+          <ScalarProperty Name="S3B4P4" ColumnName="S3B4P4" />
+          <ScalarProperty Name="S3B4P5" ColumnName="S3B4P5" />
+          <ScalarProperty Name="S3B4F" ColumnName="S3B4F" />
+          <ScalarProperty Name="TotS3B4" ColumnName="TotS3B4" />
+          <ScalarProperty Name="S1B2P1" ColumnName="S1B2P1" />
+          <ScalarProperty Name="S1B2P2" ColumnName="S1B2P2" />
+          <ScalarProperty Name="S1B2P3" ColumnName="S1B2P3" />
+          <ScalarProperty Name="S1B2P4" ColumnName="S1B2P4" />
+          <ScalarProperty Name="S1B2P5" ColumnName="S1B2P5" />
+          <ScalarProperty Name="S1B2F" ColumnName="S1B2F" />
+          <ScalarProperty Name="TotS1B2" ColumnName="TotS1B2" />
+          <ScalarProperty Name="S3B8P1" ColumnName="S3B8P1" />
+          <ScalarProperty Name="S3B8P2" ColumnName="S3B8P2" />
+          <ScalarProperty Name="S3B8P3" ColumnName="S3B8P3" />
+          <ScalarProperty Name="S3B8P4" ColumnName="S3B8P4" />
+          <ScalarProperty Name="S3B8P5" ColumnName="S3B8P5" />
+          <ScalarProperty Name="S3B8F" ColumnName="S3B8F" />
+          <ScalarProperty Name="TotS3B8" ColumnName="TotS3B8" />
+          <ScalarProperty Name="S4P1" ColumnName="S4P1" />
+          <ScalarProperty Name="S4P2" ColumnName="S4P2" />
+          <ScalarProperty Name="S4P3" ColumnName="S4P3" />
+          <ScalarProperty Name="S4P4" ColumnName="S4P4" />
+          <ScalarProperty Name="S4P5" ColumnName="S4P5" />
+          <ScalarProperty Name="S4F" ColumnName="S4F" />
+          <ScalarProperty Name="S4Tot" ColumnName="S4Tot" />
+          <ScalarProperty Name="S10P1" ColumnName="S10P1" />
+          <ScalarProperty Name="S10P2" ColumnName="S10P2" />
+          <ScalarProperty Name="S10P3" ColumnName="S10P3" />
+          <ScalarProperty Name="S10P4" ColumnName="S10P4" />
+          <ScalarProperty Name="S10P5" ColumnName="S10P5" />
+          <ScalarProperty Name="S10F" ColumnName="S10F" />
+          <ScalarProperty Name="S10Tot" ColumnName="S10Tot" />
+          <ScalarProperty Name="S40P1" ColumnName="S40P1" />
+          <ScalarProperty Name="S40P2" ColumnName="S40P2" />
+          <ScalarProperty Name="S40P3" ColumnName="S40P3" />
+          <ScalarProperty Name="S40P4" ColumnName="S40P4" />
+          <ScalarProperty Name="S40P5" ColumnName="S40P5" />
+          <ScalarProperty Name="S40F" ColumnName="S40F" />
+          <ScalarProperty Name="S40Tot" ColumnName="S40Tot" />
+          <ScalarProperty Name="S80P1" ColumnName="S80P1" />
+          <ScalarProperty Name="S80P2" ColumnName="S80P2" />
+          <ScalarProperty Name="S80P3" ColumnName="S80P3" />
+          <ScalarProperty Name="S80P4" ColumnName="S80P4" />
+          <ScalarProperty Name="S80P5" ColumnName="S80P5" />
+          <ScalarProperty Name="S80F" ColumnName="S80F" />
+          <ScalarProperty Name="S80Tot" ColumnName="S80Tot" />
+          <ScalarProperty Name="S200P1" ColumnName="S200P1" />
+          <ScalarProperty Name="S200P2" ColumnName="S200P2" />
+          <ScalarProperty Name="S200P3" ColumnName="S200P3" />
+          <ScalarProperty Name="S200P4" ColumnName="S200P4" />
+          <ScalarProperty Name="S200P5" ColumnName="S200P5" />
+          <ScalarProperty Name="S200F" ColumnName="S200F" />
+          <ScalarProperty Name="S200Tot" ColumnName="S200Tot" />
+          <ScalarProperty Name="Pb" ColumnName="Pb" />
+          <ScalarProperty Name="Gmb" ColumnName="Gmb" />
+          <ScalarProperty Name="Gmm" ColumnName="Gmm" />
+          <ScalarProperty Name="AirVoid" ColumnName="AirVoid" />
+          <ScalarProperty Name="VoidsFilled" ColumnName="VoidsFilled" />
+          <ScalarProperty Name="Stability30" ColumnName="Stability30" />
+          <ScalarProperty Name="LossOfStability" ColumnName="LossOfStability" />
+          <ScalarProperty Name="Flow" ColumnName="Flow" />
+          <ScalarProperty Name="PI" ColumnName="PI" />
+          <ScalarProperty Name="Gsb" ColumnName="Gsb" />
+          <ScalarProperty Name="SandEquivalent" ColumnName="SandEquivalent" />
+          <ScalarProperty Name="AbrasionValue" ColumnName="AbrasionValue" />
+          <ScalarProperty Name="ClayAndLumps" ColumnName="ClayAndLumps" />
+          <ScalarProperty Name="ThinAndElongated" ColumnName="ThinAndElongated" />
+          <ScalarProperty Name="Soundness" ColumnName="Soundness" />
+          <ScalarProperty Name="CrushedParticles_CA" ColumnName="CrushedParticles_CA" />
+          <ScalarProperty Name="Crushedparticles_FA" ColumnName="Crushedparticles_FA" />
+          <ScalarProperty Name="Coating" ColumnName="Coating" />
+          <ScalarProperty Name="AggFactor" ColumnName="AggFactor" />
+          <ScalarProperty Name="DateIn" ColumnName="DateIn" />
+          <ScalarProperty Name="AttemptNo" ColumnName="AttemptNo" />
+          <ScalarProperty Name="Fail" ColumnName="Fail" />
+          <ScalarProperty Name="FatBlend" ColumnName="FatBlend" />
+          <ScalarProperty Name="FatSE" ColumnName="FatSE" />
+          <ScalarProperty Name="FatAValue" ColumnName="FatAValue" />
+          <ScalarProperty Name="FatCL" ColumnName="FatCL" />
+          <ScalarProperty Name="FatTAE" ColumnName="FatTAE" />
+          <ScalarProperty Name="FatSoundness" ColumnName="FatSoundness" />
+          <ScalarProperty Name="FatCA" ColumnName="FatCA" />
+          <ScalarProperty Name="FatFA" ColumnName="FatFA" />
+          <ScalarProperty Name="FatCoating" ColumnName="FatCoating" />
+          <ScalarProperty Name="FatPI" ColumnName="FatPI" />
+          <ScalarProperty Name="FatAV" ColumnName="FatAV" />
+          <ScalarProperty Name="FatVF" ColumnName="FatVF" />
+          <ScalarProperty Name="FatS30" ColumnName="FatS30" />
+          <ScalarProperty Name="FatLOS" ColumnName="FatLOS" />
+          <ScalarProperty Name="FatFlow" ColumnName="FatFlow" />
+          <ScalarProperty Name="PlantLocationId" ColumnName="PlantLocationId" />
+          <ScalarProperty Name="AsphaltTypesId" ColumnName="AsphaltTypesId" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarshalMixDesigns">
+      <EntityTypeMapping TypeName="QCModel.MarshalMixDesign">
+        <MappingFragment StoreEntitySet="MarshalMixDesigns">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="PlantNo" ColumnName="PlantNo" />
+          <ScalarProperty Name="TypeNum" ColumnName="TypeNum" />
+          <ScalarProperty Name="SupressIt" ColumnName="SupressIt" />
+          <ScalarProperty Name="ApprovalDate" ColumnName="ApprovalDate" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="PreviousDateEnd" ColumnName="PreviousDateEnd" />
+          <ScalarProperty Name="Approved_Date_H" ColumnName="Approved_Date_H" />
+          <ScalarProperty Name="End_Date_H" ColumnName="End_Date_H" />
+          <ScalarProperty Name="DateEndExtended" ColumnName="DateEndExtended" />
+          <ScalarProperty Name="DateEndExtended_H" ColumnName="DateEndExtended_H" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="MaxAsphaltRatio" ColumnName="MaxAsphaltRatio" />
+          <ScalarProperty Name="MinAsphaltRatio" ColumnName="MinAsphaltRatio" />
+          <ScalarProperty Name="StabilityAfter30Min" ColumnName="StabilityAfter30Min" />
+          <ScalarProperty Name="AGS_LossOfStability" ColumnName="AGS_LossOfStability" />
+          <ScalarProperty Name="MaxFlow" ColumnName="MaxFlow" />
+          <ScalarProperty Name="Flow" ColumnName="Flow" />
+          <ScalarProperty Name="MaxAirVoids" ColumnName="MaxAirVoids" />
+          <ScalarProperty Name="AirVoids" ColumnName="AirVoids" />
+          <ScalarProperty Name="MaxFilledVoids" ColumnName="MaxFilledVoids" />
+          <ScalarProperty Name="FilledVoids" ColumnName="FilledVoids" />
+          <ScalarProperty Name="AggregateFilledVoids" ColumnName="AggregateFilledVoids" />
+          <ScalarProperty Name="CompTop" ColumnName="CompTop" />
+          <ScalarProperty Name="CompBot" ColumnName="CompBot" />
+          <ScalarProperty Name="Gmm" ColumnName="Gmm" />
+          <ScalarProperty Name="Gmb" ColumnName="Gmb" />
+          <ScalarProperty Name="Gsb" ColumnName="Gsb" />
+          <ScalarProperty Name="SIEVE_11By2" ColumnName="SIEVE_11By2" />
+          <ScalarProperty Name="SIEVE_1" ColumnName="SIEVE_1" />
+          <ScalarProperty Name="SIEVE_3By4" ColumnName="SIEVE_3By4" />
+          <ScalarProperty Name="SIEVE_1By2" ColumnName="SIEVE_1By2" />
+          <ScalarProperty Name="SIEVE_3By8" ColumnName="SIEVE_3By8" />
+          <ScalarProperty Name="SIEVE_4" ColumnName="SIEVE#4" />
+          <ScalarProperty Name="SIEVE_10" ColumnName="SIEVE#10" />
+          <ScalarProperty Name="SIEVE_40" ColumnName="SIEVE#40" />
+          <ScalarProperty Name="SIEVE_80" ColumnName="SIEVE#80" />
+          <ScalarProperty Name="SIEVE_200" ColumnName="SIEVE#200" />
+          <ScalarProperty Name="Bowder" ColumnName="Bowder" />
+          <ScalarProperty Name="Max11By2" ColumnName="Max11By2" />
+          <ScalarProperty Name="Min_11By2" ColumnName="Min_11By2" />
+          <ScalarProperty Name="Max_1" ColumnName="Max_1" />
+          <ScalarProperty Name="Min_1" ColumnName="Min_1" />
+          <ScalarProperty Name="Max_3By4" ColumnName="Max_3By4" />
+          <ScalarProperty Name="Min_3By4" ColumnName="Min_3By4" />
+          <ScalarProperty Name="Max_1By2" ColumnName="Max_1By2" />
+          <ScalarProperty Name="Min_1By2" ColumnName="Min_1By2" />
+          <ScalarProperty Name="Max_3By8" ColumnName="Max_3By8" />
+          <ScalarProperty Name="Min_3By8" ColumnName="Min_3By8" />
+          <ScalarProperty Name="Max__4" ColumnName="Max#_4" />
+          <ScalarProperty Name="Min__4" ColumnName="Min#_4" />
+          <ScalarProperty Name="Max__10" ColumnName="Max#_10" />
+          <ScalarProperty Name="Min__10" ColumnName="Min#_10" />
+          <ScalarProperty Name="Max__40" ColumnName="Max#_40" />
+          <ScalarProperty Name="Min__40" ColumnName="Min#_40" />
+          <ScalarProperty Name="Max__80" ColumnName="Max#_80" />
+          <ScalarProperty Name="Min__80" ColumnName="Min#_80" />
+          <ScalarProperty Name="Max__200" ColumnName="Max#_200" />
+          <ScalarProperty Name="Min__200" ColumnName="Min#_200" />
+          <ScalarProperty Name="pb" ColumnName="pb" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="LPrint" ColumnName="LPrint" />
+          <ScalarProperty Name="aggfactor" ColumnName="aggfactor" />
+          <ScalarProperty Name="SupLocation" ColumnName="SupLocation" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Activate" ColumnName="Activate" />
+          <ScalarProperty Name="DateIn" ColumnName="DateIn" />
+          <ScalarProperty Name="JMFRequested" ColumnName="JMFRequested" />
+          <ScalarProperty Name="JMFRequestedH" ColumnName="JMFRequestedH" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarshalSampleResults">
+      <EntityTypeMapping TypeName="QCModel.MarshalSampleResult">
+        <MappingFragment StoreEntitySet="MarshalSampleResults">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="Pb" ColumnName="Pb" />
+          <ScalarProperty Name="Gmm" ColumnName="Gmm" />
+          <ScalarProperty Name="Gmmb" ColumnName="Gmmb" />
+          <ScalarProperty Name="GmmPercent" ColumnName="GmmPercent" />
+          <ScalarProperty Name="VMA" ColumnName="VMA" />
+          <ScalarProperty Name="VFA" ColumnName="VFA" />
+          <ScalarProperty Name="AVpercent" ColumnName="AVpercent" />
+          <ScalarProperty Name="SieveOne" ColumnName="SieveOne" />
+          <ScalarProperty Name="SieveOneAndHalf" ColumnName="SieveOneAndHalf" />
+          <ScalarProperty Name="SieveThreeByFour" ColumnName="SieveThreeByFour" />
+          <ScalarProperty Name="SieveHalf" ColumnName="SieveHalf" />
+          <ScalarProperty Name="SieveThreeBYEight" ColumnName="SieveThreeBYEight" />
+          <ScalarProperty Name="SieveFour" ColumnName="SieveFour" />
+          <ScalarProperty Name="SieveEight" ColumnName="SieveEight" />
+          <ScalarProperty Name="SieveFifteen" ColumnName="SieveFifteen" />
+          <ScalarProperty Name="SieveHandreed" ColumnName="SieveHandreed" />
+          <ScalarProperty Name="SieveTwoHandreed" ColumnName="SieveTwoHandreed" />
+          <ScalarProperty Name="Sieve10" ColumnName="Sieve10" />
+          <ScalarProperty Name="Sieve40" ColumnName="Sieve40" />
+          <ScalarProperty Name="Sieve80" ColumnName="Sieve80" />
+          <ScalarProperty Name="Stability" ColumnName="Stability" />
+          <ScalarProperty Name="LossStability30min" ColumnName="LossStability30min" />
+          <ScalarProperty Name="Flow" ColumnName="Flow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarshalSamples">
+      <EntityTypeMapping TypeName="QCModel.MarshalSample">
+        <MappingFragment StoreEntitySet="MarshalSamples">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="RNo" ColumnName="RNo" />
+          <ScalarProperty Name="DateSampled" ColumnName="DateSampled" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="PlantNo" ColumnName="PlantNo" />
+          <ScalarProperty Name="TypeNum" ColumnName="TypeNum" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="ClientNo" ColumnName="ClientNo" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="PermitNo" ColumnName="PermitNo" />
+          <ScalarProperty Name="SectionNo" ColumnName="SectionNo" />
+          <ScalarProperty Name="Station" ColumnName="Station" />
+          <ScalarProperty Name="PranshMenciplitiy" ColumnName="PranshMenciplitiy" />
+          <ScalarProperty Name="StartN" ColumnName="StartN" />
+          <ScalarProperty Name="StartE" ColumnName="StartE" />
+          <ScalarProperty Name="EndN" ColumnName="EndN" />
+          <ScalarProperty Name="EndE" ColumnName="EndE" />
+          <ScalarProperty Name="SLocationN" ColumnName="SLocationN" />
+          <ScalarProperty Name="SLocationE" ColumnName="SLocationE" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="SavedBy" ColumnName="SavedBy" />
+          <ScalarProperty Name="RequiredTests" ColumnName="RequiredTests" />
+          <ScalarProperty Name="Coordinates" ColumnName="Coordinates" />
+          <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+          <ScalarProperty Name="IsHandOver" ColumnName="IsHandOver" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="ReTest" ColumnName="ReTest" />
+          <ScalarProperty Name="MType" ColumnName="MType" />
+          <ScalarProperty Name="Elevation" ColumnName="Elevation" />
+          <ScalarProperty Name="JMFRequested" ColumnName="JMFRequested" />
+          <ScalarProperty Name="JMFRequestedH" ColumnName="JMFRequestedH" />
+          <ScalarProperty Name="DaysToFinish" ColumnName="DaysToFinish" />
+          <ScalarProperty Name="FinishDateIn" ColumnName="FinishDateIn" />
+          <ScalarProperty Name="ASQuantity" ColumnName="ASQuantity" />
+          <ScalarProperty Name="TypeReport" ColumnName="TypeReport" />
+          <ScalarProperty Name="LabSampleRequest" ColumnName="LabSampleRequest" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="SampleBy" ColumnName="SampleBy" />
+          <ScalarProperty Name="GehaName" ColumnName="GehaName" />
+          <ScalarProperty Name="GehaUserId" ColumnName="GehaUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitLocationTests">
+      <EntityTypeMapping TypeName="QCModel.PermitLocationTest">
+        <MappingFragment StoreEntitySet="PermitLocationTests">
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="PermitId" ColumnName="PermitId" />
+          <ScalarProperty Name="RC2" ColumnName="RC2" />
+          <ScalarProperty Name="MC1" ColumnName="MC1" />
+          <ScalarProperty Name="Compaction" ColumnName="Compaction" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="IsAmanaTest" ColumnName="IsAmanaTest" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="lang" ColumnName="lang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permits">
+      <EntityTypeMapping TypeName="QCModel.Permit">
+        <MappingFragment StoreEntitySet="Permits">
+          <ScalarProperty Name="PermitID" ColumnName="PermitID" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PermitDate" ColumnName="PermitDate" />
+          <ScalarProperty Name="MuncipityId" ColumnName="MuncipityId" />
+          <ScalarProperty Name="Zone" ColumnName="Zone" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="NoLayers" ColumnName="NoLayers" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ExtensionType" ColumnName="ExtensionType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="OuterLabId" ColumnName="OuterLabId" />
+          <ScalarProperty Name="RelatedCompanyId" ColumnName="RelatedCompanyId" />
+          <ScalarProperty Name="PermitNumber" ColumnName="PermitNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitVisionTestDetails">
+      <EntityTypeMapping TypeName="QCModel.PermitVisionTestDetail">
+        <MappingFragment StoreEntitySet="PermitVisionTestDetails">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PermitId" ColumnName="PermitId" />
+          <ScalarProperty Name="ImageSrc" ColumnName="ImageSrc" />
+          <ScalarProperty Name="LocationX" ColumnName="LocationX" />
+          <ScalarProperty Name="LocationY" ColumnName="LocationY" />
+          <ScalarProperty Name="PermitVisionTestId" ColumnName="PermitVisionTestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PermitVisionTests">
+      <EntityTypeMapping TypeName="QCModel.PermitVisionTest">
+        <MappingFragment StoreEntitySet="PermitVisionTests">
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="PermitId" ColumnName="PermitId" />
+          <ScalarProperty Name="VisionTest" ColumnName="VisionTest" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="IsAmanaTest" ColumnName="IsAmanaTest" />
+          <ScalarProperty Name="ResonOfFail" ColumnName="ResonOfFail" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Lang" ColumnName="Lang" />
+          <ScalarProperty Name="TechniqName" ColumnName="TechniqName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlantLocations">
+      <EntityTypeMapping TypeName="QCModel.PlantLocation">
+        <MappingFragment StoreEntitySet="PlantLocation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PlantLocation1" ColumnName="PlantLocation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plants">
+      <EntityTypeMapping TypeName="QCModel.Plant">
+        <MappingFragment StoreEntitySet="Plants">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PlantLocationId" ColumnName="PlantLocationId" />
+          <ScalarProperty Name="PlantName" ColumnName="PlantName" />
+          <ScalarProperty Name="MapPath" ColumnName="MapPath" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PlantManagerId" ColumnName="PlantManagerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="QCModel.Project">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Project1" ColumnName="Project" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="DateStart" ColumnName="DateStart" />
+          <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QCWorkFlows">
+      <EntityTypeMapping TypeName="QCModel.QCWorkFlow">
+        <MappingFragment StoreEntitySet="QCWorkFlow">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PermitId" ColumnName="PermitId" />
+          <ScalarProperty Name="IsPermitLocationTest" ColumnName="IsPermitLocationTest" />
+          <ScalarProperty Name="DateLocationTest" ColumnName="DateLocationTest" />
+          <ScalarProperty Name="IsVisionTest" ColumnName="IsVisionTest" />
+          <ScalarProperty Name="DateVisionTest" ColumnName="DateVisionTest" />
+          <ScalarProperty Name="IsPermitAssignToLab" ColumnName="IsPermitAssignToLab" />
+          <ScalarProperty Name="IsPermitAssignToRelatedCompany" ColumnName="IsPermitAssignToRelatedCompany" />
+          <ScalarProperty Name="IsPermitAssignedToAmana" ColumnName="IsPermitAssignedToAmana" />
+          <ScalarProperty Name="IsVisionTestFailedCompany" ColumnName="IsVisionTestFailedCompany" />
+          <ScalarProperty Name="IsVisionTestFailedAmana" ColumnName="IsVisionTestFailedAmana" />
+          <ScalarProperty Name="IsLocationTestFailedAmana" ColumnName="IsLocationTestFailedAmana" />
+          <ScalarProperty Name="IsPermitFinised" ColumnName="IsPermitFinised" />
+          <ScalarProperty Name="FailedReason" ColumnName="FailedReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SamplesWorkFlows">
+      <EntityTypeMapping TypeName="QCModel.SamplesWorkFlow">
+        <MappingFragment StoreEntitySet="SamplesWorkFlows">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="GeneralSampleTypeId" ColumnName="GeneralSampleTypeId" />
+          <ScalarProperty Name="InspectorManagerAssigned" ColumnName="InspectorManagerAssigned" />
+          <ScalarProperty Name="InspectorManager" ColumnName="InspectorManager" />
+          <ScalarProperty Name="InspectorConfirm" ColumnName="InspectorConfirm" />
+          <ScalarProperty Name="InspectorConfirmed" ColumnName="InspectorConfirmed" />
+          <ScalarProperty Name="Receptioned" ColumnName="Receptioned" />
+          <ScalarProperty Name="Reception" ColumnName="Reception" />
+          <ScalarProperty Name="Compactioned" ColumnName="Compactioned" />
+          <ScalarProperty Name="Compaction" ColumnName="Compaction" />
+          <ScalarProperty Name="Tested" ColumnName="Tested" />
+          <ScalarProperty Name="Test" ColumnName="Test" />
+          <ScalarProperty Name="Printed" ColumnName="Printed" />
+          <ScalarProperty Name="Print" ColumnName="Print" />
+          <ScalarProperty Name="MarshalJmRequested" ColumnName="MarshalJmRequested" />
+          <ScalarProperty Name="MarshalJmRequest" ColumnName="MarshalJmRequest" />
+          <ScalarProperty Name="IsReceptionManually" ColumnName="IsReceptionManually" />
+          <ScalarProperty Name="RequestNumber" ColumnName="RequestNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoilDesigns">
+      <EntityTypeMapping TypeName="QCModel.SoilDesign">
+        <MappingFragment StoreEntitySet="SoilDesigns">
+          <ScalarProperty Name="SoilTypeId" ColumnName="SoilTypeId" />
+          <ScalarProperty Name="T3" ColumnName="T3" />
+          <ScalarProperty Name="T2" ColumnName="T2" />
+          <ScalarProperty Name="T15F" ColumnName="T15F" />
+          <ScalarProperty Name="T15T" ColumnName="T15T" />
+          <ScalarProperty Name="T1F" ColumnName="T1F" />
+          <ScalarProperty Name="T1T" ColumnName="T1T" />
+          <ScalarProperty Name="T34T" ColumnName="T34T" />
+          <ScalarProperty Name="T34F" ColumnName="T34F" />
+          <ScalarProperty Name="T5F" ColumnName="T5F" />
+          <ScalarProperty Name="T5T" ColumnName="T5T" />
+          <ScalarProperty Name="T38F" ColumnName="T38F" />
+          <ScalarProperty Name="T38T" ColumnName="T38T" />
+          <ScalarProperty Name="T4F" ColumnName="T4F" />
+          <ScalarProperty Name="T4T" ColumnName="T4T" />
+          <ScalarProperty Name="T10F" ColumnName="T10F" />
+          <ScalarProperty Name="T10T" ColumnName="T10T" />
+          <ScalarProperty Name="T20F" ColumnName="T20F" />
+          <ScalarProperty Name="T20T" ColumnName="T20T" />
+          <ScalarProperty Name="T40F" ColumnName="T40F" />
+          <ScalarProperty Name="T40T" ColumnName="T40T" />
+          <ScalarProperty Name="T80F" ColumnName="T80F" />
+          <ScalarProperty Name="T80T" ColumnName="T80T" />
+          <ScalarProperty Name="T200F" ColumnName="T200F" />
+          <ScalarProperty Name="T200T" ColumnName="T200T" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoilMoistures">
+      <EntityTypeMapping TypeName="QCModel.SoilMoisture">
+        <MappingFragment StoreEntitySet="SoilMoistures">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="Moist1" ColumnName="Moist1" />
+          <ScalarProperty Name="Moist2" ColumnName="Moist2" />
+          <ScalarProperty Name="Moist3" ColumnName="Moist3" />
+          <ScalarProperty Name="MoistureCont" ColumnName="MoistureCont" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoilResults">
+      <EntityTypeMapping TypeName="QCModel.SoilResult">
+        <MappingFragment StoreEntitySet="SoilResults">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="SieveOne" ColumnName="SieveOne" />
+          <ScalarProperty Name="SieveOneAndHalf" ColumnName="SieveOneAndHalf" />
+          <ScalarProperty Name="SieveThreeByFour" ColumnName="SieveThreeByFour" />
+          <ScalarProperty Name="SieveThreeBYEight" ColumnName="SieveThreeBYEight" />
+          <ScalarProperty Name="SieveFour" ColumnName="SieveFour" />
+          <ScalarProperty Name="SieveThree" ColumnName="SieveThree" />
+          <ScalarProperty Name="SieveTeen" ColumnName="SieveTeen" />
+          <ScalarProperty Name="SieveTwoHandreed" ColumnName="SieveTwoHandreed" />
+          <ScalarProperty Name="SieveTwo" ColumnName="SieveTwo" />
+          <ScalarProperty Name="SieveForty" ColumnName="SieveForty" />
+          <ScalarProperty Name="SieveHalf" ColumnName="SieveHalf" />
+          <ScalarProperty Name="SieveTwenty" ColumnName="SieveTwenty" />
+          <ScalarProperty Name="SieveEighteen" ColumnName="SieveEighteen" />
+          <ScalarProperty Name="NoBlows" ColumnName="NoBlows" />
+          <ScalarProperty Name="NoLayers" ColumnName="NoLayers" />
+          <ScalarProperty Name="MaxDryDensity" ColumnName="MaxDryDensity" />
+          <ScalarProperty Name="MoistureContent" ColumnName="MoistureContent" />
+          <ScalarProperty Name="Liquidlimit" ColumnName="Liquidlimit" />
+          <ScalarProperty Name="PlasticLimit" ColumnName="PlasticLimit" />
+          <ScalarProperty Name="PlasticityIndex" ColumnName="PlasticityIndex" />
+          <ScalarProperty Name="GroupIndex" ColumnName="GroupIndex" />
+          <ScalarProperty Name="SoilClassification" ColumnName="SoilClassification" />
+          <ScalarProperty Name="MoistureInLocation" ColumnName="MoistureInLocation" />
+          <ScalarProperty Name="CompactionRatioInLocation" ColumnName="CompactionRatioInLocation" />
+          <ScalarProperty Name="MC1" ColumnName="MC1" />
+          <ScalarProperty Name="MC2" ColumnName="MC2" />
+          <ScalarProperty Name="MC3" ColumnName="MC3" />
+          <ScalarProperty Name="MC4" ColumnName="MC4" />
+          <ScalarProperty Name="MC5" ColumnName="MC5" />
+          <ScalarProperty Name="DR1" ColumnName="DR1" />
+          <ScalarProperty Name="DR2" ColumnName="DR2" />
+          <ScalarProperty Name="DR3" ColumnName="DR3" />
+          <ScalarProperty Name="DR4" ColumnName="DR4" />
+          <ScalarProperty Name="DR5" ColumnName="DR5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoilSampleResults">
+      <EntityTypeMapping TypeName="QCModel.SoilSampleResult">
+        <MappingFragment StoreEntitySet="SoilSampleResults">
+          <ScalarProperty Name="SampleNO" ColumnName="SampleNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoilSamples">
+      <EntityTypeMapping TypeName="QCModel.SoilSample">
+        <MappingFragment StoreEntitySet="SoilSamples">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="RNo" ColumnName="RNo" />
+          <ScalarProperty Name="DateSampled" ColumnName="DateSampled" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="ClientNo" ColumnName="ClientNo" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="PermitNo" ColumnName="PermitNo" />
+          <ScalarProperty Name="SectionNo" ColumnName="SectionNo" />
+          <ScalarProperty Name="Station" ColumnName="Station" />
+          <ScalarProperty Name="PranshMenciplitiy" ColumnName="PranshMenciplitiy" />
+          <ScalarProperty Name="StartN" ColumnName="StartN" />
+          <ScalarProperty Name="StartE" ColumnName="StartE" />
+          <ScalarProperty Name="EndN" ColumnName="EndN" />
+          <ScalarProperty Name="EndE" ColumnName="EndE" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="RequiredTests" ColumnName="RequiredTests" />
+          <ScalarProperty Name="Coordinates" ColumnName="Coordinates" />
+          <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+          <ScalarProperty Name="IsHandOver" ColumnName="IsHandOver" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="ReTest" ColumnName="ReTest" />
+          <ScalarProperty Name="Elevation" ColumnName="Elevation" />
+          <ScalarProperty Name="ASQuantity" ColumnName="ASQuantity" />
+          <ScalarProperty Name="TypeReport" ColumnName="TypeReport" />
+          <ScalarProperty Name="SLocationN" ColumnName="SLocationN" />
+          <ScalarProperty Name="SLocationE" ColumnName="SLocationE" />
+          <ScalarProperty Name="LabSampleRequest" ColumnName="LabSampleRequest" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="SampleBy" ColumnName="SampleBy" />
+          <ScalarProperty Name="GehaName" ColumnName="GehaName" />
+          <ScalarProperty Name="GehaUserId" ColumnName="GehaUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SoilTypes">
+      <EntityTypeMapping TypeName="QCModel.SoilType">
+        <MappingFragment StoreEntitySet="SoilTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SuperPaveMixDesigns">
+      <EntityTypeMapping TypeName="QCModel.SuperPaveMixDesign">
+        <MappingFragment StoreEntitySet="SuperPaveMixDesign">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MixType" ColumnName="MixType" />
+          <ScalarProperty Name="DesignTrafficClass" ColumnName="DesignTrafficClass" />
+          <ScalarProperty Name="TrafficSpeed" ColumnName="TrafficSpeed" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="NominalMaximumSize" ColumnName="NominalMaximumSize" />
+          <ScalarProperty Name="AsphaltBinder" ColumnName="AsphaltBinder" />
+          <ScalarProperty Name="UsedBinderModifier" ColumnName="UsedBinderModifier" />
+          <ScalarProperty Name="SieveOneAndHalfPass" ColumnName="SieveOneAndHalfPass" />
+          <ScalarProperty Name="SieveOnePass" ColumnName="SieveOnePass" />
+          <ScalarProperty Name="SieveEightPass" ColumnName="SieveEightPass" />
+          <ScalarProperty Name="SieveThreeByFourPass" ColumnName="SieveThreeByFourPass" />
+          <ScalarProperty Name="SieveHalfPass" ColumnName="SieveHalfPass" />
+          <ScalarProperty Name="SiveThreeByEightPass" ColumnName="SiveThreeByEightPass" />
+          <ScalarProperty Name="SieveFourPass" ColumnName="SieveFourPass" />
+          <ScalarProperty Name="SieveSixTeenPass" ColumnName="SieveSixTeenPass" />
+          <ScalarProperty Name="SieveThrityPass" ColumnName="SieveThrityPass" />
+          <ScalarProperty Name="SieveFifteenPass" ColumnName="SieveFifteenPass" />
+          <ScalarProperty Name="SieveHandreedPass" ColumnName="SieveHandreedPass" />
+          <ScalarProperty Name="SiveTwoHandreedPass" ColumnName="SiveTwoHandreedPass" />
+          <ScalarProperty Name="SieveOneAndHalfToleranceFrom" ColumnName="SieveOneAndHalfToleranceFrom" />
+          <ScalarProperty Name="SieveOneAndHalfToleranceTo" ColumnName="SieveOneAndHalfToleranceTo" />
+          <ScalarProperty Name="SieveOneToleranceFrom" ColumnName="SieveOneToleranceFrom" />
+          <ScalarProperty Name="SieveOneToleranceTo" ColumnName="SieveOneToleranceTo" />
+          <ScalarProperty Name="SieveThreeByFourToleranceFrom" ColumnName="SieveThreeByFourToleranceFrom" />
+          <ScalarProperty Name="SieveThreeByFourToleranceTo" ColumnName="SieveThreeByFourToleranceTo" />
+          <ScalarProperty Name="SieveHalfToleranceFrom" ColumnName="SieveHalfToleranceFrom" />
+          <ScalarProperty Name="SieveHalfToleranceTo" ColumnName="SieveHalfToleranceTo" />
+          <ScalarProperty Name="SiveThreeByEightToleranceFrom" ColumnName="SiveThreeByEightToleranceFrom" />
+          <ScalarProperty Name="SiveThreeByEightToleranceTo" ColumnName="SiveThreeByEightToleranceTo" />
+          <ScalarProperty Name="SieveFourToleranceFrom" ColumnName="SieveFourToleranceFrom" />
+          <ScalarProperty Name="SieveFourToleranceTo" ColumnName="SieveFourToleranceTo" />
+          <ScalarProperty Name="SieveSixTeenToleranceFrom" ColumnName="SieveSixTeenToleranceFrom" />
+          <ScalarProperty Name="SieveSixTeenToleranceTo" ColumnName="SieveSixTeenToleranceTo" />
+          <ScalarProperty Name="SieveThrityToleranceFrom" ColumnName="SieveThrityToleranceFrom" />
+          <ScalarProperty Name="SieveThrityToleranceTo" ColumnName="SieveThrityToleranceTo" />
+          <ScalarProperty Name="SieveFifteenToleranceFrom" ColumnName="SieveFifteenToleranceFrom" />
+          <ScalarProperty Name="SieveFifteenToleranceTo" ColumnName="SieveFifteenToleranceTo" />
+          <ScalarProperty Name="SieveHundreedToleranceTo" ColumnName="SieveHundreedToleranceTo" />
+          <ScalarProperty Name="SieveHandreedToleranceFrom" ColumnName="SieveHandreedToleranceFrom" />
+          <ScalarProperty Name="SiveTwoHandreedToleranceFrom" ColumnName="SiveTwoHandreedToleranceFrom" />
+          <ScalarProperty Name="SieveEightToleranceTo" ColumnName="SieveEightToleranceTo" />
+          <ScalarProperty Name="SieveEightToleranceFrom" ColumnName="SieveEightToleranceFrom" />
+          <ScalarProperty Name="SiveTwoHandreedToleranceTo" ColumnName="SiveTwoHandreedToleranceTo" />
+          <ScalarProperty Name="ACPercentFrom" ColumnName="ACPercentFrom" />
+          <ScalarProperty Name="ACPercentTo" ColumnName="ACPercentTo" />
+          <ScalarProperty Name="AVPercentFrom" ColumnName="AVPercentFrom" />
+          <ScalarProperty Name="AVPercentTo" ColumnName="AVPercentTo" />
+          <ScalarProperty Name="GMMInitalPercentFrom" ColumnName="GMMInitalPercentFrom" />
+          <ScalarProperty Name="GMMInitalPercentTo" ColumnName="GMMInitalPercentTo" />
+          <ScalarProperty Name="GMMDesTo" ColumnName="GMMDesTo" />
+          <ScalarProperty Name="GMMDesFrom" ColumnName="GMMDesFrom" />
+          <ScalarProperty Name="GMMmaxPercentFrom" ColumnName="GMMmaxPercentFrom" />
+          <ScalarProperty Name="GMMmaxPercentTo" ColumnName="GMMmaxPercentTo" />
+          <ScalarProperty Name="LAAbrasion" ColumnName="LAAbrasion" />
+          <ScalarProperty Name="FAAngularity" ColumnName="FAAngularity" />
+          <ScalarProperty Name="SandEquivalent" ColumnName="SandEquivalent" />
+          <ScalarProperty Name="Soundness" ColumnName="Soundness" />
+          <ScalarProperty Name="AprovedDate" ColumnName="AprovedDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SuperPaveSampleResults">
+      <EntityTypeMapping TypeName="QCModel.SuperPaveSampleResult">
+        <MappingFragment StoreEntitySet="SuperPaveSampleResults">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="ACPercent" ColumnName="ACPercent" />
+          <ScalarProperty Name="Gmm" ColumnName="Gmm" />
+          <ScalarProperty Name="Gmmb" ColumnName="Gmmb" />
+          <ScalarProperty Name="GmmPercent" ColumnName="GmmPercent" />
+          <ScalarProperty Name="AVpercent" ColumnName="AVpercent" />
+          <ScalarProperty Name="SieveOne" ColumnName="SieveOne" />
+          <ScalarProperty Name="SieveOneAndHalf" ColumnName="SieveOneAndHalf" />
+          <ScalarProperty Name="SieveThreeByFour" ColumnName="SieveThreeByFour" />
+          <ScalarProperty Name="SieveHalf" ColumnName="SieveHalf" />
+          <ScalarProperty Name="SieveThreeBYEight" ColumnName="SieveThreeBYEight" />
+          <ScalarProperty Name="SieveFour" ColumnName="SieveFour" />
+          <ScalarProperty Name="SieveEight" ColumnName="SieveEight" />
+          <ScalarProperty Name="SieveSixteen" ColumnName="SieveSixteen" />
+          <ScalarProperty Name="SieveThirty" ColumnName="SieveThirty" />
+          <ScalarProperty Name="SieveFifteen" ColumnName="SieveFifteen" />
+          <ScalarProperty Name="SieveHandreed" ColumnName="SieveHandreed" />
+          <ScalarProperty Name="SieveTwoHandreed" ColumnName="SieveTwoHandreed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SuperPaveSamples">
+      <EntityTypeMapping TypeName="QCModel.SuperPaveSample">
+        <MappingFragment StoreEntitySet="SuperPaveSamples">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="RNo" ColumnName="RNo" />
+          <ScalarProperty Name="DateSampled" ColumnName="DateSampled" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="PlantNo" ColumnName="PlantNo" />
+          <ScalarProperty Name="TypeNum" ColumnName="TypeNum" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="ClientNo" ColumnName="ClientNo" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="PermitNo" ColumnName="PermitNo" />
+          <ScalarProperty Name="SectionNo" ColumnName="SectionNo" />
+          <ScalarProperty Name="Station" ColumnName="Station" />
+          <ScalarProperty Name="PranshMenciplitiy" ColumnName="PranshMenciplitiy" />
+          <ScalarProperty Name="StartN" ColumnName="StartN" />
+          <ScalarProperty Name="StartE" ColumnName="StartE" />
+          <ScalarProperty Name="EndN" ColumnName="EndN" />
+          <ScalarProperty Name="EndE" ColumnName="EndE" />
+          <ScalarProperty Name="SLocationN" ColumnName="SLocationN" />
+          <ScalarProperty Name="SLocationE" ColumnName="SLocationE" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="RequiredTests" ColumnName="RequiredTests" />
+          <ScalarProperty Name="Coordinates" ColumnName="Coordinates" />
+          <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+          <ScalarProperty Name="IsHandOver" ColumnName="IsHandOver" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="ReTest" ColumnName="ReTest" />
+          <ScalarProperty Name="MType" ColumnName="MType" />
+          <ScalarProperty Name="Elevation" ColumnName="Elevation" />
+          <ScalarProperty Name="JMFRequested" ColumnName="JMFRequested" />
+          <ScalarProperty Name="JMFRequestedH" ColumnName="JMFRequestedH" />
+          <ScalarProperty Name="DaysToFinish" ColumnName="DaysToFinish" />
+          <ScalarProperty Name="FinishDateIn" ColumnName="FinishDateIn" />
+          <ScalarProperty Name="ASQuantity" ColumnName="ASQuantity" />
+          <ScalarProperty Name="TypeReport" ColumnName="TypeReport" />
+          <ScalarProperty Name="LabSampleRequest" ColumnName="LabSampleRequest" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="SampleBy" ColumnName="SampleBy" />
+          <ScalarProperty Name="GehaName" ColumnName="GehaName" />
+          <ScalarProperty Name="GehaUserId" ColumnName="GehaUserId" />
+          <ScalarProperty Name="MixDesignId" ColumnName="MixDesignId" />
+          <ScalarProperty Name="IsMap" ColumnName="IsMap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="QCModel.Team">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Team1" ColumnName="Team" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConcreteInspectorLogErrors">
+      <EntityTypeMapping TypeName="QCModel.ConcreteInspectorLogError">
+        <MappingFragment StoreEntitySet="ConcreteInspectorLogErrors">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="ErrorDate" ColumnName="ErrorDate" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="InspectorUserId" ColumnName="InspectorUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConcreteSamplesWorkFlows">
+      <EntityTypeMapping TypeName="QCModel.ConcreteSamplesWorkFlow">
+        <MappingFragment StoreEntitySet="ConcreteSamplesWorkFlow">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="SampledDate" ColumnName="SampledDate" />
+          <ScalarProperty Name="SampledBy" ColumnName="SampledBy" />
+          <ScalarProperty Name="ReviewedSampleDate" ColumnName="ReviewedSampleDate" />
+          <ScalarProperty Name="ReviewedSampleBy" ColumnName="ReviewedSampleBy" />
+          <ScalarProperty Name="TestedBy" ColumnName="TestedBy" />
+          <ScalarProperty Name="TestedDate" ColumnName="TestedDate" />
+          <ScalarProperty Name="ReviewedTestBy" ColumnName="ReviewedTestBy" />
+          <ScalarProperty Name="ReviewedTestDate" ColumnName="ReviewedTestDate" />
+          <ScalarProperty Name="IsFinished" ColumnName="IsFinished" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConcreteTestSamples">
+      <EntityTypeMapping TypeName="QCModel.ConcreteTestSample">
+        <MappingFragment StoreEntitySet="ConcreteTestSamples">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="Wg1" ColumnName="Wg1" />
+          <ScalarProperty Name="Wg2" ColumnName="Wg2" />
+          <ScalarProperty Name="Wg3" ColumnName="Wg3" />
+          <ScalarProperty Name="Wg4" ColumnName="Wg4" />
+          <ScalarProperty Name="Wg5" ColumnName="Wg5" />
+          <ScalarProperty Name="Wg6" ColumnName="Wg6" />
+          <ScalarProperty Name="CrushingDate1" ColumnName="CrushingDate1" />
+          <ScalarProperty Name="CrushingDate2" ColumnName="CrushingDate2" />
+          <ScalarProperty Name="AgeDays1" ColumnName="AgeDays1" />
+          <ScalarProperty Name="AgeDays2" ColumnName="AgeDays2" />
+          <ScalarProperty Name="LoadedAreaMM1" ColumnName="LoadedAreaMM1" />
+          <ScalarProperty Name="LoadedAreaMM2" ColumnName="LoadedAreaMM2" />
+          <ScalarProperty Name="Kn1" ColumnName="Kn1" />
+          <ScalarProperty Name="Kn2" ColumnName="Kn2" />
+          <ScalarProperty Name="Kn3" ColumnName="Kn3" />
+          <ScalarProperty Name="Kn4" ColumnName="Kn4" />
+          <ScalarProperty Name="Kn5" ColumnName="Kn5" />
+          <ScalarProperty Name="Kn6" ColumnName="Kn6" />
+          <ScalarProperty Name="Nmm1" ColumnName="Nmm1" />
+          <ScalarProperty Name="Nmm2" ColumnName="Nmm2" />
+          <ScalarProperty Name="Nmm3" ColumnName="Nmm3" />
+          <ScalarProperty Name="Nmm4" ColumnName="Nmm4" />
+          <ScalarProperty Name="Nmm5" ColumnName="Nmm5" />
+          <ScalarProperty Name="Nmm6" ColumnName="Nmm6" />
+          <ScalarProperty Name="Avg1" ColumnName="Avg1" />
+          <ScalarProperty Name="Avg2" ColumnName="Avg2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QcAsphaltFieldsTests">
+      <EntityTypeMapping TypeName="QCModel.QcAsphaltFieldsTest">
+        <MappingFragment StoreEntitySet="QcAsphaltFieldsTests">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PermitId" ColumnName="PermitId" />
+          <ScalarProperty Name="TestId" ColumnName="TestId" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Lan" ColumnName="Lan" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="GMM" ColumnName="GMM" />
+          <ScalarProperty Name="GMB" ColumnName="GMB" />
+          <ScalarProperty Name="CompactionRatio" ColumnName="CompactionRatio" />
+          <ScalarProperty Name="IsCompactionSuccess" ColumnName="IsCompactionSuccess" />
+          <ScalarProperty Name="GehaId" ColumnName="GehaId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TestedDate" ColumnName="TestedDate" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="SectionNumber" ColumnName="SectionNumber" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="FailureReason" ColumnName="FailureReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QcMCFieldsTests">
+      <EntityTypeMapping TypeName="QCModel.QcMCFieldsTest">
+        <MappingFragment StoreEntitySet="QcMCFieldsTests">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PermitId" ColumnName="PermitId" />
+          <ScalarProperty Name="TestId" ColumnName="TestId" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Lan" ColumnName="Lan" />
+          <ScalarProperty Name="IsMC1Sucess" ColumnName="IsMC1Sucess" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TestedDate" ColumnName="TestedDate" />
+          <ScalarProperty Name="GehaId" ColumnName="GehaId" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="SectionNumber" ColumnName="SectionNumber" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="FailureReason" ColumnName="FailureReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QcPermitMasterFieldsTests">
+      <EntityTypeMapping TypeName="QCModel.QcPermitMasterFieldsTest">
+        <MappingFragment StoreEntitySet="QcPermitMasterFieldsTests">
+          <ScalarProperty Name="PermitId" ColumnName="PermitId" />
+          <ScalarProperty Name="TestId" ColumnName="TestId" />
+          <ScalarProperty Name="TestName" ColumnName="TestName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QcRCFieldsTests">
+      <EntityTypeMapping TypeName="QCModel.QcRCFieldsTest">
+        <MappingFragment StoreEntitySet="QcRCFieldsTests">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PermitId" ColumnName="PermitId" />
+          <ScalarProperty Name="TestId" ColumnName="TestId" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Lan" ColumnName="Lan" />
+          <ScalarProperty Name="IsRC2Sucess" ColumnName="IsRC2Sucess" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TestedDate" ColumnName="TestedDate" />
+          <ScalarProperty Name="GehaId" ColumnName="GehaId" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="SectionNumber" ColumnName="SectionNumber" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="FailureReason" ColumnName="FailureReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QcSoilFieldsTests">
+      <EntityTypeMapping TypeName="QCModel.QcSoilFieldsTest">
+        <MappingFragment StoreEntitySet="QcSoilFieldsTests">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PermitId" ColumnName="PermitId" />
+          <ScalarProperty Name="TestId" ColumnName="TestId" />
+          <ScalarProperty Name="Lat" ColumnName="Lat" />
+          <ScalarProperty Name="Lan" ColumnName="Lan" />
+          <ScalarProperty Name="LineName" ColumnName="LineName" />
+          <ScalarProperty Name="SectionNumber" ColumnName="SectionNumber" />
+          <ScalarProperty Name="LayerNumber" ColumnName="LayerNumber" />
+          <ScalarProperty Name="LayersNumber" ColumnName="LayersNumber" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="Classification" ColumnName="Classification" />
+          <ScalarProperty Name="Proctor" ColumnName="Proctor" />
+          <ScalarProperty Name="GMB" ColumnName="GMB" />
+          <ScalarProperty Name="CompactionRatio" ColumnName="CompactionRatio" />
+          <ScalarProperty Name="IsCompactionSuccess" ColumnName="IsCompactionSuccess" />
+          <ScalarProperty Name="GehaId" ColumnName="GehaId" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="TestedDate" ColumnName="TestedDate" />
+          <ScalarProperty Name="LineType" ColumnName="LineType" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="FailureReason" ColumnName="FailureReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="QCModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+      <EndProperty Name="aspnet_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="AsphaltInsepector" FunctionName="QCModel.Store.AsphaltInsepector">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.AsphaltInsepector_Result">
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="StartHour" ColumnName="StartHour" />
+          <ScalarProperty Name="EndHour" ColumnName="EndHour" />
+          <ScalarProperty Name="NoJobs" ColumnName="NoJobs" />
+          <ScalarProperty Name="PermitNumber" ColumnName="PermitNumber" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="LayerWidth" ColumnName="LayerWidth" />
+          <ScalarProperty Name="EvelCm" ColumnName="EvelCm" />
+          <ScalarProperty Name="LocationStartN" ColumnName="LocationStartN" />
+          <ScalarProperty Name="LocationStartE" ColumnName="LocationStartE" />
+          <ScalarProperty Name="LocationEN" ColumnName="LocationEN" />
+          <ScalarProperty Name="LocationEE" ColumnName="LocationEE" />
+          <ScalarProperty Name="MoreStreet2" ColumnName="MoreStreet2" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="LocationStartNStreet2" ColumnName="LocationStartNStreet2" />
+          <ScalarProperty Name="LocationStartEStreet2" ColumnName="LocationStartEStreet2" />
+          <ScalarProperty Name="LocationENStreet2" ColumnName="LocationENStreet2" />
+          <ScalarProperty Name="LocationEEStreet2" ColumnName="LocationEEStreet2" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="InspectorBy" ColumnName="InspectorBy" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContractorId1" ColumnName="ContractorId1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AsphaltInsepectorManager" FunctionName="QCModel.Store.AsphaltInsepectorManager">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.AsphaltInsepectorManager_Result">
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="StartHour" ColumnName="StartHour" />
+          <ScalarProperty Name="EndHour" ColumnName="EndHour" />
+          <ScalarProperty Name="NoJobs" ColumnName="NoJobs" />
+          <ScalarProperty Name="PermitNumber" ColumnName="PermitNumber" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="LayerWidth" ColumnName="LayerWidth" />
+          <ScalarProperty Name="EvelCm" ColumnName="EvelCm" />
+          <ScalarProperty Name="LocationStartN" ColumnName="LocationStartN" />
+          <ScalarProperty Name="LocationStartE" ColumnName="LocationStartE" />
+          <ScalarProperty Name="LocationEN" ColumnName="LocationEN" />
+          <ScalarProperty Name="LocationEE" ColumnName="LocationEE" />
+          <ScalarProperty Name="MoreStreet2" ColumnName="MoreStreet2" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="LocationStartNStreet2" ColumnName="LocationStartNStreet2" />
+          <ScalarProperty Name="LocationStartEStreet2" ColumnName="LocationStartEStreet2" />
+          <ScalarProperty Name="LocationENStreet2" ColumnName="LocationENStreet2" />
+          <ScalarProperty Name="LocationEEStreet2" ColumnName="LocationEEStreet2" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="InspectorBy" ColumnName="InspectorBy" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="ProjectNumber1" ColumnName="ProjectNumber1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AsphaltReceptionMarshalSamples" FunctionName="QCModel.Store.AsphaltReceptionMarshalSamples">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.AsphaltReceptionMarshalSamples_Result">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="InspectorConfirm" ColumnName="InspectorConfirm" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="AsphaltTypeId" ColumnName="AsphaltTypeId" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_AnyDataInTables" FunctionName="QCModel.Store.aspnet_AnyDataInTables" />
+    <FunctionImportMapping FunctionImportName="aspnet_Applications_CreateApplication" FunctionName="QCModel.Store.aspnet_Applications_CreateApplication" />
+    <FunctionImportMapping FunctionImportName="aspnet_CheckSchemaVersion" FunctionName="QCModel.Store.aspnet_CheckSchemaVersion" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_ChangePasswordQuestionAndAnswer" FunctionName="QCModel.Store.aspnet_Membership_ChangePasswordQuestionAndAnswer" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_CreateUser" FunctionName="QCModel.Store.aspnet_Membership_CreateUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_FindUsersByEmail" FunctionName="QCModel.Store.aspnet_Membership_FindUsersByEmail" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_FindUsersByName" FunctionName="QCModel.Store.aspnet_Membership_FindUsersByName" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetAllUsers" FunctionName="QCModel.Store.aspnet_Membership_GetAllUsers" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetNumberOfUsersOnline" FunctionName="QCModel.Store.aspnet_Membership_GetNumberOfUsersOnline" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetPassword" FunctionName="QCModel.Store.aspnet_Membership_GetPassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.aspnet_Membership_GetPassword_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetPasswordWithFormat" FunctionName="QCModel.Store.aspnet_Membership_GetPasswordWithFormat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.aspnet_Membership_GetPasswordWithFormat_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+          <ScalarProperty Name="Column5" ColumnName="Column5" />
+          <ScalarProperty Name="Column6" ColumnName="Column6" />
+          <ScalarProperty Name="Column7" ColumnName="Column7" />
+          <ScalarProperty Name="Column8" ColumnName="Column8" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByEmail" FunctionName="QCModel.Store.aspnet_Membership_GetUserByEmail" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByName" FunctionName="QCModel.Store.aspnet_Membership_GetUserByName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.aspnet_Membership_GetUserByName_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_GetUserByUserId" FunctionName="QCModel.Store.aspnet_Membership_GetUserByUserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.aspnet_Membership_GetUserByUserId_Result">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_ResetPassword" FunctionName="QCModel.Store.aspnet_Membership_ResetPassword" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_SetPassword" FunctionName="QCModel.Store.aspnet_Membership_SetPassword" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_UnlockUser" FunctionName="QCModel.Store.aspnet_Membership_UnlockUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_UpdateUser" FunctionName="QCModel.Store.aspnet_Membership_UpdateUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Membership_UpdateUserInfo" FunctionName="QCModel.Store.aspnet_Membership_UpdateUserInfo" />
+    <FunctionImportMapping FunctionImportName="aspnet_Paths_CreatePath" FunctionName="QCModel.Store.aspnet_Paths_CreatePath" />
+    <FunctionImportMapping FunctionImportName="aspnet_Personalization_GetApplicationId" FunctionName="QCModel.Store.aspnet_Personalization_GetApplicationId" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_DeleteAllState" FunctionName="QCModel.Store.aspnet_PersonalizationAdministration_DeleteAllState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_FindState" FunctionName="QCModel.Store.aspnet_PersonalizationAdministration_FindState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_GetCountOfState" FunctionName="QCModel.Store.aspnet_PersonalizationAdministration_GetCountOfState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_ResetSharedState" FunctionName="QCModel.Store.aspnet_PersonalizationAdministration_ResetSharedState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAdministration_ResetUserState" FunctionName="QCModel.Store.aspnet_PersonalizationAdministration_ResetUserState" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_GetPageSettings" FunctionName="QCModel.Store.aspnet_PersonalizationAllUsers_GetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_ResetPageSettings" FunctionName="QCModel.Store.aspnet_PersonalizationAllUsers_ResetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationAllUsers_SetPageSettings" FunctionName="QCModel.Store.aspnet_PersonalizationAllUsers_SetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_GetPageSettings" FunctionName="QCModel.Store.aspnet_PersonalizationPerUser_GetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_ResetPageSettings" FunctionName="QCModel.Store.aspnet_PersonalizationPerUser_ResetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_PersonalizationPerUser_SetPageSettings" FunctionName="QCModel.Store.aspnet_PersonalizationPerUser_SetPageSettings" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_DeleteInactiveProfiles" FunctionName="QCModel.Store.aspnet_Profile_DeleteInactiveProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_DeleteProfiles" FunctionName="QCModel.Store.aspnet_Profile_DeleteProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_GetNumberOfInactiveProfiles" FunctionName="QCModel.Store.aspnet_Profile_GetNumberOfInactiveProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_GetProfiles" FunctionName="QCModel.Store.aspnet_Profile_GetProfiles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_GetProperties" FunctionName="QCModel.Store.aspnet_Profile_GetProperties">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.aspnet_Profile_GetProperties_Result">
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_Profile_SetProperties" FunctionName="QCModel.Store.aspnet_Profile_SetProperties" />
+    <FunctionImportMapping FunctionImportName="aspnet_RegisterSchemaVersion" FunctionName="QCModel.Store.aspnet_RegisterSchemaVersion" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_CreateRole" FunctionName="QCModel.Store.aspnet_Roles_CreateRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_DeleteRole" FunctionName="QCModel.Store.aspnet_Roles_DeleteRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_GetAllRoles" FunctionName="QCModel.Store.aspnet_Roles_GetAllRoles" />
+    <FunctionImportMapping FunctionImportName="aspnet_Roles_RoleExists" FunctionName="QCModel.Store.aspnet_Roles_RoleExists" />
+    <FunctionImportMapping FunctionImportName="aspnet_Setup_RemoveAllRoleMembers" FunctionName="QCModel.Store.aspnet_Setup_RemoveAllRoleMembers" />
+    <FunctionImportMapping FunctionImportName="aspnet_Setup_RestorePermissions" FunctionName="QCModel.Store.aspnet_Setup_RestorePermissions" />
+    <FunctionImportMapping FunctionImportName="aspnet_UnRegisterSchemaVersion" FunctionName="QCModel.Store.aspnet_UnRegisterSchemaVersion" />
+    <FunctionImportMapping FunctionImportName="aspnet_Users_CreateUser" FunctionName="QCModel.Store.aspnet_Users_CreateUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_Users_DeleteUser" FunctionName="QCModel.Store.aspnet_Users_DeleteUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_AddUsersToRoles" FunctionName="QCModel.Store.aspnet_UsersInRoles_AddUsersToRoles" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_FindUsersInRole" FunctionName="QCModel.Store.aspnet_UsersInRoles_FindUsersInRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_GetRolesForUser" FunctionName="QCModel.Store.aspnet_UsersInRoles_GetRolesForUser" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_GetUsersInRoles" FunctionName="QCModel.Store.aspnet_UsersInRoles_GetUsersInRoles" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_IsUserInRole" FunctionName="QCModel.Store.aspnet_UsersInRoles_IsUserInRole" />
+    <FunctionImportMapping FunctionImportName="aspnet_UsersInRoles_RemoveUsersFromRoles" FunctionName="QCModel.Store.aspnet_UsersInRoles_RemoveUsersFromRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="aspnet_WebEvent_LogEvent" FunctionName="QCModel.Store.aspnet_WebEvent_LogEvent" />
+    <FunctionImportMapping FunctionImportName="GetItemByFactoryYealy" FunctionName="QCModel.Store.GetItemByFactoryYealy">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.GetItemByFactoryYealy_Result">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="Avg2" ColumnName="Avg2" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+          <ScalarProperty Name="SampleDate" ColumnName="SampleDate" />
+          <ScalarProperty Name="AmountofLand" ColumnName="AmountofLand" />
+          <ScalarProperty Name="IsCleanUsage" ColumnName="IsCleanUsage" />
+          <ScalarProperty Name="IsBasicUsage" ColumnName="IsBasicUsage" />
+          <ScalarProperty Name="IsColumnUsage" ColumnName="IsColumnUsage" />
+          <ScalarProperty Name="IsRoofUsage" ColumnName="IsRoofUsage" />
+          <ScalarProperty Name="IsOtherUsage" ColumnName="IsOtherUsage" />
+          <ScalarProperty Name="ConcreteTemperture" ColumnName="ConcreteTemperture" />
+          <ScalarProperty Name="ConcreteRank" ColumnName="ConcreteRank" />
+          <ScalarProperty Name="CrushingDate1" ColumnName="CrushingDate1" />
+          <ScalarProperty Name="CrushingDate2" ColumnName="CrushingDate2" />
+          <ScalarProperty Name="Avg1" ColumnName="Avg1" />
+          <ScalarProperty Name="AmanaSampleNo" ColumnName="AmanaSampleNo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetrptConcreteSamplesResultsummary" FunctionName="QCModel.Store.GetrptConcreteSamplesResultsummary">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.GetrptConcreteSamplesResultsummary_Result">
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="AmanaSampleNo" ColumnName="AmanaSampleNo" />
+          <ScalarProperty Name="ConcreteRank" ColumnName="ConcreteRank" />
+          <ScalarProperty Name="AmountofLand" ColumnName="AmountofLand" />
+          <ScalarProperty Name="ConcreteTemperture" ColumnName="ConcreteTemperture" />
+          <ScalarProperty Name="SampleDate" ColumnName="SampleDate" />
+          <ScalarProperty Name="Usage" ColumnName="Usage" />
+          <ScalarProperty Name="PressureResistance" ColumnName="PressureResistance" />
+          <ScalarProperty Name="MaxTemperature" ColumnName="MaxTemperature" />
+          <ScalarProperty Name="MinTemperature" ColumnName="MinTemperature" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSuperPavChartForProject" FunctionName="QCModel.Store.GetSuperPavChartForProject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.GetSuperPavChartForProject_Result">
+          <ScalarProperty Name="RNo" ColumnName="RNo" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="DateSampled" ColumnName="DateSampled" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="Gmm" ColumnName="Gmm" />
+          <ScalarProperty Name="Gmmb" ColumnName="Gmmb" />
+          <ScalarProperty Name="ACPercent" ColumnName="ACPercent" />
+          <ScalarProperty Name="GmmPercent" ColumnName="GmmPercent" />
+          <ScalarProperty Name="AVpercent" ColumnName="AVpercent" />
+          <ScalarProperty Name="SieveOne" ColumnName="SieveOne" />
+          <ScalarProperty Name="SieveOneAndHalf" ColumnName="SieveOneAndHalf" />
+          <ScalarProperty Name="SieveThreeByFour" ColumnName="SieveThreeByFour" />
+          <ScalarProperty Name="SieveHalf" ColumnName="SieveHalf" />
+          <ScalarProperty Name="SieveThreeBYEight" ColumnName="SieveThreeBYEight" />
+          <ScalarProperty Name="SieveFour" ColumnName="SieveFour" />
+          <ScalarProperty Name="SieveEight" ColumnName="SieveEight" />
+          <ScalarProperty Name="SieveSixteen" ColumnName="SieveSixteen" />
+          <ScalarProperty Name="SieveHandreed" ColumnName="SieveHandreed" />
+          <ScalarProperty Name="SieveFifteen" ColumnName="SieveFifteen" />
+          <ScalarProperty Name="SieveThirty" ColumnName="SieveThirty" />
+          <ScalarProperty Name="SieveTwoHandreed" ColumnName="SieveTwoHandreed" />
+          <ScalarProperty Name="PermitNo" ColumnName="PermitNo" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MarshalJmfRecptionLst" FunctionName="QCModel.Store.MarshalJmfRecptionLst">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.MarshalJmfRecptionLst_Result">
+          <ScalarProperty Name="IsLabEngineer" ColumnName="IsLabEngineer" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="PlantLocation" ColumnName="PlantLocation" />
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="DateIn" ColumnName="DateIn" />
+          <ScalarProperty Name="GeneralSampleTypeId" ColumnName="GeneralSampleTypeId" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="MarshalJmRequested" ColumnName="MarshalJmRequested" />
+          <ScalarProperty Name="MarshalJmRequest" ColumnName="MarshalJmRequest" />
+          <ScalarProperty Name="Receptioned" ColumnName="Receptioned" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MarshalJmfSupplierLst" FunctionName="QCModel.Store.MarshalJmfSupplierLst">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.MarshalJmfSupplierLst_Result">
+          <ScalarProperty Name="DateIn" ColumnName="DateIn" />
+          <ScalarProperty Name="IsLabEngineer" ColumnName="IsLabEngineer" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="PlantLocation" ColumnName="PlantLocation" />
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="DateIn1" ColumnName="DateIn1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MarshalJmfTesterLst" FunctionName="QCModel.Store.MarshalJmfTesterLst">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.MarshalJmfTesterLst_Result">
+          <ScalarProperty Name="IsLabEngineer" ColumnName="IsLabEngineer" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="PlantLocation" ColumnName="PlantLocation" />
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="DateIn" ColumnName="DateIn" />
+          <ScalarProperty Name="GeneralSampleTypeId" ColumnName="GeneralSampleTypeId" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Reception" ColumnName="Reception" />
+          <ScalarProperty Name="Tested" ColumnName="Tested" />
+          <ScalarProperty Name="Test" ColumnName="Test" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReceptionSamplesAsphaltSuperPave" FunctionName="QCModel.Store.ReceptionSamplesAsphaltSuperPave">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.ReceptionSamplesAsphaltSuperPave_Result">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="InspectorConfirm" ColumnName="InspectorConfirm" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="AsphaltTypeId" ColumnName="AsphaltTypeId" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReceptionSamplesSoil" FunctionName="QCModel.Store.ReceptionSamplesSoil">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.ReceptionSamplesSoil_Result">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="InspectorConfirm" ColumnName="InspectorConfirm" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="SoilTypeId" ColumnName="SoilTypeId" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectClassificationByFact" FunctionName="QCModel.Store.selectClassificationByFact">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.selectClassificationByFact_Result">
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ClsYear" ColumnName="ClsYear" />
+          <ScalarProperty Name="ClassificationDegree" ColumnName="ClassificationDegree" />
+          <ScalarProperty Name="ClassificationText" ColumnName="ClassificationText" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SoilInsepector" FunctionName="QCModel.Store.SoilInsepector">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.SoilInsepector_Result">
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="StartHour" ColumnName="StartHour" />
+          <ScalarProperty Name="EndHour" ColumnName="EndHour" />
+          <ScalarProperty Name="NoJobs" ColumnName="NoJobs" />
+          <ScalarProperty Name="PermitNumber" ColumnName="PermitNumber" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="LayerWidth" ColumnName="LayerWidth" />
+          <ScalarProperty Name="EvelCm" ColumnName="EvelCm" />
+          <ScalarProperty Name="LocationStartN" ColumnName="LocationStartN" />
+          <ScalarProperty Name="LocationStartE" ColumnName="LocationStartE" />
+          <ScalarProperty Name="LocationEN" ColumnName="LocationEN" />
+          <ScalarProperty Name="LocationEE" ColumnName="LocationEE" />
+          <ScalarProperty Name="MoreStreet2" ColumnName="MoreStreet2" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="LocationStartNStreet2" ColumnName="LocationStartNStreet2" />
+          <ScalarProperty Name="LocationStartEStreet2" ColumnName="LocationStartEStreet2" />
+          <ScalarProperty Name="LocationENStreet2" ColumnName="LocationENStreet2" />
+          <ScalarProperty Name="LocationEEStreet2" ColumnName="LocationEEStreet2" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="InspectorBy" ColumnName="InspectorBy" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SoilInsepectorManager" FunctionName="QCModel.Store.SoilInsepectorManager">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.SoilInsepectorManager_Result">
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="Team" ColumnName="Team" />
+          <ScalarProperty Name="TeamId" ColumnName="TeamId" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="StartHour" ColumnName="StartHour" />
+          <ScalarProperty Name="EndHour" ColumnName="EndHour" />
+          <ScalarProperty Name="NoJobs" ColumnName="NoJobs" />
+          <ScalarProperty Name="PermitNumber" ColumnName="PermitNumber" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="LayerWidth" ColumnName="LayerWidth" />
+          <ScalarProperty Name="EvelCm" ColumnName="EvelCm" />
+          <ScalarProperty Name="LocationStartN" ColumnName="LocationStartN" />
+          <ScalarProperty Name="LocationStartE" ColumnName="LocationStartE" />
+          <ScalarProperty Name="LocationEN" ColumnName="LocationEN" />
+          <ScalarProperty Name="LocationEE" ColumnName="LocationEE" />
+          <ScalarProperty Name="MoreStreet2" ColumnName="MoreStreet2" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="LocationStartNStreet2" ColumnName="LocationStartNStreet2" />
+          <ScalarProperty Name="LocationStartEStreet2" ColumnName="LocationStartEStreet2" />
+          <ScalarProperty Name="LocationENStreet2" ColumnName="LocationENStreet2" />
+          <ScalarProperty Name="LocationEEStreet2" ColumnName="LocationEEStreet2" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="ContSampleRequest" ColumnName="ContSampleRequest" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="InspectorBy" ColumnName="InspectorBy" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SoilSamplesCompaction" FunctionName="QCModel.Store.SoilSamplesCompaction">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.SoilSamplesCompaction_Result">
+          <ScalarProperty Name="RNo" ColumnName="RNo" />
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="DateSampled" ColumnName="DateSampled" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="ClientNo" ColumnName="ClientNo" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="PermitNo" ColumnName="PermitNo" />
+          <ScalarProperty Name="SectionNo" ColumnName="SectionNo" />
+          <ScalarProperty Name="Station" ColumnName="Station" />
+          <ScalarProperty Name="SampleBy" ColumnName="SampleBy" />
+          <ScalarProperty Name="PranshMenciplitiy" ColumnName="PranshMenciplitiy" />
+          <ScalarProperty Name="StartN" ColumnName="StartN" />
+          <ScalarProperty Name="StartE" ColumnName="StartE" />
+          <ScalarProperty Name="EndN" ColumnName="EndN" />
+          <ScalarProperty Name="EndE" ColumnName="EndE" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="RequiredTests" ColumnName="RequiredTests" />
+          <ScalarProperty Name="Coordinates" ColumnName="Coordinates" />
+          <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+          <ScalarProperty Name="IsHandOver" ColumnName="IsHandOver" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="ReTest" ColumnName="ReTest" />
+          <ScalarProperty Name="Elevation" ColumnName="Elevation" />
+          <ScalarProperty Name="ASQuantity" ColumnName="ASQuantity" />
+          <ScalarProperty Name="TypeReport" ColumnName="TypeReport" />
+          <ScalarProperty Name="SLocationN" ColumnName="SLocationN" />
+          <ScalarProperty Name="SLocationE" ColumnName="SLocationE" />
+          <ScalarProperty Name="GeneralSampleTypeId" ColumnName="GeneralSampleTypeId" />
+          <ScalarProperty Name="Compaction" ColumnName="Compaction" />
+          <ScalarProperty Name="Compactioned" ColumnName="Compactioned" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SoilSummary" FunctionName="QCModel.Store.SoilSummary">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.SoilSummary_Result">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="IsHandOver" ColumnName="IsHandOver" />
+          <ScalarProperty Name="RNo" ColumnName="RNo" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="Station" ColumnName="Station" />
+          <ScalarProperty Name="Elevation" ColumnName="Elevation" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="DateSampled" ColumnName="DateSampled" />
+          <ScalarProperty Name="ClientNo" ColumnName="ClientNo" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="SoilSampleType" ColumnName="SoilSampleType" />
+          <ScalarProperty Name="SoilClassification" ColumnName="SoilClassification" />
+          <ScalarProperty Name="PlasticLimit" ColumnName="PlasticLimit" />
+          <ScalarProperty Name="Liquidlimit" ColumnName="Liquidlimit" />
+          <ScalarProperty Name="PlasticityIndex" ColumnName="PlasticityIndex" />
+          <ScalarProperty Name="GroupIndex" ColumnName="GroupIndex" />
+          <ScalarProperty Name="MoistureContent" ColumnName="MoistureContent" />
+          <ScalarProperty Name="SieveTwo" ColumnName="SieveTwo" />
+          <ScalarProperty Name="SieveOne" ColumnName="SieveOne" />
+          <ScalarProperty Name="SieveOneAndHalf" ColumnName="SieveOneAndHalf" />
+          <ScalarProperty Name="SieveThreeByFour" ColumnName="SieveThreeByFour" />
+          <ScalarProperty Name="SieveThreeBYEight" ColumnName="SieveThreeBYEight" />
+          <ScalarProperty Name="SieveFour" ColumnName="SieveFour" />
+          <ScalarProperty Name="SieveThree" ColumnName="SieveThree" />
+          <ScalarProperty Name="SieveTeen" ColumnName="SieveTeen" />
+          <ScalarProperty Name="SieveTwoHandreed" ColumnName="SieveTwoHandreed" />
+          <ScalarProperty Name="SieveForty" ColumnName="SieveForty" />
+          <ScalarProperty Name="SieveHalf" ColumnName="SieveHalf" />
+          <ScalarProperty Name="SieveTwenty" ColumnName="SieveTwenty" />
+          <ScalarProperty Name="SieveEighteen" ColumnName="SieveEighteen" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectNumber" ColumnName="ProjectNumber" />
+          <ScalarProperty Name="ProjectFullName" ColumnName="ProjectFullName" />
+          <ScalarProperty Name="Printed" ColumnName="Printed" />
+          <ScalarProperty Name="Print" ColumnName="Print" />
+          <ScalarProperty Name="GeneralSampleTypeId" ColumnName="GeneralSampleTypeId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SuperPaveSamplesCompaction" FunctionName="QCModel.Store.SuperPaveSamplesCompaction">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.SuperPaveSamplesCompaction_Result">
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="RNo" ColumnName="RNo" />
+          <ScalarProperty Name="DateSampled" ColumnName="DateSampled" />
+          <ScalarProperty Name="ExecutionDate" ColumnName="ExecutionDate" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+          <ScalarProperty Name="ClientNo" ColumnName="ClientNo" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="PermitNo" ColumnName="PermitNo" />
+          <ScalarProperty Name="SectionNo" ColumnName="SectionNo" />
+          <ScalarProperty Name="Station" ColumnName="Station" />
+          <ScalarProperty Name="SampleBy" ColumnName="SampleBy" />
+          <ScalarProperty Name="PranshMenciplitiy" ColumnName="PranshMenciplitiy" />
+          <ScalarProperty Name="StartN" ColumnName="StartN" />
+          <ScalarProperty Name="StartE" ColumnName="StartE" />
+          <ScalarProperty Name="EndN" ColumnName="EndN" />
+          <ScalarProperty Name="EndE" ColumnName="EndE" />
+          <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="RequiredTests" ColumnName="RequiredTests" />
+          <ScalarProperty Name="Coordinates" ColumnName="Coordinates" />
+          <ScalarProperty Name="CheckInDate" ColumnName="CheckInDate" />
+          <ScalarProperty Name="IsHandOver" ColumnName="IsHandOver" />
+          <ScalarProperty Name="LayerThickness" ColumnName="LayerThickness" />
+          <ScalarProperty Name="ReTest" ColumnName="ReTest" />
+          <ScalarProperty Name="Elevation" ColumnName="Elevation" />
+          <ScalarProperty Name="ASQuantity" ColumnName="ASQuantity" />
+          <ScalarProperty Name="TypeReport" ColumnName="TypeReport" />
+          <ScalarProperty Name="SLocationN" ColumnName="SLocationN" />
+          <ScalarProperty Name="SLocationE" ColumnName="SLocationE" />
+          <ScalarProperty Name="GeneralSampleTypeId" ColumnName="GeneralSampleTypeId" />
+          <ScalarProperty Name="Compaction" ColumnName="Compaction" />
+          <ScalarProperty Name="Compactioned" ColumnName="Compactioned" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SuperPaveSummary" FunctionName="QCModel.Store.SuperPaveSummary">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.SuperPaveSummary_Result">
+          <ScalarProperty Name="IsMap" ColumnName="IsMap" />
+          <ScalarProperty Name="RNo" ColumnName="RNo" />
+          <ScalarProperty Name="ContractorId" ColumnName="ContractorId" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="DateSampled" ColumnName="DateSampled" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="SampleNo" ColumnName="SampleNo" />
+          <ScalarProperty Name="Gmm" ColumnName="Gmm" />
+          <ScalarProperty Name="Gmmb" ColumnName="Gmmb" />
+          <ScalarProperty Name="ACPercent" ColumnName="ACPercent" />
+          <ScalarProperty Name="GmmPercent" ColumnName="GmmPercent" />
+          <ScalarProperty Name="AVpercent" ColumnName="AVpercent" />
+          <ScalarProperty Name="SieveOne" ColumnName="SieveOne" />
+          <ScalarProperty Name="SieveOneAndHalf" ColumnName="SieveOneAndHalf" />
+          <ScalarProperty Name="SieveThreeByFour" ColumnName="SieveThreeByFour" />
+          <ScalarProperty Name="SieveHalf" ColumnName="SieveHalf" />
+          <ScalarProperty Name="SieveThreeBYEight" ColumnName="SieveThreeBYEight" />
+          <ScalarProperty Name="SieveFour" ColumnName="SieveFour" />
+          <ScalarProperty Name="SieveEight" ColumnName="SieveEight" />
+          <ScalarProperty Name="SieveSixteen" ColumnName="SieveSixteen" />
+          <ScalarProperty Name="SieveHandreed" ColumnName="SieveHandreed" />
+          <ScalarProperty Name="SieveFifteen" ColumnName="SieveFifteen" />
+          <ScalarProperty Name="SieveThirty" ColumnName="SieveThirty" />
+          <ScalarProperty Name="SieveTwoHandreed" ColumnName="SieveTwoHandreed" />
+          <ScalarProperty Name="PermitNo" ColumnName="PermitNo" />
+          <ScalarProperty Name="Project" ColumnName="Project" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="FactoryDocs">
+      <EntityTypeMapping TypeName="QCModel.FactoryDoc">
+        <MappingFragment StoreEntitySet="FactoryDocs">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="FileExtention" ColumnName="FileExtention" />
+          <ScalarProperty Name="FileLocation" ColumnName="FileLocation" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factory11">
+      <EntityTypeMapping TypeName="QCModel.Factory11">
+        <MappingFragment StoreEntitySet="Factory">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EngineerExperience" ColumnName="EngineerExperience" />
+          <ScalarProperty Name="EngineerEmail" ColumnName="EngineerEmail" />
+          <ScalarProperty Name="EngineerPhoneNumber" ColumnName="EngineerPhoneNumber" />
+          <ScalarProperty Name="EngineerName" ColumnName="EngineerName" />
+          <ScalarProperty Name="ManagerExperience" ColumnName="ManagerExperience" />
+          <ScalarProperty Name="ManagerEmail" ColumnName="ManagerEmail" />
+          <ScalarProperty Name="ManagerPhoneNumber" ColumnName="ManagerPhoneNumber" />
+          <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+          <ScalarProperty Name="OwnerPhoneNumber" ColumnName="OwnerPhoneNumber" />
+          <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MailBox" ColumnName="MailBox" />
+          <ScalarProperty Name="FaxNumber" ColumnName="FaxNumber" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="NumberofTrucks" ColumnName="NumberofTrucks" />
+          <ScalarProperty Name="NumberofMixers" ColumnName="NumberofMixers" />
+          <ScalarProperty Name="DailyProductionRate" ColumnName="DailyProductionRate" />
+          <ScalarProperty Name="ProductionCapacity" ColumnName="ProductionCapacity" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AddUpdateFactory" FunctionName="QCModel.Store.AddUpdateFactory" />
+    <EntitySetMapping Name="ConcreteMixingDesigns">
+      <EntityTypeMapping TypeName="QCModel.ConcreteMixingDesign">
+        <MappingFragment StoreEntitySet="ConcreteMixingDesign">
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="WhiteSand" ColumnName="WhiteSand" />
+          <ScalarProperty Name="Rubble3by8" ColumnName="Rubble3by8" />
+          <ScalarProperty Name="Rubble3by4" ColumnName="Rubble3by4" />
+          <ScalarProperty Name="WashedSand" ColumnName="WashedSand" />
+          <ScalarProperty Name="WaterWeight" ColumnName="WaterWeight" />
+          <ScalarProperty Name="CementWeight" ColumnName="CementWeight" />
+          <ScalarProperty Name="ConcreteRank" ColumnName="ConcreteRank" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AddUpdateConcMixDesing" FunctionName="QCModel.Store.AddUpdateConcMixDesing" />
+    <FunctionImportMapping FunctionImportName="GetMixingDesignDetails" FunctionName="QCModel.Store.GetMixingDesignDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QCModel.GetMixingDesignDetails_Result">
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FactoryId" ColumnName="FactoryId" />
+          <ScalarProperty Name="ConcreteRank" ColumnName="ConcreteRank" />
+          <ScalarProperty Name="CementWeight" ColumnName="CementWeight" />
+          <ScalarProperty Name="WaterWeight" ColumnName="WaterWeight" />
+          <ScalarProperty Name="WashedSand" ColumnName="WashedSand" />
+          <ScalarProperty Name="Rubble3by4" ColumnName="Rubble3by4" />
+          <ScalarProperty Name="Rubble3by8" ColumnName="Rubble3by8" />
+          <ScalarProperty Name="WhiteSand" ColumnName="WhiteSand" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="QCModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="QCModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AddUpdateUser" FunctionName="QCModel.Store.AddUpdateUser" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,201 @@
+﻿
+@{
+    ViewBag.Title = "BlockTestingResult";
+}
+@using Resources
+<style type="text/css">
+    .nav-tabs-top {
+    }
+
+    .table {
+        border-bottom: solid 2px #eeeeee;
+    }
+
+     .form-control-plaintext
+    {
+        padding-left : 3%;
+        outline-color : limegreen ;
+        outline-style : solid;
+        outline-width : thin;
+        
+    }
+</style>
+
+<body style="background-color :#ECECF1; background-size: cover;" dir="rtl">
+    <div class="page-header  align-items-center">
+        <h3 style="text-align : center">@Resources.Block_Entering_Testing_Result</h3>
+    </div>
+    <div class="nav-tabs-top nav-responsive-xl" style="-ms-flex-direction: column; flex-direction: column; margin-top: 4%; padding-left: 100px; padding-right: 100px;">
+        <div class="tab-content">
+            <div class="tab-pane fade show active">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h4> @Resources.Compressive_Strength_of_Block_Cube</h4>
+                        </div>
+                        <div class="col-md-5">
+                            <h6>@Resources.Sample_Number  98657426</h6>
+                        </div>
+                    </div>
+                    <table class="table table-reponsive" dir="ltr">
+                        <thead style="text-align:center">
+                            <tr>
+                                <th>@Resources.Sample_Number</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody style="text-align:center">
+                            <tr>
+                                <th>Weight (kg)</th>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Length (mm)</th>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Width (mm)</th>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Height (mm)</th>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Min Face Shell (mm)</th>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Net Area (mm2) </th>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Gross Area (mm2) </th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Load (kn) </th>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control-plaintext" placeholder="@Resources.Enter_Data" />
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Comp Strength  (net Area) (Mpa) </th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Comp Strength (Gross Area) (Mpa) </th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Strength Requirement</th>
+                                <td>MIN = 3.45 Mpa </td>
+                            </tr>
+                            <tr>
+                                <th>Min Ave Compressive Strength of (3) Units (Net Area) (Mpa)</th>
+                                <td></td>
+                                <td></td>
+                                <td>MIN= 4.14Mpa </td>
+                            </tr>
+                            <tr>
+                                <th>Min Ave Compressive Strength of (3) Units (Gross Area) (Mpa) </th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <button type="submit" class="btn btn-success">@Resources.Save</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+

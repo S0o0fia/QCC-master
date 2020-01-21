@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "MakeChoice";
+    Layout = "~/Views/Shared/Layouts/_LayoutBlank.cshtml";
+
+}
+@using Resources
+@section Styles {
+    <!-- Page -->
+    @Styles.Render("~/bundle/vendor/css/pages/authentication")
+}
+
+<style type="text/css">
+    .nav-tabs-top {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: 3%;
+      
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .table {
+        border-bottom: solid 2px #eeeeee;
+    }
+
+    a {
+        font-weight: bold;
+        text-align: right;
+    }
+    .page-header{
+          margin-bottom:3%;
+    }
+
+    .card-body{
+       text-align:center;
+    }
+</style>
+
+<body style="background-color :#ECECF1; background-size: cover;" dir="rtl">
+
+    <div class="nav-tabs-top nav-responsive-xl">
+        <div class="page-header  align-items-center">
+            <h1 style="text-align : center">@Resources.Make_Choice</h1>
+        </div>
+
+        <div class="card-columns row">
+            <div class="card col-5"  >
+                <img class="card-img-top" src="~/Images/back.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">@Resources.Concrete_System</h4>
+                    <p class="card-text">@Resources.Click_below_button_to_go</p>
+                    <a href="@Url.Action("Home" , "Home" )" class="btn btn-success">@Resources.go</a>
+                </div>
+            </div>
+           <div class="col-2"></div>
+            <div class="card col-5" >
+                <img class="card-img-top" src="~/Images/block.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">@Resources.Block_System</h4>
+                    <p class="card-text">@Resources.Click_below_button_to_go</p>
+                    <a href="@Url.Action("Home" , "Home" )" class="btn btn-success">@Resources.go</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

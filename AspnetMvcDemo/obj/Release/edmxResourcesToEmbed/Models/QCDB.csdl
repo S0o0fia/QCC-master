@@ -1,0 +1,2866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C_ConClsCustomProperties">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConClsCategoryId" Type="Int32" />
+    <Property Name="PropertyText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyWeight" Type="Double" />
+  </EntityType>
+  <EntityType Name="C_ConClsPropertyMulti">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConClsCategoryId" Type="Int32" />
+    <Property Name="PropertyText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyWeight" Type="Double" />
+  </EntityType>
+  <EntityType Name="C_ConClsPropertyThirtyValues">
+    <Key>
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ClsYear" />
+      <PropertyRef Name="ConClsPropertyIdMulti" />
+    </Key>
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ClsYear" Type="Int32" Nullable="false" />
+    <Property Name="ConClsPropertyIdMulti" Type="Int32" Nullable="false" />
+    <Property Name="PropertyValue" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="AsphaltType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredApplicationName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordFormat" Type="Int32" Nullable="false" />
+    <Property Name="PasswordSalt" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobilePIN" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="LoweredEmail" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsApproved" Type="Boolean" Nullable="false" />
+    <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="Path" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="Guid" Nullable="false" />
+    <Property Name="PageSettings" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="PathId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="PageSettings" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="PropertyNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PropertyValuesBinary" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="RoleId" Type="Guid" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredRoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CompatibleSchemaVersion" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsCurrentVersion" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="Guid" Nullable="false" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LoweredUserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MobileAlias" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="String" MaxLength="32" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EventType" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EventSequence" Type="Decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventOccurrence" Type="Decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventCode" Type="Int32" Nullable="false" />
+    <Property Name="EventDetailCode" Type="Int32" Nullable="false" />
+    <Property Name="Message" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationVirtualPath" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="MachineName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RequestUrl" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Name="ExceptionType" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Compaction">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+      <PropertyRef Name="GeneralSamleTypeId" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="GeneralSamleTypeId" Type="Int32" Nullable="false" />
+    <Property Name="Comp1" Type="Double" />
+    <Property Name="Comp2" Type="Double" />
+    <Property Name="Comp3" Type="Double" />
+    <Property Name="CRatio" Type="Double" />
+    <Property Name="TestDate" Type="DateTime" Precision="3" />
+    <Property Name="AsphaltTypeId" Type="Int32" />
+    <Property Name="SoilTypeId" Type="Int32" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="UpdatedBy" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="GehaID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="ConClsCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="SuperCategory" Type="Int32" />
+    <Property Name="SuperCategoryName" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConClsClassificationText">
+    <Key>
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ClsYear" />
+    </Key>
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ClsYear" Type="Int32" Nullable="false" />
+    <Property Name="ClassificationDegree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClassificationText" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConClsEvalPerformControl">
+    <Key>
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ConClsYear" />
+    </Key>
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ConClsYear" Type="Int32" Nullable="false" />
+    <Property Name="TempGeneralComment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="TempQualtyMaxComment" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="TempQualtyMinComment1" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Slump" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="CompressiveStrength" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConClsLabAdditionalTool">
+    <Key>
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ClsYear" />
+    </Key>
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ClsYear" Type="Int32" Nullable="false" />
+    <Property Name="Cylinder" Type="Int32" />
+    <Property Name="Cubles" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ConClsLabAdmixture">
+    <Key>
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ClsYear" />
+    </Key>
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ClsYear" Type="Int32" Nullable="false" />
+    <Property Name="IsTechniqcalSheet" Type="Boolean" />
+    <Property Name="TrialMixesEvalutePeriodicId" Type="Int32" />
+    <Property Name="TrialMixesEvalutePeriodicWeight" Type="Double" />
+  </EntityType>
+  <EntityType Name="ConClsLabEquipment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryId" Type="Int32" />
+    <Property Name="ClsYear" Type="Int32" />
+    <Property Name="MadeYear" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MadeFactoryCompany" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="MachineType" Type="Int32" />
+    <Property Name="SpeedControl" Type="Int32" />
+    <Property Name="TempControl1" Type="Int32" />
+    <Property Name="TempControl2" Type="Int32" />
+    <Property Name="TempControl3" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ConClsLabProperty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConClsCategoryId" Type="Int32" />
+    <Property Name="PropertyText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConClsLabPropertyValue">
+    <Key>
+      <PropertyRef Name="ConClsPeriodicLabPropertId" />
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ClsYear" />
+    </Key>
+    <Property Name="ConClsPeriodicLabPropertId" Type="Int32" Nullable="false" />
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ClsYear" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConClsLabStuff">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryId" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="TechnicalCertified" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="JobPosition" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConClsLabTestPractice">
+    <Key>
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ClsYear" />
+    </Key>
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ClsYear" Type="Int32" Nullable="false" />
+    <Property Name="MethodCuringWater" Type="Boolean" />
+    <Property Name="MethodCuringTempl" Type="Boolean" />
+    <Property Name="MehodTestingSurface" Type="Boolean" />
+    <Property Name="MethodRatLoading" Type="Boolean" />
+    <Property Name="ProperProtection" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ConClsMaterialSupCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConClsMaterialSup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConClsMaterialSupCategoryIdq" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="TypeofMaterial" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ConClsMixDesign">
+    <Key>
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ClsYear" />
+    </Key>
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ClsYear" Type="Int32" Nullable="false" />
+    <Property Name="MixResult40" Type="Double" />
+    <Property Name="MixResult35" Type="Double" />
+    <Property Name="MixResult30" Type="Double" />
+    <Property Name="MixResult20" Type="Double" />
+    <Property Name="CementKg40" Type="Double" />
+    <Property Name="CementKg35" Type="Double" />
+    <Property Name="CementKg30" Type="Double" />
+    <Property Name="CementKg20" Type="Double" />
+    <Property Name="HotWater40" Type="Double" />
+    <Property Name="HotWater35" Type="Double" />
+    <Property Name="HotWater30" Type="Double" />
+    <Property Name="HotWater20" Type="Double" />
+    <Property Name="Rookam3by4Kg40" Type="Double" />
+    <Property Name="Rookam3by4Kg35" Type="Double" />
+    <Property Name="Rookam3by4Kg30" Type="Double" />
+    <Property Name="Rookam3by4Kg20" Type="Double" />
+    <Property Name="Rookam3by8Kg40" Type="Double" />
+    <Property Name="Rookam3by8Kg35" Type="Double" />
+    <Property Name="Rookam3by8Kg30" Type="Double" />
+    <Property Name="Rookam3by8Kg20" Type="Double" />
+    <Property Name="SelicaSandKg40" Type="Double" />
+    <Property Name="SelicaSandKg35" Type="Double" />
+    <Property Name="SelicaSandKg30" Type="Double" />
+    <Property Name="SelicaSandKg20" Type="Double" />
+    <Property Name="WachingSandKg40" Type="Double" />
+    <Property Name="WachingSandKg35" Type="Double" />
+    <Property Name="WachingSandKg30" Type="Double" />
+    <Property Name="WachingSandKg20" Type="Double" />
+    <Property Name="RP264Litter40" Type="Double" />
+    <Property Name="RP264Litter35" Type="Double" />
+    <Property Name="RP264Litter30" Type="Double" />
+    <Property Name="RP264Litter20" Type="Double" />
+  </EntityType>
+  <EntityType Name="ConClsMixer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactId" Type="Int32" Nullable="false" />
+    <Property Name="YearCls" Type="Int32" Nullable="false" />
+    <Property Name="TotalMixers" Type="Int32" />
+    <Property Name="WaysOfMixer" Type="Boolean" />
+    <Property Name="MixerSize" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="MixerPeriod" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="WeightControl" Type="Boolean" />
+    <Property Name="SizeControl" Type="Boolean" />
+    <Property Name="IsAmountRegisterUsing" Type="Boolean" />
+    <Property Name="IsRegisterExistAnyTime" Type="Boolean" />
+    <Property Name="StationNo" Type="Int32" />
+    <Property Name="IsMzReadDevice" Type="Boolean" />
+    <Property Name="IsMzGoodSize" Type="Boolean" />
+    <Property Name="IsMzAccurate" Type="Boolean" />
+    <Property Name="IsAllArrowGoodProtected" Type="Boolean" />
+    <Property Name="IsLargeNoEasyRead" Type="Boolean" />
+    <Property Name="IsMixerManul" Type="Boolean" />
+    <Property Name="IsMixerDigital" Type="Boolean" />
+    <Property Name="IsMixerMix" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ConClsPeriodicLabProperty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConClsPropPeriodicId" Type="Int32" />
+    <Property Name="PropertyWeight" Type="Double" />
+    <Property Name="ConClsLabPropertyId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ConClsProperty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConClsCategoryId" Type="Int32" />
+    <Property Name="PropertyText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PropertyWeight" Type="Double" />
+  </EntityType>
+  <EntityType Name="ConClsPropertiesReason">
+    <Key>
+      <PropertyRef Name="ConClsPropertyId" />
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ClsYear" />
+    </Key>
+    <Property Name="ConClsPropertyId" Type="Int32" Nullable="false" />
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ClsYear" Type="Int32" Nullable="false" />
+    <Property Name="Reason" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConClsPropertyValue">
+    <Key>
+      <PropertyRef Name="ConClsPropertyId" />
+      <PropertyRef Name="FactoryId" />
+      <PropertyRef Name="ClsYear" />
+    </Key>
+    <Property Name="ConClsPropertyId" Type="Int32" Nullable="false" />
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="ClsYear" Type="Int32" Nullable="false" />
+    <Property Name="PropertyValue" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ConClsPropPeriodic">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Peroidic" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConcreteSample">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PlantNumber" Type="Int32" />
+    <Property Name="SampleDate" Type="DateTime" Precision="3" />
+    <Property Name="SampleTime" Type="Double" />
+    <Property Name="InvoiceNumber" Type="Int32" />
+    <Property Name="TrucksNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Client" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ConcreteRank" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ConcreteTemperture" Type="Int32" />
+    <Property Name="WeatherTemperture" Type="Int32" />
+    <Property Name="AmountofLand" Type="Int32" />
+    <Property Name="AcementType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AcementSource" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionTypes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionAmount" Type="Double" />
+    <Property Name="IsCleanUsage" Type="Boolean" />
+    <Property Name="IsBasicUsage" Type="Boolean" />
+    <Property Name="IsColumnUsage" Type="Boolean" />
+    <Property Name="IsRoofUsage" Type="Boolean" />
+    <Property Name="IsOtherUsage" Type="Boolean" />
+    <Property Name="AcementWeight" Type="Int32" />
+    <Property Name="WaterWieght" Type="Int32" />
+    <Property Name="WashedSandWeight" Type="Int32" />
+    <Property Name="SizeFourbyThree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SizeEightByThree" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsCleanLocation" Type="Boolean" />
+    <Property Name="IsDustControlInStation" Type="Boolean" />
+    <Property Name="IsRokamSummar" Type="Boolean" />
+    <Property Name="IsLabEngineer" Type="Boolean" />
+    <Property Name="IsMoldanatInTrunks" Type="Boolean" />
+    <Property Name="IsPeopeSafty" Type="Boolean" />
+    <Property Name="SampledBy" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="WhiteSandWeight" Type="Int32" />
+    <Property Name="WaterTemperature" Type="Int32" />
+    <Property Name="Resist7days" Type="Double" />
+    <Property Name="Resist28days" Type="Double" />
+    <Property Name="AmanaSampleNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContAsphaltSample">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AsphaltTypeId" Type="Int32" />
+    <Property Name="ProjectId" Type="Int32" />
+    <Property Name="StartHour" Type="Double" />
+    <Property Name="EndHour" Type="Double" />
+    <Property Name="NoJobs" Type="Boolean" />
+    <Property Name="PermitNumber" Type="Int32" />
+    <Property Name="BranchId" Type="Int32" />
+    <Property Name="LayerThickness" Type="Double" />
+    <Property Name="LayerWidth" Type="Double" />
+    <Property Name="EvelCm" Type="Double" />
+    <Property Name="LocationStartN" Type="Double" />
+    <Property Name="LocationStartE" Type="Double" />
+    <Property Name="LocationEN" Type="Double" />
+    <Property Name="LocationEE" Type="Double" />
+    <Property Name="Street" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MoreStreet2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LocationStartNStreet2" Type="Double" />
+    <Property Name="LocationStartEStreet2" Type="Double" />
+    <Property Name="LocationENStreet2" Type="Double" />
+    <Property Name="LocationEEStreet2" Type="Double" />
+    <Property Name="RequestNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsSampled" Type="Boolean" />
+    <Property Name="Source" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TeamId" Type="Int32" />
+    <Property Name="ExecutionDate" Type="DateTime" Precision="3" />
+    <Property Name="Quantity" Type="Double" />
+    <Property Name="InspectorReturned" Type="Boolean" />
+    <Property Name="InspectorNotes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InspectorLongitude" Type="Double" />
+    <Property Name="InspectorMagnitude" Type="Double" />
+    <Property Name="PlantLocationId" Type="Int32" />
+    <Property Name="ContSampleRequest" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsEmergency" Type="Boolean" />
+    <Property Name="ContractorId" Type="Guid" />
+    <Property Name="SupplierId" Type="Guid" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="UpdatedBy" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="InspectorBy" Type="Guid" />
+    <Property Name="MixDesignId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ContractorRetFlow">
+    <Key>
+      <PropertyRef Name="RequestNumber" />
+    </Key>
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsContractorSubmit" Type="Boolean" />
+    <Property Name="ContractorSubmit" Type="DateTime" Precision="3" />
+    <Property Name="IsGMAccept" Type="Boolean" />
+    <Property Name="GMAccept" Type="DateTime" Precision="3" />
+    <Property Name="Notes" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TestsTypes" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContSoilSample">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SoilTypeId" Type="Int32" />
+    <Property Name="ProjectId" Type="Int32" />
+    <Property Name="StartHour" Type="Double" />
+    <Property Name="EndHour" Type="Double" />
+    <Property Name="NoJobs" Type="Boolean" />
+    <Property Name="PermitNumber" Type="Int32" />
+    <Property Name="BranchId" Type="Int32" />
+    <Property Name="LayerThickness" Type="Double" />
+    <Property Name="LayerWidth" Type="Double" />
+    <Property Name="EvelCm" Type="Double" />
+    <Property Name="LocationStartN" Type="Double" />
+    <Property Name="LocationStartE" Type="Double" />
+    <Property Name="LocationEN" Type="Double" />
+    <Property Name="LocationEE" Type="Double" />
+    <Property Name="Street" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MoreStreet2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LocationStartNStreet2" Type="Double" />
+    <Property Name="LocationStartEStreet2" Type="Double" />
+    <Property Name="LocationENStreet2" Type="Double" />
+    <Property Name="LocationEEStreet2" Type="Double" />
+    <Property Name="RequestNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsSampled" Type="Boolean" />
+    <Property Name="Source" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TeamId" Type="Int32" />
+    <Property Name="ExecutionDate" Type="DateTime" Precision="3" />
+    <Property Name="Quantity" Type="Double" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="longitude" Type="Double" />
+    <Property Name="ContSampleRequest" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ContractorId" Type="Guid" />
+    <Property Name="SupplierId" Type="Guid" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="UpdatedBy" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="InspectorBy" Type="Guid" />
+  </EntityType>
+  <EntityType Name="Factory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Lat" Type="Double" />
+    <Property Name="Lang" Type="Double" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerName" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsibleManager" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="ResponsibleManagerCertified" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="TechManager" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="TechManagerCertified" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="TelephoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FaxNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductEnergy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DailyProductRating" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="CodeNo" Type="Int32" />
+  </EntityType>
+  <EntityType Name="FactoryEquipment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryId" Type="Int32" />
+    <Property Name="Serial" Type="Int32" />
+    <Property Name="EquipmentName" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="TotalCount" Type="Int32" />
+    <Property Name="EquipWorking" Type="Int32" />
+    <Property Name="EquipNoWorking" Type="Int32" />
+    <Property Name="EquipSpare" Type="Int32" />
+    <Property Name="Notes" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Factory1">
+    <Key>
+      <PropertyRef Name="FactoryID" />
+    </Key>
+    <Property Name="FactoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryEngName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TelephoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FaxNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AddressDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="ManagerRespons" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerCert" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerTech" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerTechCert" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductivityPower" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AvgDailyProd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StandardDiviation" Type="Double" />
+    <Property Name="StandardDiv30" Type="Double" />
+    <Property Name="StandardDiv35" Type="Double" />
+    <Property Name="StandardDiv40" Type="Double" />
+  </EntityType>
+  <EntityType Name="GeneralSampleType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MapRole">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MapUserProject">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+      <PropertyRef Name="ContractorId" />
+    </Key>
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="ContractorId" Type="Guid" Nullable="false" />
+    <Property Name="ProjectUserId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MapUserRole">
+    <Key>
+      <PropertyRef Name="MapUserId" />
+      <PropertyRef Name="MapRoleId" />
+    </Key>
+    <Property Name="MapUserId" Type="Int32" Nullable="false" />
+    <Property Name="MapRoleId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MapUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Mob" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CompanyName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Guid" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MarshalAsphaltSpec">
+    <Key>
+      <PropertyRef Name="TypeNum" />
+    </Key>
+    <Property Name="TypeNum" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="tasphalt" Type="Int16" />
+    <Property Name="basphalt" Type="Int16" />
+    <Property Name="stability" Type="Int16" />
+    <Property Name="lostability" Type="Int16" />
+    <Property Name="tflow" Type="Double" />
+    <Property Name="bflow" Type="Double" />
+    <Property Name="tairvoid" Type="Int16" />
+    <Property Name="bairvoid" Type="Int16" />
+    <Property Name="tfilvoid" Type="Int16" />
+    <Property Name="bfilvoid" Type="Int16" />
+    <Property Name="ts15" Type="Int16" />
+    <Property Name="bs15" Type="Int16" />
+    <Property Name="ts1" Type="Int16" />
+    <Property Name="bs1" Type="Int16" />
+    <Property Name="ts34" Type="Int16" />
+    <Property Name="bs34" Type="Int16" />
+    <Property Name="ts12" Type="Int16" />
+    <Property Name="bs12" Type="Int16" />
+    <Property Name="ts38" Type="Int16" />
+    <Property Name="bs38" Type="Int16" />
+    <Property Name="ts4" Type="Int16" />
+    <Property Name="bs4" Type="Int16" />
+    <Property Name="ts10" Type="Int16" />
+    <Property Name="bs10" Type="Int16" />
+    <Property Name="ts40" Type="Int16" />
+    <Property Name="bs40" Type="Int16" />
+    <Property Name="ts80" Type="Int16" />
+    <Property Name="bs80" Type="Int16" />
+    <Property Name="ts200" Type="Int16" />
+    <Property Name="bs200" Type="Int16" />
+  </EntityType>
+  <EntityType Name="MarshalAspMixDesApp">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+      <PropertyRef Name="IsLabEngineer" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="IsLabEngineer" Type="Boolean" Nullable="false" />
+    <Property Name="Pin1" Type="Double" />
+    <Property Name="Pin2" Type="Double" />
+    <Property Name="Pin3" Type="Double" />
+    <Property Name="Pin4" Type="Double" />
+    <Property Name="Pin5" Type="Double" />
+    <Property Name="Filler" Type="Double" />
+    <Property Name="PinTot" Type="Double" />
+    <Property Name="S11B2P1" Type="Double" />
+    <Property Name="S11B2P2" Type="Double" />
+    <Property Name="S11B2P3" Type="Double" />
+    <Property Name="S11B2P4" Type="Double" />
+    <Property Name="S11B2P5" Type="Double" />
+    <Property Name="S11B2F" Type="Double" />
+    <Property Name="S11B2Tot" Type="Double" />
+    <Property Name="S1P1" Type="Double" />
+    <Property Name="S1P2" Type="Double" />
+    <Property Name="S1P3" Type="Double" />
+    <Property Name="S1P4" Type="Double" />
+    <Property Name="S1P5" Type="Double" />
+    <Property Name="S1F" Type="Double" />
+    <Property Name="TotS1" Type="Double" />
+    <Property Name="S3B4P1" Type="Double" />
+    <Property Name="S3B4P2" Type="Double" />
+    <Property Name="S3B4P3" Type="Double" />
+    <Property Name="S3B4P4" Type="Double" />
+    <Property Name="S3B4P5" Type="Double" />
+    <Property Name="S3B4F" Type="Double" />
+    <Property Name="TotS3B4" Type="Double" />
+    <Property Name="S1B2P1" Type="Double" />
+    <Property Name="S1B2P2" Type="Double" />
+    <Property Name="S1B2P3" Type="Double" />
+    <Property Name="S1B2P4" Type="Double" />
+    <Property Name="S1B2P5" Type="Double" />
+    <Property Name="S1B2F" Type="Double" />
+    <Property Name="TotS1B2" Type="Double" />
+    <Property Name="S3B8P1" Type="Double" />
+    <Property Name="S3B8P2" Type="Double" />
+    <Property Name="S3B8P3" Type="Double" />
+    <Property Name="S3B8P4" Type="Double" />
+    <Property Name="S3B8P5" Type="Double" />
+    <Property Name="S3B8F" Type="Double" />
+    <Property Name="TotS3B8" Type="Double" />
+    <Property Name="S4P1" Type="Double" />
+    <Property Name="S4P2" Type="Double" />
+    <Property Name="S4P3" Type="Double" />
+    <Property Name="S4P4" Type="Double" />
+    <Property Name="S4P5" Type="Double" />
+    <Property Name="S4F" Type="Double" />
+    <Property Name="S4Tot" Type="Double" />
+    <Property Name="S10P1" Type="Double" />
+    <Property Name="S10P2" Type="Double" />
+    <Property Name="S10P3" Type="Double" />
+    <Property Name="S10P4" Type="Double" />
+    <Property Name="S10P5" Type="Double" />
+    <Property Name="S10F" Type="Double" />
+    <Property Name="S10Tot" Type="Double" />
+    <Property Name="S40P1" Type="Double" />
+    <Property Name="S40P2" Type="Double" />
+    <Property Name="S40P3" Type="Double" />
+    <Property Name="S40P4" Type="Double" />
+    <Property Name="S40P5" Type="Double" />
+    <Property Name="S40F" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="S40Tot" Type="Double" />
+    <Property Name="S80P1" Type="Double" />
+    <Property Name="S80P2" Type="Double" />
+    <Property Name="S80P3" Type="Double" />
+    <Property Name="S80P4" Type="Double" />
+    <Property Name="S80P5" Type="Double" />
+    <Property Name="S80F" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="S80Tot" Type="Double" />
+    <Property Name="S200P1" Type="Double" />
+    <Property Name="S200P2" Type="Double" />
+    <Property Name="S200P3" Type="Double" />
+    <Property Name="S200P4" Type="Double" />
+    <Property Name="S200P5" Type="Double" />
+    <Property Name="S200F" Type="Double" />
+    <Property Name="S200Tot" Type="Double" />
+    <Property Name="Pb" Type="Double" />
+    <Property Name="Gmb" Type="Double" />
+    <Property Name="Gmm" Type="Double" />
+    <Property Name="AirVoid" Type="Double" />
+    <Property Name="VoidsFilled" Type="Double" />
+    <Property Name="Stability30" Type="Double" />
+    <Property Name="LossOfStability" Type="Double" />
+    <Property Name="Flow" Type="Double" />
+    <Property Name="PI" Type="Double" />
+    <Property Name="Gsb" Type="Double" />
+    <Property Name="SandEquivalent" Type="Double" />
+    <Property Name="AbrasionValue" Type="Double" />
+    <Property Name="ClayAndLumps" Type="Double" />
+    <Property Name="ThinAndElongated" Type="Double" />
+    <Property Name="Soundness" Type="Double" />
+    <Property Name="CrushedParticles_CA" Type="Double" />
+    <Property Name="Crushedparticles_FA" Type="Double" />
+    <Property Name="Coating" Type="Double" />
+    <Property Name="AggFactor" Type="Double" />
+    <Property Name="DateIn" Type="DateTime" Precision="3" />
+    <Property Name="AttemptNo" Type="Int32" />
+    <Property Name="Fail" Type="Boolean" />
+    <Property Name="FatBlend" Type="Boolean" />
+    <Property Name="FatSE" Type="Boolean" />
+    <Property Name="FatAValue" Type="Boolean" />
+    <Property Name="FatCL" Type="Boolean" />
+    <Property Name="FatTAE" Type="Boolean" />
+    <Property Name="FatSoundness" Type="Boolean" />
+    <Property Name="FatCA" Type="Boolean" />
+    <Property Name="FatFA" Type="Boolean" />
+    <Property Name="FatCoating" Type="Boolean" />
+    <Property Name="FatPI" Type="Boolean" />
+    <Property Name="FatAV" Type="Boolean" />
+    <Property Name="FatVF" Type="Boolean" />
+    <Property Name="FatS30" Type="Boolean" />
+    <Property Name="FatLOS" Type="Boolean" />
+    <Property Name="FatFlow" Type="Boolean" />
+    <Property Name="PlantLocationId" Type="Int32" />
+    <Property Name="AsphaltTypesId" Type="Int32" />
+    <Property Name="ContSampleRequest" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MarshalMixDesign">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="PlantNo" Type="Int32" />
+    <Property Name="TypeNum" Type="Int32" />
+    <Property Name="SupressIt" Type="Int32" />
+    <Property Name="ApprovalDate" Type="DateTime" Precision="3" />
+    <Property Name="DateEnd" Type="DateTime" Precision="3" />
+    <Property Name="PreviousDateEnd" Type="DateTime" Precision="3" />
+    <Property Name="Approved_Date_H" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="End_Date_H" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateEndExtended" Type="DateTime" Precision="3" />
+    <Property Name="DateEndExtended_H" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Duration" Type="Int32" />
+    <Property Name="MaxAsphaltRatio" Type="Double" />
+    <Property Name="MinAsphaltRatio" Type="Double" />
+    <Property Name="StabilityAfter30Min" Type="Double" />
+    <Property Name="AGS_LossOfStability" Type="Double" />
+    <Property Name="MaxFlow" Type="Double" />
+    <Property Name="Flow" Type="Double" />
+    <Property Name="MaxAirVoids" Type="Double" />
+    <Property Name="AirVoids" Type="Double" />
+    <Property Name="MaxFilledVoids" Type="Double" />
+    <Property Name="FilledVoids" Type="Double" />
+    <Property Name="AggregateFilledVoids" Type="Double" />
+    <Property Name="CompTop" Type="Int32" />
+    <Property Name="CompBot" Type="Int32" />
+    <Property Name="Gmm" Type="Double" />
+    <Property Name="Gmb" Type="Double" />
+    <Property Name="Gsb" Type="Double" />
+    <Property Name="SIEVE_11By2" Type="Double" />
+    <Property Name="SIEVE_1" Type="Double" />
+    <Property Name="SIEVE_3By4" Type="Double" />
+    <Property Name="SIEVE_1By2" Type="Double" />
+    <Property Name="SIEVE_3By8" Type="Double" />
+    <Property Name="SIEVE_4" Type="Double" />
+    <Property Name="SIEVE_10" Type="Double" />
+    <Property Name="SIEVE_40" Type="Double" />
+    <Property Name="SIEVE_80" Type="Double" />
+    <Property Name="SIEVE_200" Type="Double" />
+    <Property Name="Bowder" Type="Int16" />
+    <Property Name="Max11By2" Type="Double" />
+    <Property Name="Min_11By2" Type="Double" />
+    <Property Name="Max_1" Type="Double" />
+    <Property Name="Min_1" Type="Double" />
+    <Property Name="Max_3By4" Type="Double" />
+    <Property Name="Min_3By4" Type="Double" />
+    <Property Name="Max_1By2" Type="Double" />
+    <Property Name="Min_1By2" Type="Double" />
+    <Property Name="Max_3By8" Type="Double" />
+    <Property Name="Min_3By8" Type="Double" />
+    <Property Name="Max__4" Type="Double" />
+    <Property Name="Min__4" Type="Double" />
+    <Property Name="Max__10" Type="Double" />
+    <Property Name="Min__10" Type="Double" />
+    <Property Name="Max__40" Type="Double" />
+    <Property Name="Min__40" Type="Double" />
+    <Property Name="Max__80" Type="Double" />
+    <Property Name="Min__80" Type="Double" />
+    <Property Name="Max__200" Type="Double" />
+    <Property Name="Min__200" Type="Double" />
+    <Property Name="pb" Type="Double" />
+    <Property Name="Approved" Type="Int16" />
+    <Property Name="LPrint" Type="Int32" />
+    <Property Name="aggfactor" Type="Single" />
+    <Property Name="SupLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Activate" Type="Int32" />
+    <Property Name="DateIn" Type="DateTime" Precision="3" />
+    <Property Name="JMFRequested" Type="DateTime" Precision="3" />
+    <Property Name="JMFRequestedH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RequestNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="MarshalSampleResult">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="Pb" Type="Double" />
+    <Property Name="Gmm" Type="Double" />
+    <Property Name="Gmmb" Type="Double" />
+    <Property Name="GmmPercent" Type="Double" />
+    <Property Name="VMA" Type="Double" />
+    <Property Name="VFA" Type="Double" />
+    <Property Name="AVpercent" Type="Double" />
+    <Property Name="SieveOne" Type="Double" />
+    <Property Name="SieveOneAndHalf" Type="Double" />
+    <Property Name="SieveThreeByFour" Type="Double" />
+    <Property Name="SieveHalf" Type="Double" />
+    <Property Name="SieveThreeBYEight" Type="Double" />
+    <Property Name="SieveFour" Type="Double" />
+    <Property Name="SieveEight" Type="Double" />
+    <Property Name="SieveFifteen" Type="Double" />
+    <Property Name="SieveHandreed" Type="Double" />
+    <Property Name="SieveTwoHandreed" Type="Double" />
+    <Property Name="Sieve10" Type="Double" />
+    <Property Name="Sieve40" Type="Double" />
+    <Property Name="Sieve80" Type="Double" />
+    <Property Name="Stability" Type="Double" />
+    <Property Name="LossStability30min" Type="Double" />
+    <Property Name="Flow" Type="Double" />
+  </EntityType>
+  <EntityType Name="MarshalSample">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="RNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateSampled" Type="DateTime" Precision="3" />
+    <Property Name="ExecutionDate" Type="DateTime" Precision="3" />
+    <Property Name="SampleType" Type="Int32" />
+    <Property Name="PlantNo" Type="Int32" />
+    <Property Name="TypeNum" Type="Int32" />
+    <Property Name="Project" Type="Int32" />
+    <Property Name="ClientNo" Type="Int32" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PermitNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SectionNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Station" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PranshMenciplitiy" Type="Int32" />
+    <Property Name="StartN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="StartE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EndN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EndE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SLocationN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SLocationE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="StreetName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SavedBy" Type="Guid" />
+    <Property Name="RequiredTests" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinates" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CheckInDate" Type="DateTime" Precision="3" />
+    <Property Name="IsHandOver" Type="Boolean" />
+    <Property Name="LayerThickness" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReTest" Type="Int32" />
+    <Property Name="MType" Type="Int32" />
+    <Property Name="Elevation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JMFRequested" Type="DateTime" Precision="3" />
+    <Property Name="JMFRequestedH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DaysToFinish" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FinishDateIn" Type="DateTime" Precision="3" />
+    <Property Name="ASQuantity" Type="Int32" />
+    <Property Name="TypeReport" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LabSampleRequest" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ContractorId" Type="Guid" />
+    <Property Name="SupplierId" Type="Guid" />
+    <Property Name="SampleBy" Type="Guid" />
+    <Property Name="GehaName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="GehaUserId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="PermitLocationTest">
+    <Key>
+      <PropertyRef Name="TestID" />
+    </Key>
+    <Property Name="TestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitId" Type="Int32" />
+    <Property Name="RC2" Type="Double" />
+    <Property Name="MC1" Type="Double" />
+    <Property Name="Compaction" Type="Double" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="UpdatedBy" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsAmanaTest" Type="Boolean" />
+    <Property Name="Lat" Type="Double" />
+    <Property Name="lang" Type="Double" />
+  </EntityType>
+  <EntityType Name="Permit">
+    <Key>
+      <PropertyRef Name="PermitID" />
+    </Key>
+    <Property Name="PermitID" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="PermitDate" Type="DateTime" Precision="3" />
+    <Property Name="MuncipityId" Type="Int32" />
+    <Property Name="Zone" Type="Int32" />
+    <Property Name="Street" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="NoLayers" Type="Int32" />
+    <Property Name="ServiceType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ExtensionType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="UpdatedBy" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="OuterLabId" Type="Guid" />
+    <Property Name="RelatedCompanyId" Type="Guid" />
+    <Property Name="PermitNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PermitVisionTestDetail">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitId" Type="Int32" />
+    <Property Name="ImageSrc" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="LocationX" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LocationY" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PermitVisionTestId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="PermitVisionTest">
+    <Key>
+      <PropertyRef Name="TestID" />
+    </Key>
+    <Property Name="TestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitId" Type="Int32" />
+    <Property Name="VisionTest" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="UpdatedBy" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsAmanaTest" Type="Boolean" />
+    <Property Name="ResonOfFail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Lat" Type="Double" />
+    <Property Name="Lang" Type="Double" />
+    <Property Name="TechniqName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PlantLocation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlantLocation1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Plant">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlantLocationId" Type="Int32" />
+    <Property Name="PlantName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="MapPath" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UserId" Type="Guid" />
+    <Property Name="PlantManagerId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Project1" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="DateStart" Type="DateTime" Precision="3" />
+    <Property Name="DateEnd" Type="DateTime" Precision="3" />
+    <Property Name="ProjectNumber" Type="Int32" />
+    <Property Name="Notes" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="ContractorId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="QCWorkFlow">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitId" Type="Int32" />
+    <Property Name="IsPermitLocationTest" Type="Boolean" />
+    <Property Name="DateLocationTest" Type="DateTime" Precision="3" />
+    <Property Name="IsVisionTest" Type="Boolean" />
+    <Property Name="DateVisionTest" Type="DateTime" Precision="3" />
+    <Property Name="IsPermitAssignToLab" Type="Boolean" />
+    <Property Name="IsPermitAssignToRelatedCompany" Type="Boolean" />
+    <Property Name="IsPermitAssignedToAmana" Type="Boolean" />
+    <Property Name="IsVisionTestFailedCompany" Type="Boolean" />
+    <Property Name="IsVisionTestFailedAmana" Type="Boolean" />
+    <Property Name="IsLocationTestFailedAmana" Type="Boolean" />
+    <Property Name="IsPermitFinised" Type="Boolean" />
+    <Property Name="FailedReason" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SamplesWorkFlow">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleNo" Type="Int32" />
+    <Property Name="GeneralSampleTypeId" Type="Int32" />
+    <Property Name="InspectorManagerAssigned" Type="DateTime" Precision="3" />
+    <Property Name="InspectorManager" Type="Boolean" />
+    <Property Name="InspectorConfirm" Type="Boolean" />
+    <Property Name="InspectorConfirmed" Type="DateTime" Precision="3" />
+    <Property Name="Receptioned" Type="DateTime" Precision="3" />
+    <Property Name="Reception" Type="Boolean" />
+    <Property Name="Compactioned" Type="DateTime" Precision="3" />
+    <Property Name="Compaction" Type="Boolean" />
+    <Property Name="Tested" Type="DateTime" Precision="3" />
+    <Property Name="Test" Type="Boolean" />
+    <Property Name="Printed" Type="DateTime" Precision="3" />
+    <Property Name="Print" Type="Boolean" />
+    <Property Name="MarshalJmRequested" Type="DateTime" Precision="0" />
+    <Property Name="MarshalJmRequest" Type="Boolean" />
+    <Property Name="IsReceptionManually" Type="Boolean" />
+    <Property Name="RequestNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SoilDesign">
+    <Key>
+      <PropertyRef Name="SoilTypeId" />
+    </Key>
+    <Property Name="SoilTypeId" Type="Int32" Nullable="false" />
+    <Property Name="T3" Type="Double" />
+    <Property Name="T2" Type="Double" />
+    <Property Name="T15F" Type="Double" />
+    <Property Name="T15T" Type="Double" />
+    <Property Name="T1F" Type="Double" />
+    <Property Name="T1T" Type="Double" />
+    <Property Name="T34T" Type="Double" />
+    <Property Name="T34F" Type="Double" />
+    <Property Name="T5F" Type="Double" />
+    <Property Name="T5T" Type="Double" />
+    <Property Name="T38F" Type="Double" />
+    <Property Name="T38T" Type="Double" />
+    <Property Name="T4F" Type="Double" />
+    <Property Name="T4T" Type="Double" />
+    <Property Name="T10F" Type="Double" />
+    <Property Name="T10T" Type="Double" />
+    <Property Name="T20F" Type="Double" />
+    <Property Name="T20T" Type="Double" />
+    <Property Name="T40F" Type="Double" />
+    <Property Name="T40T" Type="Double" />
+    <Property Name="T80F" Type="Double" />
+    <Property Name="T80T" Type="Double" />
+    <Property Name="T200F" Type="Double" />
+    <Property Name="T200T" Type="Double" />
+  </EntityType>
+  <EntityType Name="SoilMoisture">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="Moist1" Type="Double" />
+    <Property Name="Moist2" Type="Double" />
+    <Property Name="Moist3" Type="Double" />
+    <Property Name="MoistureCont" Type="Double" />
+    <Property Name="TestDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="SoilResult">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="SieveOne" Type="Double" />
+    <Property Name="SieveOneAndHalf" Type="Double" />
+    <Property Name="SieveThreeByFour" Type="Double" />
+    <Property Name="SieveThreeBYEight" Type="Double" />
+    <Property Name="SieveFour" Type="Double" />
+    <Property Name="SieveThree" Type="Double" />
+    <Property Name="SieveTeen" Type="Double" />
+    <Property Name="SieveTwoHandreed" Type="Double" />
+    <Property Name="SieveTwo" Type="Double" />
+    <Property Name="SieveForty" Type="Double" />
+    <Property Name="SieveHalf" Type="Double" />
+    <Property Name="SieveTwenty" Type="Double" />
+    <Property Name="SieveEighteen" Type="Double" />
+    <Property Name="NoBlows" Type="Int32" />
+    <Property Name="NoLayers" Type="Double" />
+    <Property Name="MaxDryDensity" Type="Double" />
+    <Property Name="MoistureContent" Type="Double" />
+    <Property Name="Liquidlimit" Type="Double" />
+    <Property Name="PlasticLimit" Type="Double" />
+    <Property Name="PlasticityIndex" Type="Double" />
+    <Property Name="GroupIndex" Type="Double" />
+    <Property Name="SoilClassification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoistureInLocation" Type="Double" />
+    <Property Name="CompactionRatioInLocation" Type="Double" />
+    <Property Name="MC1" Type="Double" />
+    <Property Name="MC2" Type="Double" />
+    <Property Name="MC3" Type="Double" />
+    <Property Name="MC4" Type="Double" />
+    <Property Name="MC5" Type="Double" />
+    <Property Name="DR1" Type="Double" />
+    <Property Name="DR2" Type="Double" />
+    <Property Name="DR3" Type="Double" />
+    <Property Name="DR4" Type="Double" />
+    <Property Name="DR5" Type="Double" />
+  </EntityType>
+  <EntityType Name="SoilSampleResult">
+    <Key>
+      <PropertyRef Name="SampleNO" />
+    </Key>
+    <Property Name="SampleNO" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SoilSample">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="RNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateSampled" Type="DateTime" Precision="3" />
+    <Property Name="ExecutionDate" Type="DateTime" Precision="3" />
+    <Property Name="SampleType" Type="Int32" />
+    <Property Name="Project" Type="Int32" />
+    <Property Name="ClientNo" Type="Int32" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PermitNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SectionNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Station" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PranshMenciplitiy" Type="Int32" />
+    <Property Name="StartN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="StartE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EndN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EndE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StreetName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RequiredTests" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinates" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CheckInDate" Type="DateTime" Precision="3" />
+    <Property Name="IsHandOver" Type="Boolean" />
+    <Property Name="LayerThickness" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReTest" Type="Int32" />
+    <Property Name="Elevation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ASQuantity" Type="Int32" />
+    <Property Name="TypeReport" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SLocationN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SLocationE" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="LabSampleRequest" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="ContractorId" Type="Guid" />
+    <Property Name="SampleBy" Type="Guid" />
+    <Property Name="GehaName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="GehaUserId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="SoilType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SampleType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SuperPaveMixDesign">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MixType" Type="Byte" />
+    <Property Name="DesignTrafficClass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrafficSpeed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LayerThickness" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NominalMaximumSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AsphaltBinder" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UsedBinderModifier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SieveOneAndHalfPass" Type="Double" />
+    <Property Name="SieveOnePass" Type="Double" />
+    <Property Name="SieveEightPass" Type="Double" />
+    <Property Name="SieveThreeByFourPass" Type="Double" />
+    <Property Name="SieveHalfPass" Type="Double" />
+    <Property Name="SiveThreeByEightPass" Type="Double" />
+    <Property Name="SieveFourPass" Type="Double" />
+    <Property Name="SieveSixTeenPass" Type="Double" />
+    <Property Name="SieveThrityPass" Type="Double" />
+    <Property Name="SieveFifteenPass" Type="Double" />
+    <Property Name="SieveHandreedPass" Type="Double" />
+    <Property Name="SiveTwoHandreedPass" Type="Double" />
+    <Property Name="SieveOneAndHalfToleranceFrom" Type="Double" />
+    <Property Name="SieveOneAndHalfToleranceTo" Type="Double" />
+    <Property Name="SieveOneToleranceFrom" Type="Double" />
+    <Property Name="SieveOneToleranceTo" Type="Double" />
+    <Property Name="SieveThreeByFourToleranceFrom" Type="Double" />
+    <Property Name="SieveThreeByFourToleranceTo" Type="Double" />
+    <Property Name="SieveHalfToleranceFrom" Type="Double" />
+    <Property Name="SieveHalfToleranceTo" Type="Double" />
+    <Property Name="SiveThreeByEightToleranceFrom" Type="Double" />
+    <Property Name="SiveThreeByEightToleranceTo" Type="Double" />
+    <Property Name="SieveFourToleranceFrom" Type="Double" />
+    <Property Name="SieveFourToleranceTo" Type="Double" />
+    <Property Name="SieveSixTeenToleranceFrom" Type="Double" />
+    <Property Name="SieveSixTeenToleranceTo" Type="Double" />
+    <Property Name="SieveThrityToleranceFrom" Type="Double" />
+    <Property Name="SieveThrityToleranceTo" Type="Double" />
+    <Property Name="SieveFifteenToleranceFrom" Type="Double" />
+    <Property Name="SieveFifteenToleranceTo" Type="Double" />
+    <Property Name="SieveHundreedToleranceTo" Type="Double" />
+    <Property Name="SieveHandreedToleranceFrom" Type="Double" />
+    <Property Name="SiveTwoHandreedToleranceFrom" Type="Double" />
+    <Property Name="SieveEightToleranceTo" Type="Double" />
+    <Property Name="SieveEightToleranceFrom" Type="Double" />
+    <Property Name="SiveTwoHandreedToleranceTo" Type="Double" />
+    <Property Name="ACPercentFrom" Type="Double" />
+    <Property Name="ACPercentTo" Type="Double" />
+    <Property Name="AVPercentFrom" Type="Double" />
+    <Property Name="AVPercentTo" Type="Double" />
+    <Property Name="GMMInitalPercentFrom" Type="Double" />
+    <Property Name="GMMInitalPercentTo" Type="Double" />
+    <Property Name="GMMDesTo" Type="Double" />
+    <Property Name="GMMDesFrom" Type="Double" />
+    <Property Name="GMMmaxPercentFrom" Type="Double" />
+    <Property Name="GMMmaxPercentTo" Type="Double" />
+    <Property Name="LAAbrasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FAAngularity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SandEquivalent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Soundness" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AprovedDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="SupplierId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="SuperPaveSampleResult">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="ACPercent" Type="Double" />
+    <Property Name="Gmm" Type="Double" />
+    <Property Name="Gmmb" Type="Double" />
+    <Property Name="GmmPercent" Type="Double" />
+    <Property Name="AVpercent" Type="Double" />
+    <Property Name="SieveOne" Type="Double" />
+    <Property Name="SieveOneAndHalf" Type="Double" />
+    <Property Name="SieveThreeByFour" Type="Double" />
+    <Property Name="SieveHalf" Type="Double" />
+    <Property Name="SieveThreeBYEight" Type="Double" />
+    <Property Name="SieveFour" Type="Double" />
+    <Property Name="SieveEight" Type="Double" />
+    <Property Name="SieveSixteen" Type="Double" />
+    <Property Name="SieveThirty" Type="Double" />
+    <Property Name="SieveFifteen" Type="Double" />
+    <Property Name="SieveHandreed" Type="Double" />
+    <Property Name="SieveTwoHandreed" Type="Double" />
+  </EntityType>
+  <EntityType Name="SuperPaveSample">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateSampled" Type="DateTime" Precision="3" />
+    <Property Name="ExecutionDate" Type="DateTime" Precision="3" />
+    <Property Name="SampleType" Type="Int32" />
+    <Property Name="PlantNo" Type="Int32" />
+    <Property Name="TypeNum" Type="Int32" />
+    <Property Name="Project" Type="Int32" />
+    <Property Name="ClientNo" Type="Int32" />
+    <Property Name="Location" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="PermitNo" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="SectionNo" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Station" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="PranshMenciplitiy" Type="Int32" />
+    <Property Name="StartN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="StartE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EndN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EndE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SLocationN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SLocationE" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="StreetName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RequiredTests" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Coordinates" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CheckInDate" Type="DateTime" Precision="3" />
+    <Property Name="IsHandOver" Type="Boolean" />
+    <Property Name="LayerThickness" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ReTest" Type="Int32" />
+    <Property Name="MType" Type="Int32" />
+    <Property Name="Elevation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JMFRequested" Type="DateTime" Precision="3" />
+    <Property Name="JMFRequestedH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DaysToFinish" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FinishDateIn" Type="DateTime" Precision="3" />
+    <Property Name="ASQuantity" Type="Int32" />
+    <Property Name="TypeReport" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LabSampleRequest" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ContractorId" Type="Guid" />
+    <Property Name="SupplierId" Type="Guid" />
+    <Property Name="CreatedBy" Type="Guid" />
+    <Property Name="UpdatedBy" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="SampleBy" Type="Guid" />
+    <Property Name="GehaName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="GehaUserId" Type="Guid" />
+    <Property Name="MixDesignId" Type="Int32" />
+    <Property Name="IsMap" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Team1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConcreteInspectorLogError">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="ErrorDate" Type="DateTime" Precision="3" />
+    <Property Name="Error" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="InspectorUserId" Type="Guid" />
+  </EntityType>
+  <EntityType Name="ConcreteSamplesWorkFlow">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="SampledDate" Type="DateTime" Precision="3" />
+    <Property Name="SampledBy" Type="Guid" />
+    <Property Name="ReviewedSampleDate" Type="DateTime" Precision="3" />
+    <Property Name="ReviewedSampleBy" Type="Guid" />
+    <Property Name="TestedBy" Type="Guid" />
+    <Property Name="TestedDate" Type="DateTime" Precision="3" />
+    <Property Name="ReviewedTestBy" Type="Guid" />
+    <Property Name="ReviewedTestDate" Type="DateTime" Precision="3" />
+    <Property Name="IsFinished" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ConcreteTestSample">
+    <Key>
+      <PropertyRef Name="SampleNo" />
+    </Key>
+    <Property Name="SampleNo" Type="Int32" Nullable="false" />
+    <Property Name="Wg1" Type="Double" />
+    <Property Name="Wg2" Type="Double" />
+    <Property Name="Wg3" Type="Double" />
+    <Property Name="Wg4" Type="Double" />
+    <Property Name="Wg5" Type="Double" />
+    <Property Name="Wg6" Type="Double" />
+    <Property Name="CrushingDate1" Type="DateTime" Precision="3" />
+    <Property Name="CrushingDate2" Type="DateTime" Precision="3" />
+    <Property Name="AgeDays1" Type="Int32" />
+    <Property Name="AgeDays2" Type="Int32" />
+    <Property Name="LoadedAreaMM1" Type="Double" />
+    <Property Name="LoadedAreaMM2" Type="Double" />
+    <Property Name="Kn1" Type="Double" />
+    <Property Name="Kn2" Type="Double" />
+    <Property Name="Kn3" Type="Double" />
+    <Property Name="Kn4" Type="Double" />
+    <Property Name="Kn5" Type="Double" />
+    <Property Name="Kn6" Type="Double" />
+    <Property Name="Nmm1" Type="Double" />
+    <Property Name="Nmm2" Type="Double" />
+    <Property Name="Nmm3" Type="Double" />
+    <Property Name="Nmm4" Type="Double" />
+    <Property Name="Nmm5" Type="Double" />
+    <Property Name="Nmm6" Type="Double" />
+    <Property Name="Avg1" Type="Double" />
+    <Property Name="Avg2" Type="Double" />
+  </EntityType>
+  <EntityType Name="QcAsphaltFieldsTest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitId" Type="Int32" />
+    <Property Name="TestId" Type="Int32" />
+    <Property Name="Lat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Lan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SampleType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GMM" Type="Double" />
+    <Property Name="GMB" Type="Double" />
+    <Property Name="CompactionRatio" Type="Double" />
+    <Property Name="IsCompactionSuccess" Type="Boolean" />
+    <Property Name="GehaId" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="TestedDate" Type="DateTime" Precision="3" />
+    <Property Name="Street" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SectionNumber" Type="Int32" />
+    <Property Name="LineName" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FailureReason" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="QcMCFieldsTest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitId" Type="Int32" />
+    <Property Name="TestId" Type="Int32" />
+    <Property Name="Lat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Lan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsMC1Sucess" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="TestedDate" Type="DateTime" Precision="3" />
+    <Property Name="GehaId" Type="Guid" />
+    <Property Name="Street" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SectionNumber" Type="Int32" />
+    <Property Name="LineName" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FailureReason" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="QcPermitMasterFieldsTest">
+    <Key>
+      <PropertyRef Name="PermitId" />
+      <PropertyRef Name="TestId" />
+    </Key>
+    <Property Name="PermitId" Type="Int32" Nullable="false" />
+    <Property Name="TestId" Type="Int32" Nullable="false" />
+    <Property Name="TestName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="QcRCFieldsTest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitId" Type="Int32" />
+    <Property Name="TestId" Type="Int32" />
+    <Property Name="Lat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Lan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsRC2Sucess" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="TestedDate" Type="DateTime" Precision="3" />
+    <Property Name="GehaId" Type="Guid" />
+    <Property Name="Street" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="SectionNumber" Type="Int32" />
+    <Property Name="LineName" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FailureReason" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="QcSoilFieldsTest">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PermitId" Type="Int32" />
+    <Property Name="TestId" Type="Int32" />
+    <Property Name="Lat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Lan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LineName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SectionNumber" Type="Int32" />
+    <Property Name="LayerNumber" Type="Int32" />
+    <Property Name="LayersNumber" Type="Int32" />
+    <Property Name="SampleType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Classification" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Proctor" Type="Double" />
+    <Property Name="GMB" Type="Double" />
+    <Property Name="CompactionRatio" Type="Double" />
+    <Property Name="IsCompactionSuccess" Type="Boolean" />
+    <Property Name="GehaId" Type="Guid" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="TestedDate" Type="DateTime" Precision="3" />
+    <Property Name="LineType" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="FailureReason" Type="String" MaxLength="450" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__1209AD79">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__13F1F5EB">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__18B6AB08">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__19AACF41">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__12FDD1B2">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__14E61A24">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="Self.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__15DA3E5D">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__16CE6296">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__17C286CF">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="Self.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="aspnet_UsersInRoles">
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="*" />
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="QCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C_ConClsCustomProperties" EntityType="Self.C_ConClsCustomProperties" />
+    <EntitySet Name="C_ConClsPropertyMulti" EntityType="Self.C_ConClsPropertyMulti" />
+    <EntitySet Name="C_ConClsPropertyThirtyValues" EntityType="Self.C_ConClsPropertyThirtyValues" />
+    <EntitySet Name="AsphaltTypes" EntityType="Self.AsphaltType" />
+    <EntitySet Name="aspnet_Applications" EntityType="Self.aspnet_Applications" />
+    <EntitySet Name="aspnet_Membership" EntityType="Self.aspnet_Membership" />
+    <EntitySet Name="aspnet_Paths" EntityType="Self.aspnet_Paths" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="Self.aspnet_PersonalizationAllUsers" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="Self.aspnet_PersonalizationPerUser" />
+    <EntitySet Name="aspnet_Profile" EntityType="Self.aspnet_Profile" />
+    <EntitySet Name="aspnet_Roles" EntityType="Self.aspnet_Roles" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="Self.aspnet_SchemaVersions" />
+    <EntitySet Name="aspnet_Users" EntityType="Self.aspnet_Users" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="Self.aspnet_WebEvent_Events" />
+    <EntitySet Name="Branches" EntityType="Self.Branch" />
+    <EntitySet Name="Clients" EntityType="Self.Client" />
+    <EntitySet Name="Compactions" EntityType="Self.Compaction" />
+    <EntitySet Name="ConClsCategories" EntityType="Self.ConClsCategory" />
+    <EntitySet Name="ConClsClassificationTexts" EntityType="Self.ConClsClassificationText" />
+    <EntitySet Name="ConClsEvalPerformControls" EntityType="Self.ConClsEvalPerformControl" />
+    <EntitySet Name="ConClsLabAdditionalTools" EntityType="Self.ConClsLabAdditionalTool" />
+    <EntitySet Name="ConClsLabAdmixtures" EntityType="Self.ConClsLabAdmixture" />
+    <EntitySet Name="ConClsLabEquipments" EntityType="Self.ConClsLabEquipment" />
+    <EntitySet Name="ConClsLabProperties" EntityType="Self.ConClsLabProperty" />
+    <EntitySet Name="ConClsLabPropertyValues" EntityType="Self.ConClsLabPropertyValue" />
+    <EntitySet Name="ConClsLabStuffs" EntityType="Self.ConClsLabStuff" />
+    <EntitySet Name="ConClsLabTestPractices" EntityType="Self.ConClsLabTestPractice" />
+    <EntitySet Name="ConClsMaterialSupCategories" EntityType="Self.ConClsMaterialSupCategory" />
+    <EntitySet Name="ConClsMaterialSups" EntityType="Self.ConClsMaterialSup" />
+    <EntitySet Name="ConClsMixDesigns" EntityType="Self.ConClsMixDesign" />
+    <EntitySet Name="ConClsMixers" EntityType="Self.ConClsMixer" />
+    <EntitySet Name="ConClsPeriodicLabProperties" EntityType="Self.ConClsPeriodicLabProperty" />
+    <EntitySet Name="ConClsProperties" EntityType="Self.ConClsProperty" />
+    <EntitySet Name="ConClsPropertiesReasons" EntityType="Self.ConClsPropertiesReason" />
+    <EntitySet Name="ConClsPropertyValues" EntityType="Self.ConClsPropertyValue" />
+    <EntitySet Name="ConClsPropPeriodics" EntityType="Self.ConClsPropPeriodic" />
+    <EntitySet Name="ConcreteSamples" EntityType="Self.ConcreteSample" />
+    <EntitySet Name="ContAsphaltSamples" EntityType="Self.ContAsphaltSample" />
+    <EntitySet Name="ContractorRetFlows" EntityType="Self.ContractorRetFlow" />
+    <EntitySet Name="ContSoilSamples" EntityType="Self.ContSoilSample" />
+    <EntitySet Name="Factories" EntityType="Self.Factory" />
+    <EntitySet Name="FactoryEquipments" EntityType="Self.FactoryEquipment" />
+    <EntitySet Name="Factorys" EntityType="Self.Factory1" />
+    <EntitySet Name="GeneralSampleTypes" EntityType="Self.GeneralSampleType" />
+    <EntitySet Name="MapRoles" EntityType="Self.MapRole" />
+    <EntitySet Name="MapUserProjects" EntityType="Self.MapUserProject" />
+    <EntitySet Name="MapUserRoles" EntityType="Self.MapUserRole" />
+    <EntitySet Name="MapUsers" EntityType="Self.MapUser" />
+    <EntitySet Name="MarshalAsphaltSpecs" EntityType="Self.MarshalAsphaltSpec" />
+    <EntitySet Name="MarshalAspMixDesApps" EntityType="Self.MarshalAspMixDesApp" />
+    <EntitySet Name="MarshalMixDesigns" EntityType="Self.MarshalMixDesign" />
+    <EntitySet Name="MarshalSampleResults" EntityType="Self.MarshalSampleResult" />
+    <EntitySet Name="MarshalSamples" EntityType="Self.MarshalSample" />
+    <EntitySet Name="PermitLocationTests" EntityType="Self.PermitLocationTest" />
+    <EntitySet Name="Permits" EntityType="Self.Permit" />
+    <EntitySet Name="PermitVisionTestDetails" EntityType="Self.PermitVisionTestDetail" />
+    <EntitySet Name="PermitVisionTests" EntityType="Self.PermitVisionTest" />
+    <EntitySet Name="PlantLocations" EntityType="Self.PlantLocation" />
+    <EntitySet Name="Plants" EntityType="Self.Plant" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="QCWorkFlows" EntityType="Self.QCWorkFlow" />
+    <EntitySet Name="SamplesWorkFlows" EntityType="Self.SamplesWorkFlow" />
+    <EntitySet Name="SoilDesigns" EntityType="Self.SoilDesign" />
+    <EntitySet Name="SoilMoistures" EntityType="Self.SoilMoisture" />
+    <EntitySet Name="SoilResults" EntityType="Self.SoilResult" />
+    <EntitySet Name="SoilSampleResults" EntityType="Self.SoilSampleResult" />
+    <EntitySet Name="SoilSamples" EntityType="Self.SoilSample" />
+    <EntitySet Name="SoilTypes" EntityType="Self.SoilType" />
+    <EntitySet Name="SuperPaveMixDesigns" EntityType="Self.SuperPaveMixDesign" />
+    <EntitySet Name="SuperPaveSampleResults" EntityType="Self.SuperPaveSampleResult" />
+    <EntitySet Name="SuperPaveSamples" EntityType="Self.SuperPaveSample" />
+    <EntitySet Name="Teams" EntityType="Self.Team" />
+    <EntitySet Name="ConcreteInspectorLogErrors" EntityType="Self.ConcreteInspectorLogError" />
+    <EntitySet Name="ConcreteSamplesWorkFlows" EntityType="Self.ConcreteSamplesWorkFlow" />
+    <EntitySet Name="ConcreteTestSamples" EntityType="Self.ConcreteTestSample" />
+    <EntitySet Name="QcAsphaltFieldsTests" EntityType="Self.QcAsphaltFieldsTest" />
+    <EntitySet Name="QcMCFieldsTests" EntityType="Self.QcMCFieldsTest" />
+    <EntitySet Name="QcPermitMasterFieldsTests" EntityType="Self.QcPermitMasterFieldsTest" />
+    <EntitySet Name="QcRCFieldsTests" EntityType="Self.QcRCFieldsTest" />
+    <EntitySet Name="QcSoilFieldsTests" EntityType="Self.QcSoilFieldsTest" />
+    <AssociationSet Name="FK__aspnet_Me__Appli__1209AD79" Association="Self.FK__aspnet_Me__Appli__1209AD79">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__13F1F5EB" Association="Self.FK__aspnet_Pa__Appli__13F1F5EB">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__18B6AB08" Association="Self.FK__aspnet_Ro__Appli__18B6AB08">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__19AACF41" Association="Self.FK__aspnet_Us__Appli__19AACF41">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__12FDD1B2" Association="Self.FK__aspnet_Me__UserI__12FDD1B2">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__14E61A24" Association="Self.FK__aspnet_Pe__PathI__14E61A24">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__15DA3E5D" Association="Self.FK__aspnet_Pe__PathI__15DA3E5D">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__16CE6296" Association="Self.FK__aspnet_Pe__UserI__16CE6296">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__17C286CF" Association="Self.FK__aspnet_Pr__UserI__17C286CF">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="aspnet_UsersInRoles" Association="Self.aspnet_UsersInRoles">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <FunctionImport Name="AsphaltInsepector" ReturnType="Collection(QCModel.AsphaltInsepector_Result)" />
+    <FunctionImport Name="AsphaltInsepectorManager" ReturnType="Collection(QCModel.AsphaltInsepectorManager_Result)" />
+    <FunctionImport Name="AsphaltReceptionMarshalSamples" ReturnType="Collection(QCModel.AsphaltReceptionMarshalSamples_Result)" />
+    <FunctionImport Name="aspnet_AnyDataInTables" ReturnType="Collection(String)">
+      <Parameter Name="TablesToCheck" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Applications_CreateApplication">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_CheckSchemaVersion">
+      <Parameter Name="Feature" Mode="In" Type="String" />
+      <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_ChangePasswordQuestionAndAnswer">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="NewPasswordQuestion" Mode="In" Type="String" />
+      <Parameter Name="NewPasswordAnswer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_CreateUser">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="PasswordQuestion" Mode="In" Type="String" />
+      <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+      <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="CreateDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+      <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_FindUsersByEmail">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="EmailToMatch" Mode="In" Type="String" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_FindUsersByName">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetAllUsers">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetNumberOfUsersOnline">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="MinutesSinceLastInActive" Mode="In" Type="Int32" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetPassword" ReturnType="Collection(QCModel.aspnet_Membership_GetPassword_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetPasswordWithFormat" ReturnType="Collection(QCModel.aspnet_Membership_GetPasswordWithFormat_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetUserByEmail" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetUserByName" ReturnType="Collection(QCModel.aspnet_Membership_GetUserByName_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_GetUserByUserId" ReturnType="Collection(QCModel.aspnet_Membership_GetUserByUserId_Result)">
+      <Parameter Name="UserId" Mode="In" Type="Guid" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="UpdateLastActivity" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_ResetPassword">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="NewPassword" Mode="In" Type="String" />
+      <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordAnswer" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_SetPassword">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="NewPassword" Mode="In" Type="String" />
+      <Parameter Name="PasswordSalt" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="PasswordFormat" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_UnlockUser">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_UpdateUser">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Comment" Mode="In" Type="String" />
+      <Parameter Name="IsApproved" Mode="In" Type="Boolean" />
+      <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+      <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UniqueEmail" Mode="In" Type="Int32" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Membership_UpdateUserInfo">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="IsPasswordCorrect" Mode="In" Type="Boolean" />
+      <Parameter Name="UpdateLastLoginActivityDate" Mode="In" Type="Boolean" />
+      <Parameter Name="MaxInvalidPasswordAttempts" Mode="In" Type="Int32" />
+      <Parameter Name="PasswordAttemptWindow" Mode="In" Type="Int32" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="LastLoginDate" Mode="In" Type="DateTime" />
+      <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Paths_CreatePath">
+      <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="PathId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Personalization_GetApplicationId">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ApplicationId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_DeleteAllState">
+      <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Count" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_FindState">
+      <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_GetCountOfState">
+      <Parameter Name="Count" Mode="InOut" Type="Int32" />
+      <Parameter Name="AllUsersScope" Mode="In" Type="Boolean" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_ResetSharedState">
+      <Parameter Name="Count" Mode="InOut" Type="Int32" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAdministration_ResetUserState">
+      <Parameter Name="Count" Mode="InOut" Type="Int32" />
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAllUsers_GetPageSettings" ReturnType="Collection(Binary)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAllUsers_ResetPageSettings">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationAllUsers_SetPageSettings">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationPerUser_GetPageSettings" ReturnType="Collection(Binary)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationPerUser_ResetPageSettings">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_PersonalizationPerUser_SetPageSettings">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Path" Mode="In" Type="String" />
+      <Parameter Name="PageSettings" Mode="In" Type="Binary" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_DeleteInactiveProfiles" ReturnType="Collection(Int32)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_DeleteProfiles" ReturnType="Collection(Int32)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserNames" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_GetNumberOfInactiveProfiles" ReturnType="Collection(Int32)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_GetProfiles">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="ProfileAuthOptions" Mode="In" Type="Int32" />
+      <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+      <Parameter Name="PageSize" Mode="In" Type="Int32" />
+      <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+      <Parameter Name="InactiveSinceDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_GetProperties" ReturnType="Collection(QCModel.aspnet_Profile_GetProperties_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Profile_SetProperties">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="PropertyNames" Mode="In" Type="String" />
+      <Parameter Name="PropertyValuesString" Mode="In" Type="String" />
+      <Parameter Name="PropertyValuesBinary" Mode="In" Type="Binary" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_RegisterSchemaVersion">
+      <Parameter Name="Feature" Mode="In" Type="String" />
+      <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+      <Parameter Name="IsCurrentVersion" Mode="In" Type="Boolean" />
+      <Parameter Name="RemoveIncompatibleSchema" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Roles_CreateRole">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Roles_DeleteRole">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+      <Parameter Name="DeleteOnlyIfRoleIsEmpty" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Roles_GetAllRoles" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Roles_RoleExists">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Setup_RemoveAllRoleMembers">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Setup_RestorePermissions">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UnRegisterSchemaVersion">
+      <Parameter Name="Feature" Mode="In" Type="String" />
+      <Parameter Name="CompatibleSchemaVersion" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Users_CreateUser">
+      <Parameter Name="ApplicationId" Mode="In" Type="Guid" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="IsUserAnonymous" Mode="In" Type="Boolean" />
+      <Parameter Name="LastActivityDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UserId" Mode="InOut" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_Users_DeleteUser">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="TablesToDeleteFrom" Mode="In" Type="Int32" />
+      <Parameter Name="NumTablesDeletedFrom" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_AddUsersToRoles" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserNames" Mode="In" Type="String" />
+      <Parameter Name="RoleNames" Mode="In" Type="String" />
+      <Parameter Name="CurrentTimeUtc" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_FindUsersInRole" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+      <Parameter Name="UserNameToMatch" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_GetRolesForUser" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_GetUsersInRoles" ReturnType="Collection(String)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_IsUserInRole">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_UsersInRoles_RemoveUsersFromRoles" ReturnType="Collection(QCModel.aspnet_UsersInRoles_RemoveUsersFromRoles_Result)">
+      <Parameter Name="ApplicationName" Mode="In" Type="String" />
+      <Parameter Name="UserNames" Mode="In" Type="String" />
+      <Parameter Name="RoleNames" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="aspnet_WebEvent_LogEvent">
+      <Parameter Name="EventId" Mode="In" Type="String" />
+      <Parameter Name="EventTimeUtc" Mode="In" Type="DateTime" />
+      <Parameter Name="EventTime" Mode="In" Type="DateTime" />
+      <Parameter Name="EventType" Mode="In" Type="String" />
+      <Parameter Name="EventSequence" Mode="In" Type="Decimal" />
+      <Parameter Name="EventOccurrence" Mode="In" Type="Decimal" />
+      <Parameter Name="EventCode" Mode="In" Type="Int32" />
+      <Parameter Name="EventDetailCode" Mode="In" Type="Int32" />
+      <Parameter Name="Message" Mode="In" Type="String" />
+      <Parameter Name="ApplicationPath" Mode="In" Type="String" />
+      <Parameter Name="ApplicationVirtualPath" Mode="In" Type="String" />
+      <Parameter Name="MachineName" Mode="In" Type="String" />
+      <Parameter Name="RequestUrl" Mode="In" Type="String" />
+      <Parameter Name="ExceptionType" Mode="In" Type="String" />
+      <Parameter Name="Details" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetItemByFactoryYealy" ReturnType="Collection(QCModel.GetItemByFactoryYealy_Result)">
+      <Parameter Name="FactoryId" Mode="In" Type="Int32" />
+      <Parameter Name="YEAR" Mode="In" Type="Int32" />
+      <Parameter Name="MixId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetrptConcreteSamplesResultsummary" ReturnType="Collection(QCModel.GetrptConcreteSamplesResultsummary_Result)">
+      <Parameter Name="YEAR" Mode="In" Type="Int32" />
+      <Parameter Name="FactoryId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetSuperPavChartForProject" ReturnType="Collection(QCModel.GetSuperPavChartForProject_Result)" />
+    <FunctionImport Name="MarshalJmfRecptionLst" ReturnType="Collection(QCModel.MarshalJmfRecptionLst_Result)" />
+    <FunctionImport Name="MarshalJmfSupplierLst" ReturnType="Collection(QCModel.MarshalJmfSupplierLst_Result)" />
+    <FunctionImport Name="MarshalJmfTesterLst" ReturnType="Collection(QCModel.MarshalJmfTesterLst_Result)" />
+    <FunctionImport Name="ReceptionSamplesAsphaltSuperPave" ReturnType="Collection(QCModel.ReceptionSamplesAsphaltSuperPave_Result)" />
+    <FunctionImport Name="ReceptionSamplesSoil" ReturnType="Collection(QCModel.ReceptionSamplesSoil_Result)" />
+    <FunctionImport Name="selectClassificationByFact" ReturnType="Collection(QCModel.selectClassificationByFact_Result)">
+      <Parameter Name="FactoryId" Mode="In" Type="String" />
+      <Parameter Name="ClsYear" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SoilInsepector" ReturnType="Collection(QCModel.SoilInsepector_Result)" />
+    <FunctionImport Name="SoilInsepectorManager" ReturnType="Collection(QCModel.SoilInsepectorManager_Result)" />
+    <FunctionImport Name="SoilSamplesCompaction" ReturnType="Collection(QCModel.SoilSamplesCompaction_Result)" />
+    <FunctionImport Name="SoilSummary" ReturnType="Collection(QCModel.SoilSummary_Result)" />
+    <FunctionImport Name="SuperPaveSamplesCompaction" ReturnType="Collection(QCModel.SuperPaveSamplesCompaction_Result)" />
+    <FunctionImport Name="SuperPaveSummary" ReturnType="Collection(QCModel.SuperPaveSummary_Result)" />
+    <EntitySet Name="FactoryDocs" EntityType="QCModel.FactoryDoc" />
+    <EntitySet Name="Factory11" EntityType="QCModel.Factory11" />
+    <AssociationSet Name="FK_FactoryId" Association="QCModel.FK_FactoryId">
+      <End Role="Factory11" EntitySet="Factory11" />
+      <End Role="FactoryDoc" EntitySet="FactoryDocs" />
+    </AssociationSet>
+    <FunctionImport Name="AddUpdateFactory">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Type" Mode="In" Type="String" />
+      <Parameter Name="ProductionCapacity" Mode="In" Type="Double" />
+      <Parameter Name="DailyProductionRate" Mode="In" Type="Double" />
+      <Parameter Name="NumberofMixers" Mode="In" Type="Int32" />
+      <Parameter Name="NumberofTrucks" Mode="In" Type="Int32" />
+      <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="FaxNumber" Mode="In" Type="String" />
+      <Parameter Name="MailBox" Mode="In" Type="String" />
+      <Parameter Name="EMail" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="String" />
+      <Parameter Name="Latitude" Mode="In" Type="Double" />
+      <Parameter Name="Longitude" Mode="In" Type="Double" />
+      <Parameter Name="OwnerName" Mode="In" Type="String" />
+      <Parameter Name="OwnerEmail" Mode="In" Type="String" />
+      <Parameter Name="OwnerPhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="ManagerName" Mode="In" Type="String" />
+      <Parameter Name="ManagerEmail" Mode="In" Type="String" />
+      <Parameter Name="ManagerPhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="ManagerExperience" Mode="In" Type="Double" />
+      <Parameter Name="EngineerName" Mode="In" Type="String" />
+      <Parameter Name="EngineerEmail" Mode="In" Type="String" />
+      <Parameter Name="EngineerPhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="EngineerExperience" Mode="In" Type="Double" />
+      <Parameter Name="Comments" Mode="In" Type="String" />
+      <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+      <Parameter Name="CreatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="CreatedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UpdatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="UpdatedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="StatusCode" Mode="InOut" Type="Int32" />
+      <Parameter Name="StatusMessage" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="ConcreteMixingDesigns" EntityType="QCModel.ConcreteMixingDesign" />
+    <AssociationSet Name="FK__ConcreteM__Facto__6ABAD62E" Association="QCModel.FK__ConcreteM__Facto__6ABAD62E">
+      <End Role="Factory11" EntitySet="Factory11" />
+      <End Role="ConcreteMixingDesign" EntitySet="ConcreteMixingDesigns" />
+    </AssociationSet>
+    <FunctionImport Name="AddUpdateConcMixDesing">
+      <Parameter Name="Id" Mode="In" Type="Int64" />
+      <Parameter Name="FactoryId" Mode="In" Type="Int32" />
+      <Parameter Name="ConcreteRank" Mode="In" Type="String" />
+      <Parameter Name="CementWeight" Mode="In" Type="Double" />
+      <Parameter Name="WaterWeight" Mode="In" Type="Double" />
+      <Parameter Name="WashedSand" Mode="In" Type="Double" />
+      <Parameter Name="Rubble3by4" Mode="In" Type="Double" />
+      <Parameter Name="Rubble3by8" Mode="In" Type="Double" />
+      <Parameter Name="WhiteSand" Mode="In" Type="Double" />
+      <Parameter Name="Status" Mode="In" Type="String" />
+      <Parameter Name="ExpiryDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Comments" Mode="In" Type="String" />
+      <Parameter Name="CreatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="CreatedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UpdatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="UpdatedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="StatusCode" Mode="InOut" Type="Int32" />
+      <Parameter Name="StatusMessage" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetMixingDesignDetails" ReturnType="Collection(QCModel.GetMixingDesignDetails_Result)" />
+    <EntitySet Name="UserRoles" EntityType="QCModel.UserRole" />
+    <EntitySet Name="Users" EntityType="QCModel.User" />
+    <FunctionImport Name="AddUpdateUser">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+      <Parameter Name="FullName" Mode="In" Type="String" />
+      <Parameter Name="PhoneNumber" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="EMail" Mode="In" Type="String" />
+      <Parameter Name="Username" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="Photo" Mode="In" Type="Binary" />
+      <Parameter Name="JobTitle" Mode="In" Type="String" />
+      <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+      <Parameter Name="CreatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="CreatedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="UpdatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="UpdatedDate" Mode="In" Type="DateTime" />
+      <Parameter Name="StatusCode" Mode="InOut" Type="Int32" />
+      <Parameter Name="StatusMessage" Mode="InOut" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="AsphaltInsepector_Result">
+    <Property Type="String" Name="SampleType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Team" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TeamId" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="ContractorId" Nullable="true" />
+    <Property Type="String" Name="Project" Nullable="false" MaxLength="300" />
+    <Property Type="Double" Name="StartHour" Nullable="true" />
+    <Property Type="Double" Name="EndHour" Nullable="true" />
+    <Property Type="Boolean" Name="NoJobs" Nullable="true" />
+    <Property Type="Int32" Name="PermitNumber" Nullable="true" />
+    <Property Type="Int32" Name="BranchId" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="LayerThickness" Nullable="true" />
+    <Property Type="Double" Name="LayerWidth" Nullable="true" />
+    <Property Type="Double" Name="EvelCm" Nullable="true" />
+    <Property Type="Double" Name="LocationStartN" Nullable="true" />
+    <Property Type="Double" Name="LocationStartE" Nullable="true" />
+    <Property Type="Double" Name="LocationEN" Nullable="true" />
+    <Property Type="Double" Name="LocationEE" Nullable="true" />
+    <Property Type="String" Name="MoreStreet2" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Street" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="LocationStartNStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationStartEStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationENStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationEEStreet2" Nullable="true" />
+    <Property Type="String" Name="Source" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="Double" Name="Quantity" Nullable="true" />
+    <Property Type="Guid" Name="InspectorBy" Nullable="true" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="Guid" Name="ContractorId1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="AsphaltInsepectorManager_Result">
+    <Property Type="String" Name="SampleType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Team" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TeamId" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Project" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="ProjectNumber" Nullable="true" />
+    <Property Type="Double" Name="StartHour" Nullable="true" />
+    <Property Type="Double" Name="EndHour" Nullable="true" />
+    <Property Type="Boolean" Name="NoJobs" Nullable="true" />
+    <Property Type="Int32" Name="PermitNumber" Nullable="true" />
+    <Property Type="Int32" Name="BranchId" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="LayerThickness" Nullable="true" />
+    <Property Type="Double" Name="LayerWidth" Nullable="true" />
+    <Property Type="Double" Name="EvelCm" Nullable="true" />
+    <Property Type="Double" Name="LocationStartN" Nullable="true" />
+    <Property Type="Double" Name="LocationStartE" Nullable="true" />
+    <Property Type="Double" Name="LocationEN" Nullable="true" />
+    <Property Type="Double" Name="LocationEE" Nullable="true" />
+    <Property Type="String" Name="MoreStreet2" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Street" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="LocationStartNStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationStartEStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationENStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationEEStreet2" Nullable="true" />
+    <Property Type="String" Name="Source" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="Double" Name="Quantity" Nullable="true" />
+    <Property Type="Guid" Name="InspectorBy" Nullable="true" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="Guid" Name="ContractorId" Nullable="true" />
+    <Property Type="Int32" Name="ProjectNumber1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="AsphaltReceptionMarshalSamples_Result">
+    <Property Type="Int32" Name="SampleNo" Nullable="true" />
+    <Property Type="Boolean" Name="InspectorConfirm" Nullable="true" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="AsphaltTypeId" Nullable="true" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="aspnet_Membership_GetPassword_Result">
+    <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Column2" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="aspnet_Membership_GetPasswordWithFormat_Result">
+    <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Column2" Nullable="true" />
+    <Property Type="String" Name="Column3" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="Column4" Nullable="true" />
+    <Property Type="Int32" Name="Column5" Nullable="true" />
+    <Property Type="Boolean" Name="Column6" Nullable="true" />
+    <Property Type="DateTime" Name="Column7" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="Column8" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="aspnet_Membership_GetUserByName_Result">
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+    <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="aspnet_Membership_GetUserByUserId_Result">
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="PasswordQuestion" Nullable="true" MaxLength="256" />
+    <Property Type="String" Name="Comment" Nullable="true" MaxLength="Max" />
+    <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastLoginDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastActivityDate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" />
+    <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+    <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="aspnet_Profile_GetProperties_Result">
+    <Property Type="String" Name="PropertyNames" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="PropertyValuesString" Nullable="false" MaxLength="Max" />
+    <Property Type="Binary" Name="PropertyValuesBinary" Nullable="false" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
+    <Property Type="String" Name="Column1" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+  </ComplexType>
+  <ComplexType Name="GetItemByFactoryYealy_Result">
+    <Property Type="Int32" Name="SampleNo" Nullable="false" />
+    <Property Type="Double" Name="Avg2" Nullable="true" />
+    <Property Type="Int32" Name="Expr1" Nullable="false" />
+    <Property Type="String" Name="FactoryName" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="SampleDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="AmountofLand" Nullable="true" />
+    <Property Type="Boolean" Name="IsCleanUsage" Nullable="true" />
+    <Property Type="Boolean" Name="IsBasicUsage" Nullable="true" />
+    <Property Type="Boolean" Name="IsColumnUsage" Nullable="true" />
+    <Property Type="Boolean" Name="IsRoofUsage" Nullable="true" />
+    <Property Type="Boolean" Name="IsOtherUsage" Nullable="true" />
+    <Property Type="Int32" Name="ConcreteTemperture" Nullable="true" />
+    <Property Type="String" Name="ConcreteRank" Nullable="true" MaxLength="150" />
+    <Property Type="DateTime" Name="CrushingDate1" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="CrushingDate2" Nullable="true" Precision="23" />
+    <Property Type="Double" Name="Avg1" Nullable="true" />
+    <Property Type="String" Name="AmanaSampleNo" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetrptConcreteSamplesResultsummary_Result">
+    <Property Type="Int64" Name="SerialNumber" Nullable="true" />
+    <Property Type="String" Name="AmanaSampleNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ConcreteRank" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="AmountofLand" Nullable="true" />
+    <Property Type="Int32" Name="ConcreteTemperture" Nullable="true" />
+    <Property Type="DateTime" Name="SampleDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Usage" Nullable="true" MaxLength="1000" />
+    <Property Type="Double" Name="PressureResistance" Nullable="false" />
+    <Property Type="Int32" Name="MaxTemperature" Nullable="true" />
+    <Property Type="Int32" Name="MinTemperature" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetSuperPavChartForProject_Result">
+    <Property Type="String" Name="RNo" Nullable="true" MaxLength="100" />
+    <Property Type="Guid" Name="ContractorId" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="11" />
+    <Property Type="DateTime" Name="DateSampled" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="SupplierId" Nullable="true" />
+    <Property Type="Int32" Name="SampleNo" Nullable="false" />
+    <Property Type="Double" Name="Gmm" Nullable="true" />
+    <Property Type="Double" Name="Gmmb" Nullable="true" />
+    <Property Type="Double" Name="ACPercent" Nullable="true" />
+    <Property Type="Double" Name="GmmPercent" Nullable="true" />
+    <Property Type="Double" Name="AVpercent" Nullable="true" />
+    <Property Type="Double" Name="SieveOne" Nullable="true" />
+    <Property Type="Double" Name="SieveOneAndHalf" Nullable="true" />
+    <Property Type="Double" Name="SieveThreeByFour" Nullable="true" />
+    <Property Type="Double" Name="SieveHalf" Nullable="true" />
+    <Property Type="Double" Name="SieveThreeBYEight" Nullable="true" />
+    <Property Type="Double" Name="SieveFour" Nullable="true" />
+    <Property Type="Double" Name="SieveEight" Nullable="true" />
+    <Property Type="Double" Name="SieveSixteen" Nullable="true" />
+    <Property Type="Double" Name="SieveHandreed" Nullable="true" />
+    <Property Type="Double" Name="SieveFifteen" Nullable="true" />
+    <Property Type="Double" Name="SieveThirty" Nullable="true" />
+    <Property Type="Double" Name="SieveTwoHandreed" Nullable="true" />
+    <Property Type="String" Name="PermitNo" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Project" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="MarshalJmfRecptionLst_Result">
+    <Property Type="Boolean" Name="IsLabEngineer" Nullable="false" />
+    <Property Type="String" Name="item" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PlantLocation" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SampleNo" Nullable="false" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="DateIn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="GeneralSampleTypeId" Nullable="true" />
+    <Property Type="Int32" Name="Expr1" Nullable="true" />
+    <Property Type="DateTime" Name="MarshalJmRequested" Nullable="true" />
+    <Property Type="Boolean" Name="MarshalJmRequest" Nullable="true" />
+    <Property Type="DateTime" Name="Receptioned" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="MarshalJmfSupplierLst_Result">
+    <Property Type="DateTime" Name="DateIn" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsLabEngineer" Nullable="false" />
+    <Property Type="String" Name="item" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PlantLocation" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SampleNo" Nullable="false" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="DateIn1" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="MarshalJmfTesterLst_Result">
+    <Property Type="Boolean" Name="IsLabEngineer" Nullable="false" />
+    <Property Type="String" Name="item" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PlantLocation" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SampleNo" Nullable="false" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="DateIn" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="GeneralSampleTypeId" Nullable="true" />
+    <Property Type="Int32" Name="Expr1" Nullable="true" />
+    <Property Type="Boolean" Name="Reception" Nullable="true" />
+    <Property Type="DateTime" Name="Tested" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Test" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ReceptionSamplesAsphaltSuperPave_Result">
+    <Property Type="Int32" Name="SampleNo" Nullable="true" />
+    <Property Type="Boolean" Name="InspectorConfirm" Nullable="true" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="AsphaltTypeId" Nullable="true" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="ReceptionSamplesSoil_Result">
+    <Property Type="Int32" Name="SampleNo" Nullable="true" />
+    <Property Type="Boolean" Name="InspectorConfirm" Nullable="true" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="SoilTypeId" Nullable="true" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="selectClassificationByFact_Result">
+    <Property Type="Int32" Name="FactoryId" Nullable="false" />
+    <Property Type="Int32" Name="ClsYear" Nullable="false" />
+    <Property Type="String" Name="ClassificationDegree" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ClassificationText" Nullable="true" MaxLength="1500" />
+  </ComplexType>
+  <ComplexType Name="SoilInsepector_Result">
+    <Property Type="String" Name="SampleType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Team" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TeamId" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Project" Nullable="false" MaxLength="300" />
+    <Property Type="Double" Name="StartHour" Nullable="true" />
+    <Property Type="Double" Name="EndHour" Nullable="true" />
+    <Property Type="Boolean" Name="NoJobs" Nullable="true" />
+    <Property Type="Int32" Name="PermitNumber" Nullable="true" />
+    <Property Type="Int32" Name="BranchId" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="LayerThickness" Nullable="true" />
+    <Property Type="Double" Name="LayerWidth" Nullable="true" />
+    <Property Type="Double" Name="EvelCm" Nullable="true" />
+    <Property Type="Double" Name="LocationStartN" Nullable="true" />
+    <Property Type="Double" Name="LocationStartE" Nullable="true" />
+    <Property Type="Double" Name="LocationEN" Nullable="true" />
+    <Property Type="Double" Name="LocationEE" Nullable="true" />
+    <Property Type="String" Name="MoreStreet2" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Street" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="LocationStartNStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationStartEStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationENStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationEEStreet2" Nullable="true" />
+    <Property Type="String" Name="Source" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="Double" Name="Quantity" Nullable="true" />
+    <Property Type="Guid" Name="InspectorBy" Nullable="true" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="Guid" Name="ContractorId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SoilInsepectorManager_Result">
+    <Property Type="String" Name="SampleType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Team" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="TeamId" Nullable="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Project" Nullable="false" MaxLength="300" />
+    <Property Type="Double" Name="StartHour" Nullable="true" />
+    <Property Type="Double" Name="EndHour" Nullable="true" />
+    <Property Type="Boolean" Name="NoJobs" Nullable="true" />
+    <Property Type="Int32" Name="PermitNumber" Nullable="true" />
+    <Property Type="Int32" Name="BranchId" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="LayerThickness" Nullable="true" />
+    <Property Type="Double" Name="LayerWidth" Nullable="true" />
+    <Property Type="Double" Name="EvelCm" Nullable="true" />
+    <Property Type="Double" Name="LocationStartN" Nullable="true" />
+    <Property Type="Double" Name="LocationStartE" Nullable="true" />
+    <Property Type="Double" Name="LocationEN" Nullable="true" />
+    <Property Type="Double" Name="LocationEE" Nullable="true" />
+    <Property Type="String" Name="MoreStreet2" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Street" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="LocationStartNStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationStartEStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationENStreet2" Nullable="true" />
+    <Property Type="Double" Name="LocationEEStreet2" Nullable="true" />
+    <Property Type="String" Name="Source" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ContSampleRequest" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="Double" Name="Quantity" Nullable="true" />
+    <Property Type="Guid" Name="InspectorBy" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="Guid" Name="ContractorId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SoilSamplesCompaction_Result">
+    <Property Type="String" Name="RNo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SampleNo" Nullable="false" />
+    <Property Type="DateTime" Name="DateSampled" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="SampleType" Nullable="true" />
+    <Property Type="Guid" Name="ContractorId" Nullable="true" />
+    <Property Type="Int32" Name="Project" Nullable="true" />
+    <Property Type="Int32" Name="ClientNo" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PermitNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SectionNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Station" Nullable="true" MaxLength="50" />
+    <Property Type="Guid" Name="SampleBy" Nullable="true" />
+    <Property Type="Int32" Name="PranshMenciplitiy" Nullable="true" />
+    <Property Type="String" Name="StartN" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="StartE" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="EndN" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="EndE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="StreetName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Quantity" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Remarks" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RequiredTests" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Coordinates" Nullable="true" MaxLength="500" />
+    <Property Type="DateTime" Name="CheckInDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsHandOver" Nullable="true" />
+    <Property Type="String" Name="LayerThickness" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ReTest" Nullable="true" />
+    <Property Type="String" Name="Elevation" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ASQuantity" Nullable="true" />
+    <Property Type="String" Name="TypeReport" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SLocationN" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="SLocationE" Nullable="true" MaxLength="500" />
+    <Property Type="Int32" Name="GeneralSampleTypeId" Nullable="true" />
+    <Property Type="Boolean" Name="Compaction" Nullable="true" />
+    <Property Type="DateTime" Name="Compactioned" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SoilSummary_Result">
+    <Property Type="Int32" Name="SampleNo" Nullable="false" />
+    <Property Type="Boolean" Name="IsHandOver" Nullable="true" />
+    <Property Type="String" Name="RNo" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="StreetName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Station" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Elevation" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateSampled" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ClientNo" Nullable="true" />
+    <Property Type="String" Name="ClientName" Nullable="true" MaxLength="300" />
+    <Property Type="Guid" Name="ContractorId" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SampleType" Nullable="true" />
+    <Property Type="String" Name="SoilSampleType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SoilClassification" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="PlasticLimit" Nullable="true" />
+    <Property Type="Double" Name="Liquidlimit" Nullable="true" />
+    <Property Type="Double" Name="PlasticityIndex" Nullable="true" />
+    <Property Type="Double" Name="GroupIndex" Nullable="true" />
+    <Property Type="Double" Name="MoistureContent" Nullable="true" />
+    <Property Type="Double" Name="SieveTwo" Nullable="true" />
+    <Property Type="Double" Name="SieveOne" Nullable="true" />
+    <Property Type="Double" Name="SieveOneAndHalf" Nullable="true" />
+    <Property Type="Double" Name="SieveThreeByFour" Nullable="true" />
+    <Property Type="Double" Name="SieveThreeBYEight" Nullable="true" />
+    <Property Type="Double" Name="SieveFour" Nullable="true" />
+    <Property Type="Double" Name="SieveThree" Nullable="true" />
+    <Property Type="Double" Name="SieveTeen" Nullable="true" />
+    <Property Type="Double" Name="SieveTwoHandreed" Nullable="true" />
+    <Property Type="Double" Name="SieveForty" Nullable="true" />
+    <Property Type="Double" Name="SieveHalf" Nullable="true" />
+    <Property Type="Double" Name="SieveTwenty" Nullable="true" />
+    <Property Type="Double" Name="SieveEighteen" Nullable="true" />
+    <Property Type="Int32" Name="Project" Nullable="true" />
+    <Property Type="String" Name="ProjectName" Nullable="false" MaxLength="300" />
+    <Property Type="Int32" Name="ProjectNumber" Nullable="true" />
+    <Property Type="String" Name="ProjectFullName" Nullable="true" MaxLength="313" />
+    <Property Type="DateTime" Name="Printed" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="Print" Nullable="true" />
+    <Property Type="Int32" Name="GeneralSampleTypeId" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SuperPaveSamplesCompaction_Result">
+    <Property Type="Int32" Name="SampleNo" Nullable="false" />
+    <Property Type="String" Name="RNo" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="DateSampled" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExecutionDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="SampleType" Nullable="true" />
+    <Property Type="Guid" Name="ContractorId" Nullable="true" />
+    <Property Type="Int32" Name="Project" Nullable="true" />
+    <Property Type="Int32" Name="ClientNo" Nullable="true" />
+    <Property Type="String" Name="Location" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="PermitNo" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="SectionNo" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Station" Nullable="true" MaxLength="1000" />
+    <Property Type="Guid" Name="SampleBy" Nullable="true" />
+    <Property Type="Int32" Name="PranshMenciplitiy" Nullable="true" />
+    <Property Type="String" Name="StartN" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StartE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="EndN" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="EndE" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="StreetName" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="Quantity" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Remarks" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="RequiredTests" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Coordinates" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="CheckInDate" Nullable="true" Precision="23" />
+    <Property Type="Boolean" Name="IsHandOver" Nullable="true" />
+    <Property Type="String" Name="LayerThickness" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ReTest" Nullable="true" />
+    <Property Type="String" Name="Elevation" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ASQuantity" Nullable="true" />
+    <Property Type="String" Name="TypeReport" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="SLocationN" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="SLocationE" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="GeneralSampleTypeId" Nullable="true" />
+    <Property Type="Boolean" Name="Compaction" Nullable="true" />
+    <Property Type="DateTime" Name="Compactioned" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SuperPaveSummary_Result">
+    <Property Type="Boolean" Name="IsMap" Nullable="true" />
+    <Property Type="String" Name="RNo" Nullable="true" MaxLength="100" />
+    <Property Type="Guid" Name="ContractorId" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="250" />
+    <Property Type="DateTime" Name="DateSampled" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="SupplierId" Nullable="true" />
+    <Property Type="Int32" Name="SampleNo" Nullable="false" />
+    <Property Type="Double" Name="Gmm" Nullable="true" />
+    <Property Type="Double" Name="Gmmb" Nullable="true" />
+    <Property Type="Double" Name="ACPercent" Nullable="true" />
+    <Property Type="Double" Name="GmmPercent" Nullable="true" />
+    <Property Type="Double" Name="AVpercent" Nullable="true" />
+    <Property Type="Double" Name="SieveOne" Nullable="true" />
+    <Property Type="Double" Name="SieveOneAndHalf" Nullable="true" />
+    <Property Type="Double" Name="SieveThreeByFour" Nullable="true" />
+    <Property Type="Double" Name="SieveHalf" Nullable="true" />
+    <Property Type="Double" Name="SieveThreeBYEight" Nullable="true" />
+    <Property Type="Double" Name="SieveFour" Nullable="true" />
+    <Property Type="Double" Name="SieveEight" Nullable="true" />
+    <Property Type="Double" Name="SieveSixteen" Nullable="true" />
+    <Property Type="Double" Name="SieveHandreed" Nullable="true" />
+    <Property Type="Double" Name="SieveFifteen" Nullable="true" />
+    <Property Type="Double" Name="SieveThirty" Nullable="true" />
+    <Property Type="Double" Name="SieveTwoHandreed" Nullable="true" />
+    <Property Type="String" Name="PermitNo" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="Project" Nullable="false" MaxLength="300" />
+  </ComplexType>
+  <EntityType Name="FactoryDoc">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileType" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FileLocation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FileExtention" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="FactoryId" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Factory11">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ProductionCapacity" Type="Double" />
+    <Property Name="DailyProductionRate" Type="Double" />
+    <Property Name="NumberofMixers" Type="Int32" />
+    <Property Name="NumberofTrucks" Type="Int32" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FaxNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MailBox" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="Double" />
+    <Property Name="Longitude" Type="Double" />
+    <Property Name="OwnerName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerExperience" Type="Double" />
+    <Property Name="EngineerName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EngineerPhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EngineerEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="EngineerExperience" Type="Double" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_FactoryId">
+    <End Type="QCModel.Factory11" Role="Factory11" Multiplicity="1" />
+    <End Type="QCModel.FactoryDoc" Role="FactoryDoc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factory11">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FactoryDoc">
+        <PropertyRef Name="FactoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ConcreteMixingDesign">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryId" Type="Int32" />
+    <Property Name="ConcreteRank" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CementWeight" Type="Double" />
+    <Property Name="WaterWeight" Type="Double" />
+    <Property Name="WashedSand" Type="Double" />
+    <Property Name="Rubble3by4" Type="Double" />
+    <Property Name="Rubble3by8" Type="Double" />
+    <Property Name="WhiteSand" Type="Double" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__ConcreteM__Facto__6ABAD62E">
+    <End Type="QCModel.Factory11" Role="Factory11" Multiplicity="0..1" />
+    <End Type="QCModel.ConcreteMixingDesign" Role="ConcreteMixingDesign" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factory11">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ConcreteMixingDesign">
+        <PropertyRef Name="FactoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetMixingDesignDetails_Result">
+    <Property Type="String" Name="FactoryName" Nullable="true" MaxLength="500" />
+    <Property Type="Double" Name="Latitude" Nullable="true" />
+    <Property Type="Double" Name="Longitude" Nullable="true" />
+    <Property Type="String" Name="OwnerName" Nullable="true" MaxLength="500" />
+    <Property Type="Int64" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="FactoryId" Nullable="true" />
+    <Property Type="String" Name="ConcreteRank" Nullable="true" MaxLength="100" />
+    <Property Type="Double" Name="CementWeight" Nullable="true" />
+    <Property Type="Double" Name="WaterWeight" Nullable="true" />
+    <Property Type="Double" Name="WashedSand" Nullable="true" />
+    <Property Type="Double" Name="Rubble3by4" Nullable="true" />
+    <Property Type="Double" Name="Rubble3by8" Nullable="true" />
+    <Property Type="Double" Name="WhiteSand" Nullable="true" />
+    <Property Type="String" Name="Status" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="CreatedDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="UpdatedBy" Nullable="true" />
+    <Property Type="DateTime" Name="UpdatedDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Comments" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Role" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="JobTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>
